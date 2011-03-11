@@ -1,0 +1,2 @@
+cp /home/michael/Dokumente/Paper/library.bib library.bib
+git add library.bib

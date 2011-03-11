@@ -1,0 +1,10 @@
+figures/*.jpg
+styles/*.aux
+Dissertation.aux
+Dissertation.bbl
+Dissertation.blg
+Dissertation.log
+Dissertation.out
+Dissertation.pdf
+Dissertation.toc
+
