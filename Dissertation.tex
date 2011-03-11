@@ -8,7 +8,7 @@
 \definecolor{gray-20}{gray}{0.8}
 \definecolor{gray-30}{gray}{0.7}
 \definecolor{gray-40}{gray}{0.6}
-\definecolor{fadered}{rgb}{0.8824, 0.9529, 0.8745}
+\definecolor{fadered}{rgb}{0.988, 0.914, 0.310}
 \usepackage{charter}
 \usepackage{longtable}
 \usepackage{multirow}
@@ -25,6 +25,9 @@
 % \usepackage[small]{caption}
 % \usepackage{abstract}
 % \usepackage{lineno}
+
+% \newcommand{\includepublication}[1]{\cleardoublepage\includepdf{#1}}
+\newcommand{\includepublication}[1]{}
 
 \usepackage{listings} 
 \lstset{numbers=left, numberstyle=\scriptsize\ttfamily, numbersep=10pt, captionpos=b} 
@@ -91,15 +94,6 @@ pdfproducer = {pdflatex}}
 \newcommand{\note}[1]{}
 
 \newcommand{\imageCourtesy}[2]{Image courtesy of #1 \cite{#2}.}
-
-\fancyhf{}
-\fancyhead[EL,OR]{\thepage}
-\fancyhead[ER]{\leftmark}
-\fancyhead[OL]{\rightmark}
-\fancypagestyle{plain} {
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{0pt}
-}
 
 \lstnewenvironment{todo}{\lstset{numbers=none,frame=none,backgroundcolor=\color{fadered}}}{}
 \pagestyle{empty}
@@ -184,14 +178,14 @@ Jule, Charlotte \& Leo
 % MS/MS -- tandem mass spectrometry,
 % PSM -- peptide/spectral match
 
-\fancypagestyle{plain}{
-\fancyhf{}
-\renewcommand{\headrulewidth}{0.25pt}
-% \renewcommand{\footrulewidth}{0.5pt}
-\fancyfoot[EL,OR]{\thepage}
-\fancyhead[EL]{\leftmark}
-\fancyhead[OR]{\rightmark}
-}
+% \fancypagestyle{plain}{
+% \fancyhf{}
+% \renewcommand{\headrulewidth}{0.25pt}
+% % \renewcommand{\footrulewidth}{0.5pt}
+% \fancyfoot[EL,OR]{\thepage}
+% \fancyhead[EL]{\leftmark}
+% \fancyhead[OR]{\rightmark}
+% }
 
 \cleardoublepage
 \setcounter{tocdepth}{2}
@@ -200,12 +194,24 @@ Jule, Charlotte \& Leo
 
 \clearpage
 
+\pagestyle{fancy}
+\fancypagestyle{plain} {
+  \renewcommand{\headrulewidth}{0.25pt}
+  \fancyhf{}
+  \fancyhead[EL,OR]{\thepage}
+}
+
 % ==============================================================
 \chapter{Introduction}
 % ==============================================================
 
+
+\begin{todo}
+genome sequences, transcriptomics, proteomics
+\end{todo}
+
 The proteome is defined as the set of proteins present in a cell, tissue, or
-organism at a defined time point and under certain conditions.
+organism at a defined time point and under certain conditions. \cite{Yarmush2002, Yates2009}.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/Proteomics.jpg}
@@ -222,13 +228,33 @@ Caption here.
 
 \subsection{Preprocessing of biological samples}
 
+\begin{todo}
+SDS-PAGE, HPLC, SCX, IEF
+\end{todo}
+
 \subsection{Ionization of molecules}
+
+\begin{todo}
+ESI, MALDI
+\end{todo}
 
 \subsection{Mass analysis}
 
+\begin{todo}
+TOF, IT, Orbitrap
+\end{todo}
+
 \subsection{Mass spectra}
 
+\begin{todo}
+data formats (DTA, MGF, mzData, mzXML, mzML)
+\end{todo}
+
 \subsubsection{Full scans (MS)}
+
+\begin{todo}
+precursor peaks
+\end{todo}
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/ms1-scan.jpg}
@@ -240,6 +266,10 @@ Caption here.
 \end{figure}
 
 \subsubsection{Fragmentation scans (MS/MS)}
+
+\begin{todo}
+CID, a/b/c/x/y/z ions
+\end{todo}
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/ms2-scan.jpg}
@@ -264,47 +294,106 @@ Caption here.
 \section{Data evaluation}
 % --------------------------------------------------------------
 
-\subsection{Databases}
+\subsection{Sequence databases}
 
 \subsubsection{Genome sequences}
 
+\begin{todo}
+genome sequencing
+\end{todo}
+
 \subsubsection{Protein databases}
+
+\begin{todo}
+genome annotation
+\end{todo}
 
 \subsection{Identification}
 
 \subsubsection{Peptide mass fingerprinting}
 
+\begin{todo}
+sets of proteotypic precursor masses
+\end{todo}
+
 \subsubsection{Database search}
 
+\begin{todo}
+in silico digestion and matching via cross correlation or OMSSA-type & whatnot
+\end{todo}
+
 \subsubsection{De novo sequencing}
+
+\begin{todo}
+unbiased sequences, quite ambiguous, GPF by Jens Allmer
+\end{todo}
 
 \subsection{Quantitation}
 
 \subsubsection{Chemical labeling}
  
+\begin{todo}
+ICAT, iTRAQ
+\end{todo}
+
 \subsubsection{Metabolic labeling}
 
+\begin{todo}
+SILAC, 15N
+\end{todo}
+
 \subsubsection{Label-free quantitation}
+
+\begin{todo}
+across several runs
+\end{todo}
 
 % --------------------------------------------------------------
 \section{Proteogenomics}
 % --------------------------------------------------------------
 
+\begin{todo}
+genome annotation/gene model prediction, AUGUSTUS, external hints, 
+EGASP, exon splice graph, GPF
+\end{todo}
+
 % --------------------------------------------------------------
 \section{Chlamydomonas reinhardtii}
 % --------------------------------------------------------------
 
+\begin{todo}
+soil or freshwater green alga, unicellular, hetertroph / photoautotrop, sexual & asexual
+\end{todo}
+
 \subsection{Anaerobic metabolism}
+
+\begin{todo}
+hydrogen production
+\end{todo}
 
 % --------------------------------------------------------------
 \section{Thalassiosira oceanica}
 % --------------------------------------------------------------
 
+\begin{todo}
+deep water diatom
+\end{todo}
+
 \subsection{Iron deficiency}
+
+\begin{todo}
+hydrogen production
+\end{todo}
 
 % ==============================================================
 \chapter{Specific aims}
 % ==============================================================
+
+\begin{todo}
+- provide a de-centralized, high-throughput MS/MS data evaluation platform
+- enable high-troughput quantitation of metabolically labeled samples in C. reinhardtii
+- establish proteogenomic genome annotation in C. r. using an improved version of GPF
+\end{todo}
 
 % ==============================================================
 \chapter{Publications}
@@ -372,8 +461,7 @@ Bioinformatics 2011; doi: 10.1093/bioinformatics/btr081 (in press).
 \item corresponding authorship
 \end{itemize}
 
-% \cleardoublepage
-% \includepdf{publications/proteomatic-2011.pdf}
+\includepublication{publications/proteomatic-2011.pdf}
 
 % --------------------------------------------------------------
 \cleardoublepage
@@ -388,8 +476,7 @@ Bioinformatics 2011; doi: 10.1093/bioinformatics/btr081 (in press).
 \item what was it, then?
 \end{itemize}
 
-% \cleardoublepage
-% \includepdf{publications/terashima-2010.pdf}
+\includepublication{publications/terashima-2010.pdf}
 
 % --------------------------------------------------------------
 \cleardoublepage
@@ -404,8 +491,7 @@ Bioinformatics 2011; doi: 10.1093/bioinformatics/btr081 (in press).
 \item what was it, then?
 \end{itemize}
 
-% \cleardoublepage
-% \includepdf{publications/terashima-2011-ms.pdf}
+\includepublication{publications/terashima-2011-ms.pdf}
 
 % --------------------------------------------------------------
 \cleardoublepage
@@ -420,8 +506,7 @@ Bioinformatics 2011; doi: 10.1093/bioinformatics/btr081 (in press).
 \item what was it, then?
 \end{itemize}
 
-% \cleardoublepage
-% \includepdf{publications/gpf-2011.pdf}
+\includepublication{publications/gpf-2011.pdf}
 
 % --------------------------------------------------------------
 \cleardoublepage
@@ -436,8 +521,7 @@ Bioinformatics 2011; doi: 10.1093/bioinformatics/btr081 (in press).
 \item what was it, then?
 \end{itemize}
 
-% \cleardoublepage
-% \includepdf{publications/lommer-2011.pdf}
+% \includepublication{publications/lommer-2011.pdf}
 
 % --------------------------------------------------------------
 \cleardoublepage
@@ -452,14 +536,11 @@ Bioinformatics 2011; doi: 10.1093/bioinformatics/btr081 (in press).
 \item what was it, then?
 \end{itemize}
 
-% \cleardoublepage
-% \includepdf{publications/fufezan-2009.pdf}
+\includepublication{publications/fufezan-2009.pdf}
 
 % ==============================================================
 \chapter{Discussion and outlook}
 % ==============================================================
-
-Cite \cite{Specht2011}.
 
 % ==============================================================
 \chapter{Summary}
