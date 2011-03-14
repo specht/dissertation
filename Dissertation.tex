@@ -54,7 +54,7 @@ pdfkeywords = {},
 pdfcreator = {LaTeX},
 pdfproducer = {pdflatex}}
 
-\include{styles/chapterleft}
+% \include{styles/chapterleft}
 \include{styles/misc}
 
 \usepackage{setspace}
@@ -85,10 +85,7 @@ pdfproducer = {pdflatex}}
 
 \renewcommand{\headrulewidth}{0.25pt}
 
-\pagestyle{fancy}
-
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{#1}}
+% \pagestyle{fancy}
 
 %\setlength{\marginparwidth}{1.5cm}
 %\newcommand{\note}[1]{\marginpar{\color{gray-40}\footnotesize \flushleft #1}}
@@ -97,7 +94,7 @@ pdfproducer = {pdflatex}}
 \newcommand{\imageCourtesy}[2]{Image courtesy of #1 \cite{#2}.}
 
 \lstnewenvironment{todo}{\lstset{numbers=none,frame=none,backgroundcolor=\color{fadered}}}{}
-\pagestyle{empty}
+% \pagestyle{empty}
 
 % Code for creating empty pages
 % No headers on empty pages before new chapter
@@ -110,7 +107,21 @@ pdfproducer = {pdflatex}}
 % \makeatother \clearpage{\pagestyle{plain}\cleardoublepage}
 
 
+\renewcommand{\headrulewidth}{0.25pt}
+\fancyhf{}
+\fancyhead[EL,OR]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+\fancypagestyle{plain} {
+    \renewcommand{\headrulewidth}{0.0pt}
+    \fancyhf{}
+    % \fancyhead[ER]{\leftmark}
+    % \fancyhead[OL]{\rightmark}
+}
+
 \begin{document}
+\pagestyle{empty}
 % \pagewiselinenumbers
 
 \includepdfset{pages=-,noautoscale}
@@ -189,6 +200,7 @@ Jule, Charlotte \& Leo
 % }
 
 \cleardoublepage
+
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
 \tableofcontents
@@ -196,25 +208,41 @@ Jule, Charlotte \& Leo
 \clearpage
 
 \pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.25pt}
+\fancyhf{}
+\fancyhead[EL,OR]{\thepage}
+% \fancyhead[ER]{\leftmark}
+% \fancyhead[OL]{\rightmark}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
 \fancypagestyle{plain} {
-  \renewcommand{\headrulewidth}{0.25pt}
-  \fancyhf{}
-  \fancyhead[EL,OR]{\thepage}
+    \renewcommand{\headrulewidth}{0.25pt}
+    \fancyhf{}
+    \fancyhead[EL,OR]{\thepage}
+    % \fancyhead[ER]{\leftmark}
+    % \fancyhead[OL]{\rightmark}
 }
 
-
+% \cleardoublepage
 \input{introduction}
 
+% \cleardoublepage
 \input{specific-aims}
 
+% \cleardoublepage
 \input{publications}
 
+% \cleardoublepage
 \input{discussion-and-outlook}
 
+% \cleardoublepage
 \input{summary}
 
+% \cleardoublepage
 \input{appendix-qtrace}
 
+% \cleardoublepage
 \input{appendix-gpf}
 
 \newpage
