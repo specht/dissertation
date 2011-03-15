@@ -25,7 +25,7 @@ set of proteins expressed in a cell, tissue, or organism, at a defined time
 point and under certain conditions \citep{Yarmush2002, Yates2009}.
 In contrast to transcriptomics, proteomics is situated at the stage of 
 translation and protein synthesis, and therefore most accurately reflects the 
-current state of the cell. 
+phenotype of a cell. 
 Mass spectrometry provides an excellent means for proteome analysis
 \citep{Aebersold2003}, with speed, accuracy, and sensivity rapidly increasing
 within the past two decades.
@@ -44,7 +44,7 @@ protein.
 Post-translational modifications may modify a protein by adding an enzyme or by
 chemically modifying certain residues.
 Furthermore, structural adjustments such as the formation of disulfide 
-bridges between two cysteine residues may be required for the protein to become 
+bonds between Cysteine residues may be required for the protein to become 
 functional.
 Employing mass spectrometry, it is possible not only to identify peptides and
 proteins, but also to study their various modifications.
@@ -55,7 +55,7 @@ analysis.
 Although modern mass spectrometers are very sensitive, a couple of sample 
 preparation steps must be carried out in order to achieve comprehensive 
 proteome coverage. 
-An example mass spectrometry-based proteomics workflow for peptide 
+An example of a mass spectrometry-based proteomics workflow for peptide 
 and protein identification is depicted in Fig.~\ref{fig:proteomics-overview}.
 
 \begin{figure}
@@ -75,11 +75,65 @@ are recorded as peptide elution is in progress for a pre-defined amount of time.
 \section{Acquisition of mass spectrometric data}
 % --------------------------------------------------------------
 
+In the following, the steps involved in the acquisition of mass spectrometric
+data are described.
+
 \subsection{Preprocessing of biological samples}
 
-\begin{todo}
-SDS-PAGE, HPLC, SCX, IEF
-\end{todo}
+Although mass spectrometric analysis of intact proteins has been successfully
+reported \citep{Lee2002, Taylor2003}, such an approach is not feasible in 
+general because the high mass of proteins cannot be accounted for with most
+types of mass spectrometers.
+In addition, low abundant proteins may be missed in complex samples due to
+the fact that there are many more highly abundant proteins present.
+To overcome these obstacles, a couple of sample preprocessing steps are usually
+undertaken, with possible variations depending on the experimental context.
+
+\subsubsection{Gel electrophoresis}
+
+Due to the high dynamic range of protein expression levels, complex protein 
+mixtures tend to produce less comprehensive results because low abundant 
+proteins are `shadowed' by highly abundant proteins. 
+Gel electrophoresis may be used as a first sample separation step in which
+proteins are ordered by size, resulting in a number of fractions which can
+be analyzed individually.
+For SDS-PAGE, a sodium dodecyl sulfate polyacrylamide gel is prepared and
+proteins are loaded into wells in the gel.
+An electric field is applied to the gel, thus inducing an electromotive force 
+on the proteins which move through the gel at a speed which depends on their
+size and charge.
+However, SDS leads to denaturation of proteins and results in an overall
+negative charge for all proteins. 
+Thus, the protein migration speed is only dependent on the size of the protein.
+Individual spots of equally-sized proteins may be visualized using ethidium 
+bromide, silver, or Coomassie dye and subsequently excised.
+
+In order to achieve even higher sample separation, two-dimensional gel 
+electrophoresis may be used \citep{Klose1975, O'Farrell1975}.
+Here, proteins are additionally separated by a second physicochemical property
+such as their isoelectric point.
+As in the SDS-PAGE approach, resulting spots may be excised and subjected 
+to mass spectrometric analysis.
+
+\subsubsection{Proteolysis}
+
+In order to break proteins up into small, mass spectrometry-compatible peptides, 
+proteolytic enzymes are used.
+Among the various choices of possible enzymes, Trypsin has become very popular
+because it results in short peptides with a basic residue at the C-terminus
+\citep{Olsen2004}.
+Trypsin cleaves specifically at the C-terminal side of Lysine and Arginine 
+residues, given that no Proline residue is located at the other side of the 
+cleavage site.
+Alternative enzymes such as Asp-N and Glu-C are sometimes used to generate
+complementing peptides which overlap with the tryptic peptides in order to 
+increase sequence coverage of peptide identifications \citep{Steen2004}.
+Although Trypsin, Asp-N and Glu-C are very sequence-specific, the possibility 
+of missed cleavage sites must be taken into account during data analysis.
+
+\subsubsection{Liquid chromatography}
+
+HPLC, SCX, IEF
 
 \subsection{Ionization of molecules}
 
