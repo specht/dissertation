@@ -1,0 +1,102 @@
+\documentclass{bioinfo}
+\copyrightyear{2010}
+\pubyear{2010}
+\usepackage{natbib}
+\usepackage[english]{babel}
+
+\newcommand\caret{\mathbin{\char`\^}}
+
+\usepackage{sidecap}
+
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily\footnotesize}{}
+
+\begin{document}
+\firstpage{1}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\title[Proteomatic -- a platform for MS/MS data evaluation]
+{Proteomics to go: Proteomatic enables the user-friendly creation of versatile MS/MS data evaluation workflows}
+\author[Michael Specht \textit{et~al.}]
+{Michael~Specht\footnotemark[1], 
+Mia~Terashima, 
+Sebastian~Kuhlgert,
+Christian~Fufezan,
+Bianca~Naumann-Busch,
+Ricarda~H\"ohner and
+Michael~Hippler
+}
+\address{Institute of Plant Biology and Biotechnology, University of 
+M\"unster, Germany}
+
+\history{Received on XXXXX; revised on XXXXX; accepted on XXXXX}
+
+\editor{Associate Editor: XXXXXXX}
+
+\maketitle
+
+\footnotetext[1]{Correspondence to: Michael Specht, 
+Institute of Plant Biology and Biotechnology, Hindenburgplatz 55,
+D-48161 M\"unster, Germany. E-mail: 
+michael.specht@uni-muenster.de}
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+\begin{abstract}
+
+\section{Motivation:}
+
+
+Mass spectrometric methods and corresponding software tools for data evaluation
+are evolving rapidly.
+Programming expertise is required to create an automated pipeline in which
+several programs are run in succession.
+A graphical user interface (GUI) to programs is crucial for widespread
+deployment.
+If descriptions for these programs were available, GUIs could be created
+automatically, providing widgets to change parameters.
+Furthermore, using information about input and output files, several programs 
+could be combined into a processing pipeline.
+
+\section{Results:}
+
+We present Proteomatic, an operating system-independent and user-friendly 
+proteomics data evaluation platform that enables the construction and execution 
+of MS/MS data evaluation pipelines using free software. 
+The necessary programs for peptide identification and quantitation are 
+downloaded automatically. 
+Due to a strict separation of functionality and presentation, new programs
+can be added easily.
+Additionally, we introduce qTrace, a novel tool for the large-scale quantitation 
+of metabolically labeled samples in full scans.
+We demonstrate a fully functional MS/MS pipeline which allows for peptide
+and protein identification, validation and quantitation based on metabolic 
+labeling using OMSSA for peptide identification and qTrace for quantitation.
+
+\section{Availability:}
+
+Proteomatic is released under the LGPL.
+Source code and installers for Windows, Mac OS X, and Linux are 
+freely available at http://www.proteomatic.org.
+
+\section{Contact:} 
+michael.specht@uni-muenster.de
+\end{abstract}
+
+\input{maintext}
+
+\section*{Acknowledgement}
+
+We would like to thank Susan Hawat for conducting the mass spectrometric 
+measurements and Ingrid Jan{\ss}en for testing and valuable user feedback.
+
+{\em Funding:} 
+This work was supported by
+Deutscher \mbox{Akademischer} Austauschdienst [A/06/70349 to M.T.]; 
+Deutsche Forschungsgemeinschaft [FU780/2-1 to C.F.]; 
+and Bundesministerium f\"ur Bildung und Forschung [0315265C to M.H.].
+
+\bibliographystyle{natbib}
+\bibliography{Proteomatic}
+
+\end{document}
