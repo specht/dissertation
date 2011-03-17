@@ -158,45 +158,69 @@ measure abundance of ions
 
 \subsection{Mass spectra}
 
-\begin{todo}
-data formats (DTA, MGF, mzData, mzXML, mzML)
-\end{todo}
+Recorded mass spectra are stored as vendor-specific files which contain meta 
+information which describes the acquired data as well as the raw peak data.
+In order to unify the exchange of mass spectrometers raw data, the mzML file format
+\cite{mzml} has been devised by the HUPO-BLABLA CHECK THIS!
+Apart from the file format details, several different scan types can be
+acquired, each of which contains different information.
 
 \subsubsection{Full scans (MS)}
 
-\begin{todo}
-precursor peaks
-\end{todo}
+Full scans provide an overview over the peptides which are present in the
+mass spectrometer at a given time (see Fig.~\ref{fig:full-scan}).
+The \mz~values of all intact peptides are reported.
+However, the absence of a precursor peak does not necessarily indicate the
+absence of the corresponding peptide in the sample, because detection of
+an ion may fail for various reasons.
+Following a full scan, one or more highly abundant precursors are usually
+selected for further analysis.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/ms1-scan.jpg}
 \caption{
-{\bf Example of a full scan.} 
-Caption here.
+{\bf Zoomed view of a full scan.}
+Isotope envelopes of doubly charged peptides, consisting of precursor
+peaks with a \mz~difference of $\sim0.5$ are visible,
 }
 \label{fig:full-scan}
 \end{figure}
 
 \subsubsection{Fragmentation scans (MS/MS)}
 
-\begin{todo}
-CID, a/b/c/x/y/z ions
-\end{todo}
+Each of the selected ions gets fragmented in a process called
+{\em collision induced dissociation} (CID), in which peptides collide with an
+inert gas and subsequently break apart into N- and C-terminal fragments,
+thereby producing {\em b} ions and {\em y} ions, respectively. 
+Depending on the actual fragmentation site within the peptide bond,
+alternative fragment ions may result: {\em a} and {\em c} ions for N-terminal
+fragments, {\em x} and {\em z} ions for C-terminal fragments.
+The resulting scan is called a fragmentation scan, or tandem MS (MS/MS) scan.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/ms2-scan.jpg}
 \caption{
 {\bf Example of a fragmentation scan.} 
-Caption here.
+The 651.87 \mz~precursor peak shown in Fig.~\ref{fig:full-scan} has been
+subjected to collision-induced dissociation.
+Resulting fragment ions are recorded in the fragmentation scan.
 }
 \label{fig:fragmentation-scan}
 \end{figure}
 
+From the observed fragment ions, {\em mass ladders} can be constructed which
+represent the amino acid sequence of the selected peptide (see Fig~\ref{fig:fragmentation-scan-b-y}). 
+When fragmentation peaks are missing, the exact sequence of the peptide may not
+become clear from a single mass ladder.
+However, a combination of multiple mass ladders can resolve such ambiguities.
+
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/ms2-scan-b-y-1.jpg}
 \caption{
-{\bf Fragmentation scan with b and y ion series mass ladders superimposed.} 
-Caption here.
+{\bf The MS/MS scan depicted in Fig.~\ref{fig:fragmentation-scan} with {\em b} and 
+{\em y} ion series mass ladders superimposed.} 
+The \mz~differences of fragmentation peaks reflect the masses of individual amino
+acids or short amino acid oligomers.
 }
 \label{fig:fragmentation-scan-b-y}
 \end{figure}
@@ -206,7 +230,23 @@ Caption here.
 \section{Data evaluation}
 % --------------------------------------------------------------
 
+Evaluation of the acquired mass spectrometric data is a process with a multitude
+of possible options.
+Usually, the decisions made during sample preparation and data acquisition are
+reflected in the data analysis: If proteins were separated via SDS-PAGE, the
+resulting order of proteins via their mass can be used to verify or falsify 
+identifications.
+Likewise, if liquid chromatography is employed, the retention time at which
+peptides have been identified can be used for plausibility checks.
+
 \subsection{Sequence databases}
+
+Sequence databases, including genome and protein sequences, play an important
+role in MS/MS data evaluation because they greatly confine the search space
+for peptide identification.
+However, care must be taken if these databases are not comprehensive, because
+the search space defined by incomplete sequence databases might be too small
+to provide for proper identification.
 
 \subsubsection{Genome sequences}
 
