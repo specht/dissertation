@@ -160,8 +160,9 @@ measure abundance of ions
 
 Recorded mass spectra are stored as vendor-specific files which contain meta 
 information which describes the acquired data as well as the raw peak data.
-In order to unify the exchange of mass spectrometers raw data, the mzML file format
-\cite{mzml} has been devised by the HUPO-BLABLA CHECK THIS!
+In order to unify the exchange of mass spectrometers raw data, the mzML file 
+format has been devised by the HUPO Proteomics Standards Initiative
+\citep{Deutsch2008}.
 Apart from the file format details, several different scan types can be
 acquired, each of which contains different information.
 
@@ -248,18 +249,26 @@ However, care must be taken if these databases are not comprehensive, because
 the search space defined by incomplete sequence databases might be too small
 to provide for proper identification.
 
-\subsubsection{Genome sequences}
+% \subsubsection{Genome sequences}
+
+Genome sequence databases are a prerequisite for the prediction of protein 
+databases, and full genome sequences for more than 180 species are available
+\citep{Yates2009}.
 
 \begin{todo}
-genome sequencing
-180+ genomes sequences [Yates2009]
+cDNA mapping but problematic with low expressed transcripts
+use information from closely related organisms
+therefore: prediction to complement available evidence
+also necessary for species for which neither cDNA nor close relatives
+gene prediction esp. complicated in eukaryotes (introns)
 \end{todo}
 
-\subsubsection{Protein databases}
+Various strategies have been proposed to identify protein coding genes in
+genomic sequences \citep{Reese2000, Burge1997, Parra2000}.
+From genomic sequence databases, protein databases 
 
-\begin{todo}
-genome annotation
-\end{todo}
+
+% \subsubsection{Protein databases}
 
 \subsection{Identification}
 
