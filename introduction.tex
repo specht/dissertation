@@ -244,31 +244,56 @@ peptides have been identified can be used for plausibility checks.
 
 Sequence databases, including genome and protein sequences, play an important
 role in MS/MS data evaluation because they greatly confine the search space
-for peptide identification.
+for peptide identification from MS/MS spectra.
 However, care must be taken if these databases are not comprehensive, because
 the search space defined by incomplete sequence databases might be too small
 to provide for proper identification.
 
-% \subsubsection{Genome sequences}
+\subsubsection{Genome annotation}
 
 Genome sequence databases are a prerequisite for the prediction of protein 
 databases, and full genome sequences for more than 180 species are available
 \citep{Yates2009}.
+The annotation of genomic sequences remains a challenge, especially in
+eukaryotic genomes, where protein coding sequences are interrupted by
+introns.
+% EST support
+Various strategies have been proposed to identify protein coding genes in
+genomic sequences using expressed sequence tags (EST) libraries, 
+including the UCSC KG II \citep{Karolchik2003}, ENSEMBL \citep{Hubbard2005} 
+and NCBI Gnomon annotation pipelines \citep{Maglott2005}.
+In this method, genes are identified by mapping known cDNA tags to the
+genomic DNA sequence.
+Consequently, high cDNA coverage is required to achieve comprehensive
+genome annotation and therefore, low expressed transcripts pose a challenge.
+% comparative
+When cDNA information is unavailable, information from closely related
+species can also be used for genome annotation.
+Several software tools which implement this approach are available,
+including TWINSCAN \citep{Korf2001}, SGP 2 \citep{Parra2003}, and 
+SLAM \citep{Cawley2003}.
+
+As an alternative to cDNA and conservation supported genome annotation,
+{\em ab initio} genome annotation can be used for species for which no
+or only little cDNA evidence is available and no closely related annotated
+species exists.
+In this approach, statistical calculations are performed on the genomic
+DNA sequence, assessing various properties such as codon usage and splice 
+site consensus sequences.
+This approach allows for the initial annotation of novel genomic DNA 
+sequences.
+Programs using this approach include GENESCAN \citep{Burge1997}, 
+GENEID \citep{Parra2000}, and AUGUSTUS \citep{Stanke2004, Stanke2006}.
+In addition, the initial unbiased {\em ab initio} genome annotation can be 
+supplemented with extrinsic information as it becomes available 
+\citep{Stanke2008}.
+
+\subsubsection{Proteogenomics}
 
 \begin{todo}
-cDNA mapping but problematic with low expressed transcripts
-use information from closely related organisms
-therefore: prediction to complement available evidence
-also necessary for species for which neither cDNA nor close relatives
-gene prediction esp. complicated in eukaryotes (introns)
+genome annotation/gene model prediction, AUGUSTUS, external hints, 
+EGASP, exon splice graph, GPF
 \end{todo}
-
-Various strategies have been proposed to identify protein coding genes in
-genomic sequences \citep{Reese2000, Burge1997, Parra2000}.
-From genomic sequence databases, protein databases 
-
-
-% \subsubsection{Protein databases}
 
 \subsection{Identification}
 
@@ -308,15 +333,6 @@ SILAC, 15N
 
 \begin{todo}
 across several runs
-\end{todo}
-
-% --------------------------------------------------------------
-\section{Proteogenomics}
-% --------------------------------------------------------------
-
-\begin{todo}
-genome annotation/gene model prediction, AUGUSTUS, external hints, 
-EGASP, exon splice graph, GPF
 \end{todo}
 
 % --------------------------------------------------------------
