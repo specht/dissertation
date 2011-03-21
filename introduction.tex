@@ -143,12 +143,12 @@ In this setup, peptides elute according to their hydrophobicity.
 
 In order to make molecules suitable for mass spectrometric analysis, 
 the analyte must be ionized and transferred to the gaseous phase.
-Two well-established methods for this task exist: 
-(1) matrix-assisted laser desorption/ionization (MALDI) for solid analytes,
-and (2) electrospray ionization (ESI) for liquid samples.
+Among many available options, the two most widely used methods for this 
+task are (1) matrix-assisted laser desorption/ionization (MALDI) for solid 
+analytes, and (2) electrospray ionization (ESI) for liquid samples.
 % MALDI
-In the MALDI approach, the analyte is mixed with a matrix material and 
-co-cristallized on a metal plate. 
+In the MALDI approach \citep{Karas1988}, the analyte is mixed with a 
+matrix material and co-cristallized on a metal plate. 
 A pulsing laser beam is used to excite the matrix and sublime several 
 contained analyte molecules. 
 Although initially, mostly matrix molecules get ionized by the laser
@@ -157,7 +157,7 @@ matrix/analyte cloud is moved towards the mass analyzer by an
 electric field.
 % ESI
 ESI provides the advantage that it can be directly coupled to an
-upstream LC system because it works with fluid samples.
+upstream LC system because it works with fluid samples \citep{Fenn1989}.
 Here, the sample is pumped into a spray needle, either from the LC or via
 direct injection. 
 A high potential is applied between the entrance of the mass spectrometer and
@@ -167,6 +167,45 @@ The resulting charged droplet evaporates into smaller droplets until finally,
 in the best case, only one analyte ion is contained in a single droplet.
 
 \subsection{Mass analysis and ion detection}
+
+For the central part of a mass spectrometer, the mass analyzer, several
+options are available.
+Regardless of the ionization process, several options are available for
+the most prominent part of a mass spectrometer, the mass analyzer.
+
+% TOF
+In the time-of-flight (TOF) mass analyzer \citep{Wolff1953}, equally charged 
+ions are accelerated to the same kinetic energy, resulting in an velocity 
+which is dependent on the {\em m/z} value of an ion, with lighter ions
+moving faster than heavier ions.
+The time required for the ion to hit the ion detector is measured and
+then converted to the corresponding {\em m/z} value.
+
+% Quadrupole
+In the quadrupole mass analyzer \citep{Paul1956}, four parallel rods are 
+used to create a radio frequency quadrupole field which can be controlled
+in such a way that only ions of a specified mass-to-charge ratio can pass.
+For the creation of a mass spectrum, the {\em m/z} range is traversed from
+minimum to maximum and the passing ions are recorded.
+
+% Ion traps
+The third type of mass analyzer discussed in this thesis is the ion trap,
+which is available in a couple of variants.
+Common to all ion traps is that lower analyte amounts are required as
+compared to quadrupole mass analyzers, because instead of scanning
+the entire {\em m/z} range as the sample passes the mass spectrometer 
+and discarding all ions which do not match the current {\em m/z} value, 
+ions are first trapped in the ion trap and then ejected sequentially, 
+traversing the entire {\em m/z} range.
+In the three-dimensional quadrupole ion trap, ions are trapped in a space
+confined by a ring electrode and two endcap electrodes.
+The linear quadrupole ion trap is very similar to the quadrupole
+mass analyzer but requires lower analyte amounts 
+
+%% three-dimensional ion trap
+%% linear ion trap
+%% Orbitrap
+
 
 \begin{todo}
 separation of ions by electromagnetic fields
