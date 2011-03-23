@@ -168,19 +168,15 @@ in the best case, only one analyte ion is contained in a single droplet.
 
 \subsection{Mass analysis and ion detection}
 
-For the central part of a mass spectrometer, the mass analyzer, several
-options are available.
 Regardless of the ionization process, several options are available for
 the most prominent part of a mass spectrometer, the mass analyzer.
-
 % TOF
 In the time-of-flight (TOF) mass analyzer \citep{Wolff1953}, equally charged 
-ions are accelerated to the same kinetic energy, resulting in an velocity 
+ions are accelerated to the same kinetic energy, resulting in a velocity 
 which is dependent on the {\em m/z} value of an ion, with lighter ions
 moving faster than heavier ions.
 The time required for the ion to hit the ion detector is measured and
 then converted to the corresponding {\em m/z} value.
-
 % Quadrupole
 In the quadrupole mass analyzer \citep{Paul1956}, four parallel rods are 
 used to create a radio frequency quadrupole field which can be controlled
@@ -189,35 +185,41 @@ For the creation of a mass spectrum, the {\em m/z} range is traversed from
 minimum to maximum and the passing ions are recorded.
 
 % Ion traps
+
 The third type of mass analyzer discussed in this thesis is the ion trap,
 which is available in a couple of variants.
 Common to all ion traps is that lower analyte amounts are required as
 compared to quadrupole mass analyzers, because instead of scanning
-the entire {\em m/z} range as the sample passes the mass spectrometer 
+the entire {\em m/z} range as the sample passes through the mass spectrometer 
 and discarding all ions which do not match the current {\em m/z} value, 
-ions are first trapped in the ion trap and then ejected sequentially, 
-traversing the entire {\em m/z} range.
-
-...CONTINUE HERE...
-
+ions are first trapped and collected in the ion trap and then ejected 
+sequentially, traversing the entire {\em m/z} range.
 In the three-dimensional quadrupole ion trap, ions are trapped in a space
 confined by a ring electrode and two endcap electrodes.
-The linear quadrupole ion trap is very similar to the quadrupole
-mass analyzer but requires lower analyte amounts 
+The linear ion trap uses a two-dimensional field and provides for higher ion
+storage capacity, resulting in an increased detection sensitivity.
+The Fourier transform ion cyclotron resonance (FT-ICR) mass analyzer provides
+for extremely high mass resolution which.
+However, a strong magnetic field must be created and sustained, resulting
+in high maintenance as the system needs to be constantly cooled with helium. 
+The most recent development in this area, the Orbitrap, combines high mass 
+accuracy with low maintenance requirements \citep{Hu2005}. 
+A Thermo Scientific LTQ Orbitrap XL mass spectrometer has been used for the
+acquisition of all mass spectrometric data used in this thesis.
 
-%% three-dimensional ion trap
-%% linear ion trap
-%% Orbitrap
-
-
-\begin{todo}
-separation of ions by electromagnetic fields
-TOF, Quadrupole, Ion traps (3D Quadrupole, Linear Quadrupole, Orbitrap), FT-ICR
-\end{todo}
-
-\begin{todo}
-measure abundance of ions
-\end{todo}
+Another aspect of ion traps is that fragmentation of previously selected,
+specific precursor ions becomes possible.
+This is a prerequisite for tandem mass spectrometry (MS/MS), or data dependent
+acquisition.
+Here, a pre-defined, fixed number of highly abundant precursor ions is selected
+from every full scan, and subsequently subjected to fragmentation
+in a process called {\em collision induced dissociation} (CID).
+Here, peptides collide with an inert gas and subsequently break apart into 
+N- and C-terminal fragments, thereby producing {\em b} ions and {\em y} ions, 
+respectively. 
+Depending on the actual fragmentation site within the peptide bond,
+alternative fragment ions may result: {\em a} and {\em c} ions for N-terminal
+fragments, {\em x} and {\em z} ions for C-terminal fragments.
 
 \subsection{Mass spectra}
 
@@ -252,14 +254,13 @@ peaks with a \mz~difference of $\sim0.5$ are visible,
 
 \subsubsection{Fragmentation scans (MS/MS)}
 
-Each of the selected ions gets fragmented in a process called
-{\em collision induced dissociation} (CID), in which peptides collide with an
-inert gas and subsequently break apart into N- and C-terminal fragments,
-thereby producing {\em b} ions and {\em y} ions, respectively. 
-Depending on the actual fragmentation site within the peptide bond,
-alternative fragment ions may result: {\em a} and {\em c} ions for N-terminal
-fragments, {\em x} and {\em z} ions for C-terminal fragments.
-The resulting scan is called a fragmentation scan, or tandem MS (MS/MS) scan.
+The scans resulting from collision-induced dissociation are called 
+fragmentation scans, or tandem MS (MS/MS) scans.
+From the observed fragment ions, {\em mass ladders} can be constructed which
+represent the amino acid sequence of the selected peptide (see Fig~\ref{fig:fragmentation-scan-b-y}). 
+When fragmentation peaks are missing, the exact sequence of the peptide may not
+become clear from a single mass ladder.
+However, a combination of multiple mass ladders can resolve such ambiguities.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/ms2-scan.jpg}
@@ -271,12 +272,6 @@ Resulting fragment ions are recorded in the fragmentation scan.
 }
 \label{fig:fragmentation-scan}
 \end{figure}
-
-From the observed fragment ions, {\em mass ladders} can be constructed which
-represent the amino acid sequence of the selected peptide (see Fig~\ref{fig:fragmentation-scan-b-y}). 
-When fragmentation peaks are missing, the exact sequence of the peptide may not
-become clear from a single mass ladder.
-However, a combination of multiple mass ladders can resolve such ambiguities.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/ms2-scan-b-y-1.jpg}
@@ -361,6 +356,8 @@ EGASP, exon splice graph, GPF
 \subsection{Identification}
 
 \subsubsection{Peptide mass fingerprinting}
+
+\citep{Pappin1993,Henzel1993,Mann1993,James1993,Yates1993}
 
 \begin{todo}
 sets of proteotypic precursor masses
