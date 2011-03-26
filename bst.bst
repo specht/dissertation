@@ -4,7 +4,7 @@
 %%
 %% The original source files were:
 %%
-%% merlin.mbs  (with options: `ay,nat,nm-rev,jnrlst,nmlm,x5,m5,keyxyr,note-yr,atit-u,num-xser,isbn,issn,doi,xedn,nfss,')
+%% merlin.mbs  (with options: `ay,nat,nm-rvx,jnrlst,nmlm,x5,m5,keyxyr,note-yr,atit-u,num-xser,isbn,issn,doi,xedn,nfss,')
 %% ----------------------------------------
 %% *** dissertation ***
 %% 
@@ -167,6 +167,19 @@ FUNCTION {or}
 {   { pop$ #1 }
     'skip$
   if$
+}
+STRINGS {z}
+FUNCTION {remove.dots}
+{ 'z :=
+  ""
+  { z empty$ not }
+  { z #1 #1 substring$
+    z #2 global.max$ substring$ 'z :=
+    duplicate$ "." = 'pop$
+      { * }
+    if$
+  }
+  while$
 }
 FUNCTION {new.block.checkb}
 { empty$
@@ -370,8 +383,9 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr
-      "{vv~}{ll}{, f.}{, jj}"
+      "{vv~}{ll}{ f{}}{ jj}"
       format.name$
+      remove.dots
       bibinfo bibinfo.check
       't :=
       nameptr #1 >
@@ -426,8 +440,9 @@ FUNCTION {format.names.ed}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr
-      "{f.~}{vv~}{ll}{, jj}"
+      "{f{}~}{vv~}{ll}{ jj}"
       format.name$
+      remove.dots
       bibinfo bibinfo.check
       't :=
       nameptr #1 >

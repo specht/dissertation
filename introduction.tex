@@ -286,7 +286,7 @@ acids or short amino acid oligomers.
 
 
 % --------------------------------------------------------------
-\section{Data evaluation}
+\section{Mass spectrometric data evaluation}
 % --------------------------------------------------------------
 
 Evaluation of the acquired mass spectrometric data is a process with a multitude
@@ -298,8 +298,6 @@ identifications.
 Likewise, if liquid chromatography is employed, the retention time at which
 peptides have been identified can be used for plausibility checks.
 
-\subsection{Sequence databases}
-
 Sequence databases, including genome and protein sequences, play an important
 role in MS/MS data evaluation because they greatly confine the search space
 for peptide identification from MS/MS spectra.
@@ -307,7 +305,68 @@ However, care must be taken if these databases are not comprehensive, because
 the search space defined by incomplete sequence databases might be too small
 to provide for proper identification.
 
-\subsubsection{Genome annotation}
+
+\subsection{Identification}
+
+Several possibilities have been established to identify peptides present
+in the sample. 
+Usually, only a fraction of all peptides present in a sample can be 
+identified for various reasons.
+Firstly, peptides stemming from low abundant protein may be missed because 
+they result in low precursor peaks which are generally less favored, and
+therefore harded to detect, when compared to high peaks that can be clearly
+distinguished from noise peaks.
+Another problem arises when highly complex samples are used and the
+high number of peptides outnumbers the number of scan events in the
+mass spectrometric run.
+Also, highly abundant peptides are prone to be identified repeatedly,
+thus decreasing the identification chances of low abundant peptides.
+Finally, the differing physicochemical properties of all peptides
+lead to the effect that only a subset of the sample can be ionized and
+fragmented in such a way that identification is possible.
+
+\subsubsection{Peptide mass fingerprinting}
+
+\citep{Henzel1993,James1993,Mann1993,Pappin1993a,Yates1993}
+
+\begin{todo}
+sets of proteotypic precursor masses
+\end{todo}
+
+\subsubsection{Database search}
+
+\begin{todo}
+in silico digestion and matching via cross correlation or OMSSA-type & whatnot
+\end{todo}
+
+\subsubsection{De novo sequencing}
+
+\begin{todo}
+unbiased sequences, quite ambiguous, GPF by Jens Allmer
+\end{todo}
+
+\subsection{Quantitation}
+
+\subsubsection{Chemical labeling}
+ 
+\begin{todo}
+ICAT, iTRAQ
+\end{todo}
+
+\subsubsection{Metabolic labeling}
+
+\begin{todo}
+SILAC, 15N
+\end{todo}
+
+\subsubsection{Label-free quantitation}
+
+\begin{todo}
+across several runs
+\end{todo}
+
+\section{Proteogenomics}
+\label{proteogenomics}
 
 Genome sequence databases are a prerequisite for the prediction of protein 
 databases, and full genome sequences for more than 180 species are available
@@ -346,53 +405,13 @@ In addition, the initial unbiased {\em ab initio} genome annotation can be
 supplemented with extrinsic information as it becomes available 
 \citep{Stanke2008}.
 
-\subsubsection{Proteogenomics}
-
 \begin{todo}
-genome annotation/gene model prediction, AUGUSTUS, external hints, 
-EGASP, exon splice graph, GPF
-\end{todo}
-
-\subsection{Identification}
-
-\subsubsection{Peptide mass fingerprinting}
-
-\citep{Pappin1993,Henzel1993,Mann1993,James1993,Yates1993}
-
-\begin{todo}
-sets of proteotypic precursor masses
-\end{todo}
-
-\subsubsection{Database search}
-
-\begin{todo}
-in silico digestion and matching via cross correlation or OMSSA-type & whatnot
-\end{todo}
-
-\subsubsection{De novo sequencing}
-
-\begin{todo}
-unbiased sequences, quite ambiguous, GPF by Jens Allmer
-\end{todo}
-
-\subsection{Quantitation}
-
-\subsubsection{Chemical labeling}
- 
-\begin{todo}
-ICAT, iTRAQ
-\end{todo}
-
-\subsubsection{Metabolic labeling}
-
-\begin{todo}
-SILAC, 15N
-\end{todo}
-
-\subsubsection{Label-free quantitation}
-
-\begin{todo}
-across several runs
+% genome annotation/gene model prediction, AUGUSTUS, external hints, 
+% EGASP, exon splice graph, GPF
+TAIR9: modification of 1000+ genes and 250+ new genes
+corrections in 80% of all human genes
+alternative splicing: proteome diversity
+transcription not tightly coupled to translation (Clamp et al.)
 \end{todo}
 
 % --------------------------------------------------------------
