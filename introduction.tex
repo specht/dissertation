@@ -327,23 +327,136 @@ fragmented in such a way that identification is possible.
 
 \subsubsection{Peptide mass fingerprinting}
 
-\citep{Henzel1993,James1993,Mann1993,Pappin1993a,Yates1993}
-
-\begin{todo}
-sets of proteotypic precursor masses
-\end{todo}
+Peptide mass fingerprinting is a protein identification method which was
+simultaneously developed by several groups in 2003 
+\citep{Henzel1993,James1993,Mann1993,Pappin1993a,Yates1993}.
+In this method, the observation of several intact peptide precursor masses
+(the peptide mass fingerprint) is used to identify the protein which was 
+present in the sample.
+Peptides are determined {\em in silico} prior to the search from a protein
+database and their masses are subsequently matched to the observed precursor
+peaks.
+Accoring to \citet{Mann1993}, four to six proteolytic peptides measured
+at a mass accuracy between 100 and 1,000 ppm are usually sufficient to
+characterize a protein.
+The acquisition and interpretation of fragmentation is scans is not required, 
+however the method has the disadvantage that only samples containing a single 
+protein can be analyzed and complex protein mixtures cannot be used.
 
 \subsubsection{Database search}
 
-\begin{todo}
-in silico digestion and matching via cross correlation or OMSSA-type & whatnot
-\end{todo}
+One year after the advent of the peptide mass fingerprint approach, a novel
+method for the identification of peptides was developed by \citet{Eng1994}.
+In their study, \citeauthor{Eng1994} introduced SEQUEST, an algorithm which
+takes fragmentation scans and a protein sequence database as input files.
+From the protein sequences, {\em in silico} digested peptides are determined
+and their theoretical fragmentation scans predicted.
+Finally, using the precursor mass as a first filtering criterion, all
+theoretical and measured fragmentation scans are compared via cross-correlation
+and the resulting matches are scored and ranked.
+Subsequently, the best matching peptide is regarded as the correct 
+identification of the corresponding fragmentation scan, given that there is
+no different, competing identification with a similarly good score.
+This prerequisite for the correctness of peptide identifications highlights
+a drawback of the method: as for peptide mass fingerprinting, the peptide
+identification completely depends on the protein sequence database used.
+Sequences which are not covered by the database are not tested and therefore
+cannot weaken the identification distinctness of a particular peptide/spectral 
+match (PSM).
+In the recent years, several new database search programs have become 
+available, including MASCOT \citep{Perkins1999}, X! Tandem \citep{Craig2004},
+OMSSA \citep{Geer2004}, and MyriMatch \citep{Tabb2007}.
 
-\subsubsection{De novo sequencing}
+Initially, individual peptide/spectral matches had to be validated manually,
+and consensus score thresholds could be used as a rough estimate to distinguish
+incorrect from correct peptide identifications.
+With the advances in mass spectrometry leading towards high-throughput analyses,
+such an approach was no more feasible and a method for the assessment of
+the statistical significance of peptide/spectral matches was required.
+Two methods were developed for this purpose: 
+In \citeyear{Keller2002}, \citeauthor{Keller2002}~proposed an algorithm which
+assumes the score distribution from a set of 
+peptide/spectral matches to be composed of two distinct distributions,
+one for incorrect, and one for correct assignments. 
+The algorithm presented in their study \citep{Keller2002}, PeptideProphet,
+attempts to disentangle these distributions and separate false from correct
+identifications.
+An alternative approach which is very flexible and easy to implement was
+proposed five years later by \citeauthor{Elias2007}.
+In their paper, the authors proposed a target/decoy search strategy to 
+facilitate posterior probability estimation of the complete list of
+peptide/spectral matches resulting from a database search \citep{Elias2007}.
+To achieve this, the input protein database is complemented with an equally 
+sized {\em decoy database} which contains sequences derived from the original
+database entries by reversing or shuffling the amino acid sequence.
+To the database search program, peptides from both target and decoy sequences 
+appear as equal candidates to explain fragmentation scans.
+From the resulting of list of assignments, a score threshold can be determined
+in such a way that a user-defined estimated false discovery rate (FDR) is
+achieved in regard to the complete set of identifications.
+In practice, the score threshold is determined by traversing the entire PSM 
+list, starting from the best-scoring assignment and counting the number
+of true (target) and false positive (decoy) hits.
+Based on these numbers, \citeauthor{Elias2007} estimate the FDR as
 
-\begin{todo}
-unbiased sequences, quite ambiguous, GPF by Jens Allmer
-\end{todo}
+\begin{equation}
+\text{FDR} = \frac{2 \cdot n_{\text{decoys}}}{n_{\text{targets}} + n_{\text{decoys}}}.
+\end{equation}
+
+\citeauthor{Kall2008a} propose an alternative FDR estimation 
+\citep{Kall2008a}:
+
+\begin{equation}
+\text{FDR} = \frac{n_{\text{decoys}}}{n_{\text{targets}}}.
+\end{equation}
+
+Regardless of the actual estimation, the target/decoy approach is based on 
+the following assumptions \citep{Elias2007}: (1) proteolytic peptides inferred 
+from the target and decoy databases do not overlap, and (2) false positive 
+identifications from both databases are equally likely.
+These requirements have implications for the creation of the decoy sequences
+and as a consequence, there is an upper database size limit for which the 
+target/decoy approach is feasible.
+
+\subsubsection{{\em De novo} sequencing}
+
+For the interpretation of fragmentation scans, {\em de novo} sequencing is
+a highly unbiased method.
+Here, the mass ladders recorded in a fragmentation scan are reconstructed
+and a list of full peptide sequence candidates is returned as a result.
+Because the assignment of peptides to fragmentation spectra does not rely
+on a sequence database, the identifications are unbiased and especially
+useful for organisms with unsequenced genomes or incomplete genome sequences.
+Due to the inherent ambiguities regarding the interpretation of fragmentation
+peaks and their assignment to {\em b} or {\em y} ion mass ladders, and the 
+problem of interfering noise peaks, interpretation is difficult and 
+high-resolution spectra are usually required to achieve correct results.
+In addition, the speed of such algorithms is generally very low because the
+search space is only confined by the proteolytic enzyme which was used
+for protein digestion and apart from that, all possible amino acid sequences
+must be taken into account.
+Available {\em de novo} sequencing programs include Lutefisk 
+\citep{Johnson2002}, PEAKS \citep{Ma2003} and PepNovo \citep{Frank2005}.
+
+A common problem with {\em de novo} sequencing is that the resulting peptides
+are generally not completely correct across the entire amino acid sequence, 
+and an automated method to validate peptides and use the resulting validated 
+peptides in a downstream analysis is not readily available. 
+Therefore, {\em de novo} sequencing is often used as a complementing method 
+which is used in special cases and requires manual verification.
+A hybrid approach combining {\em de novo} sequencing and database search
+is implemented by sequence tag search algorithms such as InsPecT 
+\citep{Tanner2005} or ByOnic \citep{Bern2007}.
+Here, short sequence tags, consisting of a short amino acid sequence and the
+masses of the N- and C-terminal fragments are extracted from the fragmentation 
+spectrum.
+The subsequent database search is restricted to the peptides which match
+the extracted sequence tag, thereby increasing search speed.
+
+\subsubsection{Genomic Peptide Finder}
+
+The Genomic Peptide Finder, originally devised by \citeauthor{Allmer2004} in
+\citeyear{Allmer2004}, 
 
 \subsection{Quantitation}
 
