@@ -571,17 +571,50 @@ element.
 In this approach, the label is introduced via the metabolism of an organism.
 In the {\em stable isotope labeling with amino acids in cell culture} method
 (SILAC), strains are required which are not able to synthesize certain amino
-acids such as Arginine or Lysine.
-The \cre~strain CC424 is Arginine-auxotrophic and therefore must be supplied
-with Arginine to survive.
-The fact that \sup{13}C-labeled Arginine exposes the same physicochemical 
-properties as the natural \sup{13}C Arginine and thus the organism is 
+acids such as Arginine or Lysine \citep{Ong2002}.
+For \cre, the Arginine-auxotrophic strain CC424 is available which
+must be supplied with Arginine to survive.
+The fact that $^{13}$C-labeled Arginine exposes the same physicochemical 
+properties as the natural $^{12}$C Arginine and thus the organism is 
 oblivious to the isotopically labeled variant can be used to create 
 unlabeled and labeled samples which can later be mixed and measured in a 
 single MS/MS experiment.
-Using tryptic peptides and a \sup{13}C-Arg label, the mass shift introduced
+Using tryptic peptides and a $^{13}$C-Arg label, a mass shift of 6 Da is 
+typically introduced for each peptide because one Arginine amino acid 
+contains six carbon atoms.
+Due to the physicochemical equality of sister peptides in the mixed sample,
+equal peptides from both conditions can be expected to co-elute and therefore
+appear next to each other in several full scans. 
+From peptide identifcations in nearby fragmentation scans, the identity of
+sister peptide precursor peaks can be assumed and subsequently, the peptide
+can be quantified.
+In the case of $^{13}$C-Arg labeling, only 50\% of all tryptic peptides can
+be expected to be suitable for quantitation, because trypsin cleaves C-terminal
+of Arginine and Lysine residues, resulting in roughly half of all tryptic 
+peptides containing no Arginine at all.
+However, different variations are possible, for example, $^{13}$C-Arg/Lys 
+labeling can be used, although this requires a strain which is both Arginine
+and Lysine-auxotrophic.
 
 \subsubsection{Label-free quantitation}
+
+In the recent years, label-free quantitation methods have been developed and
+constantly refined.
+In these approaches, no labels are required and measurements of two or 
+more samples are cross-correlated to determine relative peptide and protein
+amounts in the respective conditions.
+Spectral counting is a coarse and simple way of assessing protein ratios by
+comparing the number of scans a peptide, and therefore protein, was identified
+in across the various samples \citep{Old2005}.
+Given that a minimum number of peptide/spectrum matches could be obtained from
+each sample, a rough estimation of the protein ratio can be carried out.
+However, it must be taken into account that the number of triggered and
+subsequently identified scans depends on many factors.
+In addition, if a dynamic exclusion filter is employed during the measurement 
+to disable re-triggering of the same highly abundant precursor {\em m/z} value 
+for a certain time (typically 90 seconds), this effect must be taken into 
+account when peptide abundance is inferred from the number of scans the peptide
+has been identified in.
 
 \begin{todo}
 across several runs
