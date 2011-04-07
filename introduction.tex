@@ -455,22 +455,131 @@ the extracted sequence tag, thereby increasing search speed.
 
 \subsubsection{Genomic Peptide Finder}
 
-The Genomic Peptide Finder, originally devised by \citeauthor{Allmer2004} in
-\citeyear{Allmer2004}, 
+The Genomic Peptide Finder (GPF), originally devised by \citeauthor{Allmer2004} 
+in \citeyear{Allmer2004}, follows a different strategy for the use of 
+{\em de novo} predicted amino acid sequences \citep{Allmer2004}.
+Instead of matching short sequence tags to gene model proteins, GPF uses the
+six frame translation of a genomic DNA sequence as a matching target.
+From a given {\em de novo} sequenced peptide, all sequence tags of a 
+user-defined size are extracted and each of the sequence tags is located
+within the six frame translation.
+From the resulting locations, the deduction of candidate peptides is attempted,
+each of which could be a possible explanation of the fragmention scan the
+{\em de novo} sequenced peptide originated from.
+All deduced candidate peptides fulfill the following criteria:
+
+\begin{itemize}
+\item a short sequence tag (typically three to five amino acids) has been 
+correctly predicted via {\em de novo} sequencing 
+\item the position of the sequence tag within the peptide, as defined by
+either the N- or C-terminal fragment mass, is correct within the limits 
+defined by the fragment scan mass accuracy (typically 700 ppm for an ion trap)
+\item the total mass of the peptide matches the observed precursor mass
+within the range defined by the full scan mass accuracy (typically 5 ppm for 
+the Orbitrap)
+\end{itemize}
+
+In addition to unspliced candidate peptides, the deduction of spliced candidate
+peptides is attempted by considering a user-defined maximum intron length.
+The resulting peptides may then be used to verify or falsify existing gene 
+models, as shown in a subsequent publication where GPF was used to confirm 
+2174 gene model peptides and further identify 448 novel peptides, including 98 
+spliced peptides \citep{Allmer2006}.
+The manual inspection of the identified peptides lead to the identification
+of novel gene models, the improvement of existing gene models as well as 
+hints for alternative splicing.
+
+In 2007, GPF was redesigned and implemented from scratch in the scope of this
+thesis to add a variety of features \citep{Specht2011_GPF}:
+
+\begin{itemize}
+\item intron splits may occur within a single coding nucleotide triplet
+\item splice donor/acceptor site consensus sequences may be specified to
+reduce the number of spurious spliced peptide alignments
+\item increased search speed by employing an indexing strategy while locating
+the occurences of sequence tags in the genomic DNA sequence
+\end{itemize}
+
+In addition, a method for the automated validation of GPF candidate peptides,
+employing standard database search programs such as OMSSA was established.
+This allows for statistically robust identification of GPF-deduced peptides
+alongside gene model peptides.
+Furthermore, an annotation pipeline was established in which resulting GPF
+peptides are passed to AUGUSTUS, which performs an {\em ab initio} gene 
+model prediction supplemented by various extrinsic hint sources including
+GPF peptides.
+It is therefore a major contribution of this thesis that an automated
+proteogenomic annotation of the \cre~genome in which MS/MS data generated
+for various unrelated purposes can be re-used for the generation of
+extrinsic AUGUSTUS hints has become possible.
 
 \subsection{Quantitation}
 
+In addition to determining which peptides, and therefore proteins, are 
+contained in a sample, it is often of interest to determine the abundance
+of proteins in samples from different conditions \citep{Schulze2010}.
+Using this information, the effect of various influences, such as environmental 
+stress or periodic environmental changes such as the light-dark cycle,
+can be elucidated.
+Generally, two samples are compared in one experiment and in most approaches, 
+quantitation results are relative, indicating up-regulation, down-regulation 
+or unchanged abundances for various proteins.
+If a standard of known amount is spiked into the sample and quantified alongside
+the proteins of interest, these relative results can typically be promoted to 
+absolute quantitation results.
+
 \subsubsection{Chemical labeling}
- 
-\begin{todo}
-ICAT, iTRAQ
-\end{todo}
+
+Chemical labeling methods introduce a label into the peptides from one of the 
+samples via a chemical reaction. 
+The {\em isotope-coded affinity tag} method (ICAT) 
+uses two affinity tags {\em d0} and {\em d8} which bind to cysteine residues
+and introduce a mass shift of 0 and 8 Da, respectively \citep{Gygi1999}.
+The mass shift of 8 Da can be observed in the full scans and the area under
+the respective precursor ion isotope envelopes can be used to estimate
+the ratio of peptide abundance in both samples.
+However, because the method is restricted to mass spectrometry-compatible 
+peptides which contain a cysteine residue, ICAT yields comparably low proteome
+coverage.
+
+The {\em isobaric tag for relative and absolute quantitation} method (iTRAQ)
+follows a similar approach by introducing isobaric tags into the peptides in
+different samples \citep{Ross2004} at the stage of enzymatic digestion.
+However, the N-terminus of peptides is labeled, resulting in increased proteome
+coverage.
+Each iTRAQ tag consists of a reporter group and a balance group, which together 
+result in a mass shift of 145 Da. 
+However, several distinct tags are available and possible reporter group masses 
+include 114 Da, 115 Da, 116 Da, and 117 Da, thus enabling the simultaneous 
+analysis of more than two samples (an iTRAQ variant with 8 different tags is also
+available).
+The isobaric tags result in the effect that equal peptides from different 
+samples appear at the same {\em m/z} value in the full scan.
+During fragmentation, the reporter groups get separated from the peptide, 
+resulting in distinct reporter peaks in the fragmentation scan, allowing
+for subsequent quantitation of peptides identified via tandem mass spectrometry.
+In comparison to the ICAT method, peptide quantitation is only performed in 
+fragmentation scans and therefore the amount of sampled quantitation ratios 
+per peptide is usually low.
 
 \subsubsection{Metabolic labeling}
 
-\begin{todo}
-SILAC, 15N
-\end{todo}
+As an alternative to chemical labeling, metabolic labeling can be used for
+peptide and protein quantitation in organisms which can be forced to incorporate
+an isotopically labeled amino acid or a stable isotope of a certain chemical 
+element.
+In this approach, the label is introduced via the metabolism of an organism.
+In the {\em stable isotope labeling with amino acids in cell culture} method
+(SILAC), strains are required which are not able to synthesize certain amino
+acids such as Arginine or Lysine.
+The \cre~strain CC424 is Arginine-auxotrophic and therefore must be supplied
+with Arginine to survive.
+The fact that \sup{13}C-labeled Arginine exposes the same physicochemical 
+properties as the natural \sup{13}C Arginine and thus the organism is 
+oblivious to the isotopically labeled variant can be used to create 
+unlabeled and labeled samples which can later be mixed and measured in a 
+single MS/MS experiment.
+Using tryptic peptides and a \sup{13}C-Arg label, the mass shift introduced
 
 \subsubsection{Label-free quantitation}
 
