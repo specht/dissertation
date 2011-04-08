@@ -27,8 +27,10 @@
 % \usepackage{abstract}
 % \usepackage{lineno}
 \setlength{\headheight}{14pt}
-% \newcommand{\includepublication}[1]{\cleardoublepage\includepdf{#1}}
+%\newcommand{\includepublication}[1]{\cleardoublepage\includepdf{#1}}
 \newcommand{\includepublication}[1]{}
+\usepackage{nomencl}
+\makenomenclature
 
 \sloppy
 
@@ -207,6 +209,33 @@ Jule, Charlotte \& Leo
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
 \tableofcontents
+
+\clearpage
+
+\setlength{\nomlabelwidth}{.10\hsize}
+\printnomenclature
+
+\nomenclature{AMT}{accurate mass/time}
+\nomenclature{CID}{collision-induced dissociation}
+\nomenclature{DNA}{deoxyribonucleic acid}
+\nomenclature{ESI}{electrospray ionization}
+\nomenclature{EST}{expressed sequence tag}
+\nomenclature{FDR}{false discovery rate}
+\nomenclature{FT-ICR}{Fourier transform ion cyclotron resonance}
+\nomenclature{GPF}{Genomic Peptide Finder}
+\nomenclature{HPLC}{high performance liquid chromatography}
+\nomenclature{ICAT}{isotope-coded affinity tag}
+\nomenclature{iTRAQ}{isobaric tag for relative and absolute quantitation}
+\nomenclature{LC}{liquid chromatography}
+\nomenclature{MALDI}{matrix-assisted laser desorption/ionization}
+\nomenclature{MS}{mass spectrometry}
+\nomenclature{MS/MS}{tandem mass spectrometry}
+\nomenclature{OMSSA}{Open mass spectrometry search algorithm}
+\nomenclature{PSM}{peptide/spectral match}
+\nomenclature{RNA}{ribonucleic acid}
+\nomenclature{RPLC}{reverse phase liquid chromatography}
+\nomenclature{SDS-PAGE}{sodium dodecyl sulfate polyacrylamide gel electrophoresis}
+\nomenclature{TOF}{time of flight}
 
 \clearpage
 

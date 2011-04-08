@@ -455,6 +455,8 @@ the extracted sequence tag, thereby increasing search speed.
 
 \subsubsection{Genomic Peptide Finder}
 
+\label{section:gpf}
+
 The Genomic Peptide Finder (GPF), originally devised by \citeauthor{Allmer2004} 
 in \citeyear{Allmer2004}, follows a different strategy for the use of 
 {\em de novo} predicted amino acid sequences \citep{Allmer2004}.
@@ -605,20 +607,37 @@ more samples are cross-correlated to determine relative peptide and protein
 amounts in the respective conditions.
 Spectral counting is a coarse and simple way of assessing protein ratios by
 comparing the number of scans a peptide, and therefore protein, was identified
-in across the various samples \citep{Old2005}.
+in across the samples \citep{Old2005}.
 Given that a minimum number of peptide/spectrum matches could be obtained from
-each sample, a rough estimation of the protein ratio can be carried out.
+each sample, a rough estimation of the protein ratio can be performed.
 However, it must be taken into account that the number of triggered and
-subsequently identified scans depends on many factors.
+subsequently identified scans for a peptide depends on many factors.
 In addition, if a dynamic exclusion filter is employed during the measurement 
 to disable re-triggering of the same highly abundant precursor {\em m/z} value 
 for a certain time (typically 90 seconds), this effect must be taken into 
-account when peptide abundance is inferred from the number of scans the peptide
+account when peptide abundance is inferred from the number of scans a peptide
 has been identified in.
 
-\begin{todo}
-across several runs
-\end{todo}
+More precise results can be obtained using tools which operate on full scans
+to determine peptide ratios \citep{Mueller2007, Park2008}.
+In these approaches, peptide precursor peaks in different runs are correlated 
+without the requirement of explicit MS/MS identification within the same run.
+This is achieved by establishing a database of {\em accurate mass/time tags} 
+(AMT tags) which describe full scan features (individual peptides) by means
+of accurate mass and retention time.
+This repository can than be used to ascertain the identity of specific precursor
+peaks which have not been subsequently triggered for collision-induced 
+dissociation but have been identified in a different run at the same retention 
+time.
+In order to accomodate for variations in the LC elution, all involved runs
+must be aligned in such a way that equal peptide elute at equal retention times.
+While retention time alignment is a complex and inherently ambiguous process
+\citep{Fischer2006}, label-free quantitation can be regarded as a very powerful
+quantitation strategy because it provides comprehensive results and recorded 
+mass spectrometric data can regularly be re-evaluated using an updated AMT tag 
+database, potentially yielding more results as the proteome coverage in
+the database becomes saturated.
+
 
 \section{Proteogenomics}
 \label{proteogenomics}
@@ -627,14 +646,29 @@ Genome sequence databases are a prerequisite for the prediction of protein
 databases, and full genome sequences for more than 180 species are available
 \citep{Yates2009}.
 The annotation of genomic sequences remains a challenge, especially in
-eukaryotic genomes, where protein coding sequences are interrupted by
+eukaryotic genomes, where protein coding sequences are often interrupted by
 introns.
+% bad quality
+Published gene models for organisms are subject to frequent changes and updates
+following manual inspection or novel strategies for gene model prediction.
+In the {\em A. thaliana} gene models, more than 1000 genes needed corrections
+and over 250 novel genes were added with the release of version 9 of the
+Arabidopsis Information Resource (TAIR, \cite{Huala2001}).
+In the case of {\em C. elegans}, manual inspection of the predicted gene models
+revealed that 50\% of all genes required corrections \citep{Reboul2003}.
+Likewise, a manual inspection of human gene models resulted in the 
+identification of additional exons for 80\% of all gene models 
+\citep{Pennisi2007}.
+These reports show that correct genome annotation is a strongly debated
+topic and therefore a vital area of research, especially because it forms
+the foundation of many post-genomic applications.
+
 % EST support
 Various strategies have been proposed to identify protein coding genes in
 genomic sequences using expressed sequence tags (EST) libraries, 
 including the UCSC KG II \citep{Karolchik2003}, ENSEMBL \citep{Hubbard2005} 
 and NCBI Gnomon annotation pipelines \citep{Maglott2005}.
-In this method, genes are identified by mapping known cDNA tags to the
+In these approaches, genes are identified by mapping known cDNA tags to the
 genomic DNA sequence.
 Consequently, high cDNA coverage is required to achieve comprehensive
 genome annotation and therefore, low expressed transcripts pose a challenge.
@@ -656,18 +690,82 @@ This approach allows for the initial annotation of novel genomic DNA
 sequences.
 Programs using this approach include GENESCAN \citep{Burge1997}, 
 GENEID \citep{Parra2000}, and AUGUSTUS \citep{Stanke2004, Stanke2006}.
-In addition, the initial unbiased {\em ab initio} genome annotation can be 
-supplemented with extrinsic information as it becomes available 
-\citep{Stanke2008}.
+As a result of recent developments, initially unbiased {\em ab initio} 
+genome annotations can be supplemented with extrinsic information as it 
+becomes available \citep{Stanke2008}, thus refining the genome annotation.
+This multilateral strategy seems to be indispensable for eukaryotic genomes
+where gene prediction is complicated by long introns and alternative splicing
+\citep{Brent2004}.
 
-\begin{todo}
-% genome annotation/gene model prediction, AUGUSTUS, external hints, 
-% EGASP, exon splice graph, GPF
-TAIR9: modification of 1000+ genes and 250+ new genes
-corrections in 80% of all human genes
-alternative splicing: proteome diversity
-transcription not tightly coupled to translation (Clamp et al.)
-\end{todo}
+From the mass spectrometry perspective, the recent advances represent a
+promising perspective: In addition to EST evidence and conserved genes in
+related species, peptides identified in MS/MS scans can be used to support
+genome annotation.
+This approach has several advantages. Firstly, peptides that have been observed
+in fragmentation scans can be used to differentiate pseudogenes from coding 
+genes. 
+Second, observed peptides can be used to ascertain that gene transcripts
+are not degraded but actually expressed as proteins.
+In addition, identified peptides automatically determine the coding frame
+for a certain genomic region and elucidate the location of introns in a gene.
+An additional benefit of MS/MS-assisted genome annotation is that scans recorded
+in many experiments for various experimental purposes can be used to provide
+extrinsic peptide hints to the gene model prediction program and measurements 
+with the specific aim of generating peptide hints are usually not required.
+
+The central challenge in generating peptide hints is to correctly identify
+peptides from fragmentation spectra in a way that is unbiased towards existing,
+potentially misleading gene models. 
+In addition, the identification of spliced peptides is especially helpful
+because these peptides can be used to establish a connection between two
+coding regions in the genome.
+A simple solution could be implemented by using the entire six frame translation
+of a genome as a protein database and matching fragmentation spectra against
+it.
+However, the assessment of the statistical significance of these hits is 
+difficult, given that the amount of false peptides in the six frame translation
+is unknown and at least 83\% because for a certain genomic region, at most
+of six reading frames can be expected to be protein-coding.
+In addition, this method does not yield spliced peptides which are highly
+interesting for the annotation of complex eukaryotic genomes.
+
+% \subsection{The exon splice graph approach}
+
+In \citeyear{Tanner2007}, \citeauthor{Tanner2007} proposed an approach to
+perform identification of spliced peptides within a genomic DNA sequence 
+\citep{Tanner2007}.
+The method proposed in the study uses splice site prediction and compiles
+a compact representation of all putative exons and splice junctions in a 
+graph.
+A specialized database search tool is then used to match fragmentation spectra
+to peptides contained in the exon splice graph.
+Using this method, \citeauthor{Castellana2008} were able to revise the 
+annotation of {\em A. thaliana} by correcting 695 genes and identifying
+778 novel genes.
+
+The GPF annotation pipeline presented in this thesis follows a similar strategy
+(\cite{Specht2011_GPF}, see p.~\pageref{section:gpf} and \pageref{paper:gpf}).
+However, the GPF approach is less biased in comparison to the exon splice graph
+approach because it does not require exon/intron prediction as a first step.
+GPF candidate peptides are solely generated from MS/MS {\em de novo} sequencing
+and subsequent mapping of the resulting peptides to the genome, using 
+a user-defined maximum intron length and a set of possible splice donor/acceptor 
+site consensus sequences.
+This means that intron prediction is carried out on a per-peptide basis, and
+all peptides are treated independently.
+The actual validation of extrinsic hints and splice site detection is
+carried out by AUGUSTUS in the final annotation step.
+Moreover, the approach is highly flexible because no specialized database
+search program is required because candidate peptides are inferred by GPF
+and then passed down the evaluation pipeline alongside a protein database.
+Although the protein database is used to estimate the FDR of peptide 
+identifications, the final GPF-deduced peptides which are exported as
+peptide hints do not originate from this database, although in the case
+of \cre, a big portion of these protein database peptides could be 
+independently confirmed via GPF \citep{Specht2011_GPF}.
+
+
+% \subsection{The AUGUSTUS/GPF approach}
 
 % --------------------------------------------------------------
 \section{Chlamydomonas reinhardtii}
