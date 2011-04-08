@@ -132,6 +132,17 @@ pdfproducer = {pdflatex}}
     % \fancyhead[OL]{\rightmark}
 }
 
+
+% Code for creating empty pages
+% No headers on empty pages before new chapter
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}
+    \thispagestyle{plain}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother \clearpage{\pagestyle{plain}\cleardoublepage}
+
 \begin{document}
 \pagestyle{empty}
 % \pagewiselinenumbers
@@ -212,6 +223,9 @@ Jule, Charlotte \& Leo
 % }
 
 \cleardoublepage
+\printnomenclature
+
+\cleardoublepage
 
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
@@ -220,7 +234,8 @@ Jule, Charlotte \& Leo
 \clearpage
 
 \setlength{\nomlabelwidth}{.10\hsize}
-\printnomenclature
+
+
 
 \nomenclature{AMT}{accurate mass/time}
 \nomenclature{CID}{collision-induced dissociation}
@@ -263,7 +278,7 @@ Jule, Charlotte \& Leo
     % \fancyhead[OL]{\rightmark}
 }
 
-% \cleardoublepage
+\cleardoublepage
 \input{introduction}
 
 % \cleardoublepage
