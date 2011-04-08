@@ -17,10 +17,17 @@
 \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 \usepackage[charter]{mathdesign}
 \usepackage[utf8]{inputenc}
-\usepackage[none]{hyphenat} 
+% \usepackage[none]{hyphenat} 
 \usepackage{natbib}
 \usepackage{float}
 \usepackage[final]{pdfpages}
+
+\usepackage{sidecap}
+
+\makeatletter
+  \newenvironment{SCtopfig}{\SC@float[t]{figure}}{\endSC@float}
+\makeatother
+
 % \usepackage{setspace}
 \usepackage[charter]{mathdesign}
 % \usepackage[small]{caption}
