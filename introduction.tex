@@ -4,23 +4,31 @@
 
 The availability of genome sequences is a key prerequisite for modern 
 biological research.
-After the discovery of the DNA double helix structure \citep{Watson1953},
-genome sequencing techniques have been developed and refined over the decades
-\citep{Gilbert1973, Sanger1975}, 
-culminating in the publication of the full human genome sequence in 2001 
-\citep{Venter2001}.
+Even before the discovery of the DNA double-helix structure by 
+\citeauthor{Watson1953} in \citeyear{Watson1953}, the gene had for several 
+decades been regarded as the central unit representing a 
+`hereditary characteristic' \citep{Vries1889} and therefore was considered
+to play a major role in elucidating one of the biggest mysteries of nature, 
+life itself.
+After \citeauthor{Jou1972} published the first bacteriophagic nucleotide 
+sequence for a single gene in \citeyear{Jou1972}, more elaborate genome 
+sequencing techniques have been developed and refined in the following years
+\citep{Gilbert1973, Sanger1975, Maxam1977}, culminating in the publication of 
+the full human genome sequence in 2001 \citep{Venter2001}.
+The possibility to obtain genome sequences has added considerable momentum
+to biological research and full genome sequences for more than 180 species
+are available (\cite{Yates2009}, see Table \ref{tab:genome-sizes}).
 Aside from the ambiguities introduced by non-coding regions in the genome 
 \citep{Gilbert1978} and alternative splicing of genes \citep{Black2003}, 
 the genome provides, in theory, all necessary information about which proteins 
 can potentially be expressed in a cell.
+However, in order to study the dynamic nature of a cell or organism, as for 
+example in response to changing environmental conditions, the static information
+provided by the genome is not sufficient. 
+Consequently, the field of genomics has spurred a number of {\em omics}-related 
+areas of research \citep{Sauer2007}.
 
-\begin{todo}
-- genomics
-- transcriptomics
-- proteomics
-- metabolomics
-\end{todo}
-
+\begin{table}
 \begin{tabular}{|l|r|r|l|}
 \hline
 Species & Genome size & Predicted genes & Reference \\
@@ -31,23 +39,73 @@ Species & Genome size & Predicted genes & Reference \\
 {\em Chlamydomonas reinhardtii} & 121 Mbp & 15,143 & \cite{Merchant2007} \\
 {\em Drosophila melanogaster} & 165 Mbp & 13,600 & \cite{Adams2000} \\
 {\em Daphnia pulex} & 200 Mbp & 30,907 & \cite{Colbourne2011} \\
-{\em Homo sapiens} & 2.9 Gbp & 20,251 & \cite{Venter2001} \\
+{\em Homo sapiens} & 3.2 Gbp & 20,251 & \cite{Venter2001} \\
 \hline
 \end{tabular}
+\caption{{\bf Genome sizes of selected species.} The range of known genome sizes 
+    comprises several orders of magnitude, while the number of genes seems
+    relatively unaffected by the genome size.
+}
+\label{tab:genome-sizes}
+\end{table}
 
-However, in order to study the dynamic nature of a cell or organism, as for 
-example in response to changing environmental conditions, the static information
-provided by the genome is not sufficient. 
-The transcriptome provides information about gene expression at the RNA level. 
+\section{Omics-related areas of research}
+
+One such research area, {\em transcriptomics}, deals with the transcription
+of genes, as recorded in the DNA, to mRNA.
+The transcriptome provides information about gene expression at the mRNA level. 
 DNA microarray techniques can be employed to screen the regulation of many
 genes in parallel on the transcript level \citep{Schena1995}.
-
-Complementing transcriptomics, the field of proteomics deals with the total
+Complementing transcriptomics, the field of {\em proteomics} deals with the total
 set of proteins expressed in a cell, tissue, or organism, at a defined time
 point and under certain conditions \citep{Yarmush2002, Yates2009}.
-In contrast to transcriptomics, proteomics is situated at the stage of 
-translation and protein synthesis, and therefore most accurately reflects the 
-phenotype of a cell. 
+The notion of the {\em proteome} was coined by Marc Wilkins in 1994 
+to reflect the entire set of proteins that are encoded in a genome and are 
+actually expressed by a cell \citep{Wilkins2009}.
+The transcriptome can be regarded as a precursor of the proteome.
+However, transcriptional regulation does not necessarily correlate to
+protein expression in a linear fashion \citep{Rogers2008}.
+It is therefore vital to combine various types of qualitative of quantitative
+information, including the transcriptome and proteome, with further aspects such 
+as evolution and the modeling of interactions on the levels of molecules, 
+proteins, and cells to achieve a comprehensive understanding of life.
+In the past few years, this approach has manifested itself as {\em systems 
+biology} \citep{Vidal2009}.
+In addition to genomics, transcriptomics, and proteomics, further fields 
+involved in the holistic approach of systems biology include metabolomics,
+in which the end-products of metabolic processes are analyzed 
+\citep{Daviss2005}.
+Furthermore, glycomics and lipidomics which provide a view on life from the
+perspective of carbohydrates and lipids, respectively, contribute to the
+overall picture in the systems biology framework.
+
+\section{Proteomics}
+
+The central aspects of proteomics are the identification of proteins, 
+the identifcation of post-translational modifications (PTM), 
+relative and absolute protein quantitation, protein localization, and
+protein-protein interaction studies.
+An important aspect about the proteome is that it is highly variable and
+subject to change over time and changing environmental conditions.
+In contrast to the genome and the transcriptome, the proteome most accurately
+reflects the phenotype of a cell.
+While information provided by genomics acts as a foundation to the possible
+expression of a protein by the presence of its respective gene in the DNA,
+transcript profiling yields information about gene transcription to mRNA.
+However, actual protein abundance is not directly related to mRNA abundance.
+mRNA molecules may be subject to rapid degradation, and it is also known that 
+mRNA is sometimes not translated into a protein at all \citep{Eddy2001}.
+Furthermore, the final function of a protein is heavily influenced by
+post-translational modifications such as phosphorylation \citep{Olsen2006} 
+and ubiquitination.
+Finally, not all proteins are expressed in all cell types or cell compartments,
+adding another level of ambiguity.
+For these reasons, proteomics is a highly complex research area, requiring
+sophisticated techniques to produce confident results in the face of
+massive complexity.
+
+\section{Mass spectrometry}
+
 Mass spectrometry provides an excellent means for proteome analysis
 \citep{Aebersold2003}, with speed, accuracy, and sensivity rapidly increasing
 within the past two decades.
@@ -94,7 +152,7 @@ are recorded as peptide elution is in progress for a pre-defined amount of time.
 \end{figure}
 
 % --------------------------------------------------------------
-\section{Acquisition of mass spectrometric data}
+\subsection{Acquisition of mass spectrometric data}
 % --------------------------------------------------------------
 
 Using mass spectrometry, the determination of molecule masses requires 
@@ -104,7 +162,7 @@ ratios ({\em m/z}, see Fig.~\ref{fig:mz}).
 In the following, the steps involved in the acquisition of mass spectrometric
 data are described.
 
-\subsection{Preprocessing of biological samples}
+\subsubsection{Preprocessing of biological samples}
 
 % \begin{wrapfigure}{r}{0.6\textwidth}
 \begin{SCtopfig}
@@ -129,7 +187,7 @@ the fact that there are many more highly abundant proteins present.
 To overcome these obstacles, a couple of sample preprocessing steps are usually
 undertaken, with possible variations depending on the experimental context.
 
-\subsubsection{Gel electrophoresis}
+\paragraph{Gel electrophoresis}
 
 Due to the high dynamic range of protein expression levels, complex protein 
 mixtures tend to produce less comprehensive results because low abundant 
@@ -155,7 +213,7 @@ such as their isoelectric point.
 As in the SDS-PAGE approach, resulting spots may be excised and subjected 
 to mass spectrometric analysis.
 
-\subsubsection{Proteolysis}
+\paragraph{Proteolysis}
 
 In order to break proteins up into small, mass spectrometry-compatible peptides, 
 proteolytic enzymes are used.
@@ -171,7 +229,7 @@ increase sequence coverage of peptide identifications \citep{Steen2004}.
 Although Trypsin, Asp-N and Glu-C are very sequence-specific, the possibility 
 of missed cleavage sites must be taken into account during data analysis.
 
-\subsubsection{Liquid chromatography}
+\paragraph{Liquid chromatography}
 
 In addition to fractionation via SDS-PAGE, liquid chromatography (LC) provides 
 a second dimension of separation, usually at the peptide level.
@@ -179,7 +237,7 @@ For the experiments covered in this thesis, a reverse phase liquid
 chromatography (RPLC) system has been employed.
 In this setup, peptides elute according to their hydrophobicity.
 
-\subsection{Ionization of molecules}
+\subsubsection{Ionization of molecules}
 
 In order to make molecules suitable for mass spectrometric analysis, 
 the analyte must be ionized and transferred to the gaseous phase.
@@ -206,7 +264,7 @@ effluent as it exits the needle tip.
 The resulting charged droplet evaporates into smaller droplets until finally,
 in the best case, only one analyte ion is contained in a single droplet.
 
-\subsection{Mass analysis and ion detection}
+\subsubsection{Mass analysis and ion detection}
 
 Regardless of the ionization process, several options are available for
 the most prominent part of a mass spectrometer, the mass analyzer.
@@ -261,7 +319,7 @@ Depending on the actual fragmentation site within the peptide bond,
 alternative fragment ions may result: {\em a} and {\em c} ions for N-terminal
 fragments, {\em x} and {\em z} ions for C-terminal fragments.
 
-\subsection{Mass spectra}
+\subsubsection{Mass spectra}
 
 Recorded mass spectra are stored as vendor-specific files which contain meta 
 information which describes the acquired data as well as the raw peak data.
@@ -271,7 +329,7 @@ format has been devised by the HUPO Proteomics Standards Initiative
 Apart from the file format details, several different scan types can be
 acquired, each of which contains different information.
 
-\subsubsection{Full scans (MS)}
+\paragraph{Full scans (MS)}
 
 Full scans provide an overview over the peptides which are present in the
 mass spectrometer at a given time (see Fig.~\ref{fig:full-scan}).
@@ -292,7 +350,7 @@ peaks with a \mz~difference of $\sim0.5$ are visible,
 \label{fig:full-scan}
 \end{figure}
 
-\subsubsection{Fragmentation scans (MS/MS)}
+\paragraph{Fragmentation scans (MS/MS)}
 
 The scans resulting from collision-induced dissociation are called 
 fragmentation scans, or tandem MS (MS/MS) scans.
@@ -326,7 +384,7 @@ acids or short amino acid oligomers.
 
 
 % --------------------------------------------------------------
-\section{Mass spectrometric data evaluation}
+\subsection{Mass spectrometric data evaluation}
 % --------------------------------------------------------------
 
 Evaluation of the acquired mass spectrometric data is a process with a multitude
@@ -346,7 +404,7 @@ the search space defined by incomplete sequence databases might be too small
 to provide for proper identification.
 
 
-\subsection{Identification}
+\subsubsection{Identification}
 
 Several possibilities have been established to identify peptides present
 in the sample. 
@@ -365,7 +423,7 @@ Finally, the differing physicochemical properties of all peptides
 lead to the effect that only a subset of the sample can be ionized and
 fragmented in such a way that identification is possible.
 
-\subsubsection{Peptide mass fingerprinting}
+\paragraph{Peptide mass fingerprinting}
 
 Peptide mass fingerprinting is a protein identification method which was
 simultaneously developed by several groups in 2003 
@@ -383,7 +441,7 @@ The acquisition and interpretation of fragmentation is scans is not required,
 however the method has the disadvantage that only samples containing a single 
 protein can be analyzed and complex protein mixtures cannot be used.
 
-\subsubsection{Database search}
+\paragraph{Database search}
 
 \begin{figure}
 \includegraphics[width=\textwidth]{figures/psm.jpg}
@@ -474,7 +532,7 @@ These requirements have implications for the creation of the decoy sequences
 and as a consequence, there is an upper database size limit for which the 
 target/decoy approach is feasible.
 
-\subsubsection{{\em De novo} sequencing}
+\paragraph{{\em De novo} sequencing}
 
 For the interpretation of fragmentation scans, {\em de novo} sequencing is
 a highly unbiased method.
@@ -509,7 +567,7 @@ spectrum.
 The subsequent database search is restricted to the peptides which match
 the extracted sequence tag, thereby increasing search speed.
 
-\subsubsection{Genomic Peptide Finder}
+\paragraph{Genomic Peptide Finder}
 
 \label{section:gpf}
 
@@ -571,7 +629,7 @@ proteogenomic annotation of the \cre~genome in which MS/MS data generated
 for various unrelated purposes can be re-used for the generation of
 extrinsic AUGUSTUS hints has become possible.
 
-\subsection{Quantitation}
+\subsubsection{Quantitation}
 
 In addition to determining which peptides, and therefore proteins, are 
 contained in a sample, it is often of interest to determine the abundance
@@ -586,7 +644,7 @@ If a standard of known amount is spiked into the sample and quantified alongside
 the proteins of interest, these relative results can typically be promoted to 
 absolute quantitation results.
 
-\subsubsection{Chemical labeling}
+\paragraph{Chemical labeling}
 
 Chemical labeling methods introduce a label into the peptides from one of the 
 samples via a chemical reaction. 
@@ -620,7 +678,7 @@ In comparison to the ICAT method, peptide quantitation is only performed in
 fragmentation scans and therefore the amount of sampled quantitation ratios 
 per peptide is usually low.
 
-\subsubsection{Metabolic labeling}
+\paragraph{Metabolic labeling}
 
 As an alternative to chemical labeling, metabolic labeling can be used for
 peptide and protein quantitation in organisms which can be forced to incorporate
@@ -654,7 +712,7 @@ However, different variations are possible, for example, $^{13}$C-Arg/Lys
 labeling can be used, although this requires a strain which is both Arginine
 and Lysine-auxotrophic.
 
-\subsubsection{Label-free quantitation}
+\paragraph{Label-free quantitation}
 
 In the recent years, label-free quantitation methods have been developed and
 constantly refined.
