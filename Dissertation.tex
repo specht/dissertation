@@ -12,6 +12,7 @@
 \usepackage{charter}
 \usepackage{longtable}
 \usepackage{multirow}
+\usepackage{multicol}
 \usepackage[pdftex]{graphicx}
 \usepackage{caption}
 \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
@@ -90,6 +91,7 @@ pdfproducer = {pdflatex}}
 \newcommand\caret{\mathbin{\char`\^}}
 
 \hyphenation{AUGUSTUS}
+\hyphenation{chro-ma-to-gra-phy}
 \setlength{\parskip}{2mm}
 \setlength{\parindent}{0mm}
 \renewcommand{\baselinestretch}{1.4} 
@@ -223,7 +225,10 @@ Jule, Charlotte \& Leo
 % }
 
 \cleardoublepage
+% \begin{multicols}{2}
+\setlength{\nomlabelwidth}{0.15\hsize}
 \printnomenclature
+% \end{multicols}
 
 \cleardoublepage
 
@@ -233,12 +238,11 @@ Jule, Charlotte \& Leo
 
 \clearpage
 
-\setlength{\nomlabelwidth}{.10\hsize}
-
 
 
 \nomenclature{AMT}{accurate mass/time}
 \nomenclature{CID}{collision-induced dissociation}
+\nomenclature{DIGE}{difference gel electrophoresis}
 \nomenclature{DNA}{deoxyribonucleic acid}
 \nomenclature{ESI}{electrospray ionization}
 \nomenclature{EST}{expressed sequence tag}

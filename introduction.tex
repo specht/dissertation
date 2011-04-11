@@ -49,7 +49,7 @@ Species & Genome size & Predicted genes & Reference \\
 \label{tab:genome-sizes}
 \end{table}
 
-\section{Omics-related areas of research}
+\paragraph{Omics-related areas of research.}
 
 One such research area, {\em transcriptomics}, deals with the transcription
 of genes, as recorded in the DNA, to mRNA.
@@ -104,7 +104,68 @@ For these reasons, proteomics is a highly complex research area, requiring
 sophisticated techniques to produce confident results in the face of
 massive complexity.
 
-\section{Mass spectrometry}
+\paragraph{Organelle isolation and protein purification.}
+
+A variety of methods for the reduction of sample complexity are available.
+% 
+% \paragraph{Cell fractionation.}
+% 
+In order to enable the proteomic investigation of certain cell organella such 
+as chloroplasts or mitochondria, cell fractionation can be employed.
+The isolation of organelles is achieved by physical cell disruption, followed
+by multiple centrifugation steps in which distinct organelle types are 
+separated from the heterogeneous mixture by stepwise increasing gravitational 
+force \citep{Pertoft1978}.
+% 
+% \paragraph{Immunoprecipitation.}
+% 
+
+The extraction of a certain protein of interest from a complex mixture can
+be achieved by immunoprecipitation.
+Here, an antibody which binds specifically to the protein in question,
+and therefore an amino acid sequence specific to that protein, is required.
+It is also possible to purify whole protein complexes by means of
+co-immunoprecipitation, in which all proteins bound to the protein of interest
+can be co-extracted.
+Furthermore, gel filtration can be used to enrich phosphorylated proteins.
+While phosphorylation plays an important role in determining protein function,
+phosphorylated proteins are low abundant and therefore, purification is
+necessary to achieve good coverage in phosphoproteomic experiments.
+
+\paragraph{SDS-PAGE, DIGE, and chromatographic techniques.}
+
+In addition to organelle isolation and protein purification steps, 
+two methods which spread out a sample in both space and time domains exist: 
+gel electrophoresis and liquid chromatography.
+In gel electrophoresis strategies such as SDS-PAGE, samples are dispensed
+into separate wells in a polyacrylamide gel.
+An electric field is applied to the gel, thus inducing an electromotive force 
+on the proteins which move through the gel at a speed which depends on their
+size and charge.
+However, SDS leads to denaturation of proteins and results in an overall
+negative charge for all proteins. 
+Thus, the migration speed of the proteins is only dependent on their size. 
+Individual spots of equally-sized proteins may be visualized using Coomassie 
+dye and subsequently excised.
+In order to achieve even higher sample separation, two-dimensional gel 
+electrophoresis may be used \citep{Klose1975, O'Farrell1975}.
+Here, proteins are additionally separated by a second physicochemical property
+such as their isoelectric point.
+The resulting bands (or spots in the case of 2D gels) may then be excised and 
+subjected to further analysis.
+Visual inspection of the gel and comparison to known marker proteins may give 
+clues about protein abundance and post-translational modifications.
+In difference gel electrophoresis (DIGE), the ambiguities between successive 
+gels are removed by running a single gel with two or three different protein
+samples which have previously been labeled with different fluorescent dyes.
+After the electrophoresis is finished, protein spots stemming from different 
+samples can be visualized and subsequently matched and quantified in a 
+computer-assisted way \citep{Berth2007}.
+In addition to fractionation via SDS-PAGE, chromatographic techniques may be
+employed to separate proteins according to various physicochemical properties
+including mass, isoelectric point, and hydrophobicity \citep{Neverova2005}.
+
+\section{Mass spectrometry-based proteomics}
 
 Mass spectrometry provides an excellent means for proteome analysis
 \citep{Aebersold2003}, with speed, accuracy, and sensivity rapidly increasing
@@ -133,8 +194,8 @@ proteins to certain compartments of a cell, for example by semi-quantitative
 analysis.
 
 Although modern mass spectrometers are very sensitive, a couple of sample 
-preparation steps must be carried out in order to achieve comprehensive 
-proteome coverage. 
+purification and fractionation steps, as described above, must be carried out 
+in order to achieve comprehensive proteome coverage. 
 An example of a mass spectrometry-based proteomics workflow for peptide 
 and protein identification is depicted in Fig.~\ref{fig:proteomics-overview}.
 
@@ -155,89 +216,61 @@ are recorded as peptide elution is in progress for a pre-defined amount of time.
 \subsection{Acquisition of mass spectrometric data}
 % --------------------------------------------------------------
 
-Using mass spectrometry, the determination of molecule masses requires 
-ionization.
-Therefore, values reported in mass spectra are not masses but mass-to-charge 
-ratios ({\em m/z}, see Fig.~\ref{fig:mz}).
-In the following, the steps involved in the acquisition of mass spectrometric
-data are described.
+Using mass spectrometry, the mass of molecules cannot be directly determined
+because mass analysis is always performed on ions of unknown charge, resulting
+in a spectrum of intensity values for individual mass-to-charge ({\em m/z}) 
+ratios.
+When high {\em m/z} resolution is available, ion charges can be determined 
+from a mass spectrum, and thus a deconvolution of {\em m/z} values to actual 
+masses is possible.
+Otherwise, the ambiguity introduced by the unknown charge state of detected
+ions adds an additional level of complexity to data analysis.
 
-\subsubsection{Preprocessing of biological samples}
+% \subsubsection{Preprocessing of biological samples}
 
-% \begin{wrapfigure}{r}{0.6\textwidth}
-\begin{SCtopfig}
-\centering
-\includegraphics[width=0.7\textwidth]{figures/mz.jpg}
-\caption{
-{\bf Calculation of {\em m/z} values.}
-A single peptide may give rise to multiple {\em m/z} values in a mass spectrum,
-    depending on its charge. In this example, a singly and doubly protonated
-    peptide is shown.
-} 
-\label{fig:mz}
-\end{SCtopfig}
-% \end{wrapfigure}
+% \begin{SCtopfig}
+% \centering
+% \includegraphics[width=0.7\textwidth]{figures/mz.jpg}
+% \caption{
+% {\bf Calculation of {\em m/z} values.}
+% A single peptide may give rise to multiple {\em m/z} values in a mass spectrum,
+%     depending on its charge. In this example, a singly and doubly protonated
+%     peptide is shown.
+% } 
+% \label{fig:mz}
+% \end{SCtopfig}
 
+A common problem is that low abundant proteins may be missed in complex samples 
+due to the fact that there are many more highly abundant proteins present.
+To overcome these obstacles, several sample preprocessing steps, for example 
+SDS-PAGE and liquid chromatographyare, are usually undertaken.
 Although mass spectrometric analysis of intact proteins has been successfully
 reported \citep{Lee2002, Taylor2003}, such an approach is not feasible in 
 general because the high mass of proteins cannot be accounted for with most
 types of mass spectrometers.
-In addition, low abundant proteins may be missed in complex samples due to
-the fact that there are many more highly abundant proteins present.
-To overcome these obstacles, a couple of sample preprocessing steps are usually
-undertaken, with possible variations depending on the experimental context.
-
-\paragraph{Gel electrophoresis}
-
-Due to the high dynamic range of protein expression levels, complex protein 
-mixtures tend to produce less comprehensive results because low abundant 
-proteins are `shadowed' by highly abundant proteins. 
-Gel electrophoresis may be used as a first sample separation step in which
-proteins are ordered by size, resulting in a number of fractions which can
-be analyzed individually.
-For SDS-PAGE, a sodium dodecyl sulfate polyacrylamide gel is prepared and
-proteins are loaded into wells in the gel.
-An electric field is applied to the gel, thus inducing an electromotive force 
-on the proteins which move through the gel at a speed which depends on their
-size and charge.
-However, SDS leads to denaturation of proteins and results in an overall
-negative charge for all proteins. 
-Thus, the migration speed of the proteins is only dependent on their size. 
-Individual spots of equally-sized proteins may be visualized using Coomassie 
-dye and subsequently excised.
-
-In order to achieve even higher sample separation, two-dimensional gel 
-electrophoresis may be used \citep{Klose1975, O'Farrell1975}.
-Here, proteins are additionally separated by a second physicochemical property
-such as their isoelectric point.
-As in the SDS-PAGE approach, resulting spots may be excised and subjected 
-to mass spectrometric analysis.
-
-\paragraph{Proteolysis}
-
 In order to break proteins up into small, mass spectrometry-compatible peptides, 
 proteolytic enzymes are used.
 Among the various choices of possible enzymes, Trypsin has become very popular
 because it results in short peptides with a basic residue at the C-terminus
 \citep{Olsen2004}.
-Trypsin cleaves specifically at the C-terminal side of Lysine and Arginine 
-residues, given that no Proline residue is located at the other side of the 
-cleavage site.
+% Trypsin cleaves specifically at the C-terminal side of Lysine and Arginine 
+% residues, given that no Proline residue is located at the other side of the 
+% cleavage site.
 Alternative enzymes such as Asp-N and Glu-C are sometimes used to generate
 complementing peptides which overlap with the tryptic peptides in order to 
 increase sequence coverage of peptide identifications \citep{Steen2004}.
-Although Trypsin, Asp-N and Glu-C are very sequence-specific, the possibility 
-of missed cleavage sites must be taken into account during data analysis.
+% Although Trypsin, Asp-N and Glu-C are very sequence-specific, the possibility 
+% of missed cleavage sites must be taken into account during data analysis.
 
-\paragraph{Liquid chromatography}
+% \paragraph{Liquid chromatography}
+% 
+% In addition to fractionation via SDS-PAGE, liquid chromatography (LC) provides 
+% a second dimension of separation, usually at the peptide level.
+% For the experiments covered in this thesis, a reverse phase liquid 
+% chromatography (RPLC) system has been employed.
+% In this setup, peptides elute according to their hydrophobicity.
 
-In addition to fractionation via SDS-PAGE, liquid chromatography (LC) provides 
-a second dimension of separation, usually at the peptide level.
-For the experiments covered in this thesis, a reverse phase liquid 
-chromatography (RPLC) system has been employed.
-In this setup, peptides elute according to their hydrophobicity.
-
-\subsubsection{Ionization of molecules}
+\paragraph{Ionization of molecules.}
 
 In order to make molecules suitable for mass spectrometric analysis, 
 the analyte must be ionized and transferred to the gaseous phase.
@@ -264,7 +297,7 @@ effluent as it exits the needle tip.
 The resulting charged droplet evaporates into smaller droplets until finally,
 in the best case, only one analyte ion is contained in a single droplet.
 
-\subsubsection{Mass analysis and ion detection}
+\paragraph{Mass analysis and ion detection.}
 
 Regardless of the ionization process, several options are available for
 the most prominent part of a mass spectrometer, the mass analyzer.
@@ -319,7 +352,7 @@ Depending on the actual fragmentation site within the peptide bond,
 alternative fragment ions may result: {\em a} and {\em c} ions for N-terminal
 fragments, {\em x} and {\em z} ions for C-terminal fragments.
 
-\subsubsection{Mass spectra}
+% \subsection{Mass spectra}
 
 Recorded mass spectra are stored as vendor-specific files which contain meta 
 information which describes the acquired data as well as the raw peak data.
@@ -329,7 +362,7 @@ format has been devised by the HUPO Proteomics Standards Initiative
 Apart from the file format details, several different scan types can be
 acquired, each of which contains different information.
 
-\paragraph{Full scans (MS)}
+\paragraph{Full scans (MS).}
 
 Full scans provide an overview over the peptides which are present in the
 mass spectrometer at a given time (see Fig.~\ref{fig:full-scan}).
@@ -350,12 +383,12 @@ peaks with a \mz~difference of $\sim0.5$ are visible,
 \label{fig:full-scan}
 \end{figure}
 
-\paragraph{Fragmentation scans (MS/MS)}
+\paragraph{Fragmentation scans (MS/MS).}
 
 The scans resulting from collision-induced dissociation are called 
-fragmentation scans, or tandem MS (MS/MS) scans.
+fragmentation scans, or tandem MS (MS/MS) scans (see Fig.~\ref{fig:fragmentation-scan}).
 From the observed fragment ions, {\em mass ladders} can be constructed which
-represent the amino acid sequence of the selected peptide (see Fig~\ref{fig:fragmentation-scan-b-y}). 
+represent the amino acid sequence of the selected peptide (see Fig.~\ref{fig:fragmentation-scan-b-y}). 
 When fragmentation peaks are missing, the exact sequence of the peptide may not
 become clear from a single mass ladder.
 However, a combination of multiple mass ladders can resolve such ambiguities.
@@ -384,7 +417,7 @@ acids or short amino acid oligomers.
 
 
 % --------------------------------------------------------------
-\subsection{Mass spectrometric data evaluation}
+\subsection{Identification of peptides and proteins}
 % --------------------------------------------------------------
 
 Evaluation of the acquired mass spectrometric data is a process with a multitude
@@ -404,7 +437,7 @@ the search space defined by incomplete sequence databases might be too small
 to provide for proper identification.
 
 
-\subsubsection{Identification}
+% \subsubsection{Identification}
 
 Several possibilities have been established to identify peptides present
 in the sample. 
@@ -423,7 +456,7 @@ Finally, the differing physicochemical properties of all peptides
 lead to the effect that only a subset of the sample can be ionized and
 fragmented in such a way that identification is possible.
 
-\paragraph{Peptide mass fingerprinting}
+\paragraph{Peptide mass fingerprinting.}
 
 Peptide mass fingerprinting is a protein identification method which was
 simultaneously developed by several groups in 2003 
@@ -441,7 +474,7 @@ The acquisition and interpretation of fragmentation is scans is not required,
 however the method has the disadvantage that only samples containing a single 
 protein can be analyzed and complex protein mixtures cannot be used.
 
-\paragraph{Database search}
+\paragraph{Database search.}
 
 \begin{figure}
 \includegraphics[width=\textwidth]{figures/psm.jpg}
@@ -532,7 +565,7 @@ These requirements have implications for the creation of the decoy sequences
 and as a consequence, there is an upper database size limit for which the 
 target/decoy approach is feasible.
 
-\paragraph{{\em De novo} sequencing}
+\paragraph{{\em De novo} sequencing.}
 
 For the interpretation of fragmentation scans, {\em de novo} sequencing is
 a highly unbiased method.
@@ -567,69 +600,8 @@ spectrum.
 The subsequent database search is restricted to the peptides which match
 the extracted sequence tag, thereby increasing search speed.
 
-\paragraph{Genomic Peptide Finder}
 
-\label{section:gpf}
-
-The Genomic Peptide Finder (GPF), originally devised by \citeauthor{Allmer2004} 
-in \citeyear{Allmer2004}, follows a different strategy for the use of 
-{\em de novo} predicted amino acid sequences \citep{Allmer2004}.
-Instead of matching short sequence tags to gene model proteins, GPF uses the
-six frame translation of a genomic DNA sequence as a matching target.
-From a given {\em de novo} sequenced peptide, all sequence tags of a 
-user-defined size are extracted and each of the sequence tags is located
-within the six frame translation.
-From the resulting locations, the deduction of candidate peptides is attempted,
-each of which could be a possible explanation of the fragmention scan the
-{\em de novo} sequenced peptide originated from.
-All deduced candidate peptides fulfill the following criteria:
-
-\begin{itemize}
-\item a short sequence tag (typically three to five amino acids) has been 
-correctly predicted via {\em de novo} sequencing 
-\item the position of the sequence tag within the peptide, as defined by
-either the N- or C-terminal fragment mass, is correct within the limits 
-defined by the fragment scan mass accuracy (typically 700 ppm for an ion trap)
-\item the total mass of the peptide matches the observed precursor mass
-within the range defined by the full scan mass accuracy (typically 5 ppm for 
-the Orbitrap)
-\end{itemize}
-
-In addition to unspliced candidate peptides, the deduction of spliced candidate
-peptides is attempted by considering a user-defined maximum intron length.
-The resulting peptides may then be used to verify or falsify existing gene 
-models, as shown in a subsequent publication where GPF was used to confirm 
-2174 gene model peptides and further identify 448 novel peptides, including 98 
-spliced peptides \citep{Allmer2006}.
-The manual inspection of the identified peptides lead to the identification
-of novel gene models, the improvement of existing gene models as well as 
-hints for alternative splicing.
-
-In 2007, GPF was redesigned and implemented from scratch in the scope of this
-thesis to add a variety of features \citep{Specht2011_GPF}:
-
-\begin{itemize}
-\item intron splits may occur within a single coding nucleotide triplet
-\item splice donor/acceptor site consensus sequences may be specified to
-reduce the number of spurious spliced peptide alignments
-\item increased search speed by employing an indexing strategy while locating
-the occurences of sequence tags in the genomic DNA sequence
-\end{itemize}
-
-In addition, a method for the automated validation of GPF candidate peptides,
-employing standard database search programs such as OMSSA was established.
-This allows for statistically robust identification of GPF-deduced peptides
-alongside gene model peptides.
-Furthermore, an annotation pipeline was established in which resulting GPF
-peptides are passed to AUGUSTUS, which performs an {\em ab initio} gene 
-model prediction supplemented by various extrinsic hint sources including
-GPF peptides.
-It is therefore a major contribution of this thesis that an automated
-proteogenomic annotation of the \cre~genome in which MS/MS data generated
-for various unrelated purposes can be re-used for the generation of
-extrinsic AUGUSTUS hints has become possible.
-
-\subsubsection{Quantitation}
+\subsection{Quantitation of peptides and proteins}
 
 In addition to determining which peptides, and therefore proteins, are 
 contained in a sample, it is often of interest to determine the abundance
@@ -811,6 +783,8 @@ This multilateral strategy seems to be indispensable for eukaryotic genomes
 where gene prediction is complicated by long introns and alternative splicing
 \citep{Brent2004}.
 
+\paragraph{Proteogenomic genome annotation.}
+
 From the mass spectrometry perspective, the recent advances represent a
 promising perspective: In addition to EST evidence and conserved genes in
 related species, peptides identified in MS/MS scans can be used to support
@@ -857,49 +831,56 @@ Using this method, \citeauthor{Castellana2008} were able to revise the
 annotation of {\em A. thaliana} by correcting 695 genes and identifying
 778 novel genes.
 
-\begin{SCtopfig}
-\includegraphics[width=0.7\textwidth]{figures/gpf-omssa.jpg}
-\caption{
-{\bf Validation of GPF candidate peptides via a target/decoy approach
-    using previously established gene models.} 
-    Statistical significance of identified GPF candidate peptides is 
-    assessed using existing gene models which may be incomplete but
-    can be expected to contain a high amount of correct sequences.
-}
-\label{fig:gpf-omssa}
-\end{SCtopfig}
+\paragraph{The Genomic Peptide Finder.}
 
-The GPF annotation pipeline presented in this thesis follows a similar strategy
-(\cite{Specht2011_GPF}, see p.~\pageref{section:gpf} and \pageref{paper:gpf}).
-However, the GPF approach is less biased in comparison to the exon splice graph
-approach because it does not require exon/intron prediction as a first step.
-GPF candidate peptides are solely generated from MS/MS {\em de novo} sequencing
-and subsequent mapping of the resulting peptides to the genome, using 
-a user-defined maximum intron length and a set of possible splice donor/acceptor 
-site consensus sequences.
-This means that intron prediction is carried out on a per-peptide basis, and
-all peptides are treated independently.
-The actual validation of extrinsic hints and splice site detection is
-carried out by AUGUSTUS in the final annotation step.
-Moreover, the approach is highly flexible because no specialized database
-search program is required because candidate peptides are inferred by GPF
-and then passed down the evaluation pipeline alongside a protein database
-(see Fig.~\ref{fig:gpf-omssa}).
-Although the protein database is used to estimate the FDR of peptide 
-identifications, the final GPF-deduced peptides which are exported as
-peptide hints do not originate from this database, although in the case
-of \cre, a big portion of these protein database peptides could be 
-independently confirmed via GPF \citep{Specht2011_GPF}.
+\label{section:gpf}
 
+The Genomic Peptide Finder (GPF), originally devised by \citeauthor{Allmer2004} 
+in \citeyear{Allmer2004}, follows a different strategy for the use of 
+{\em de novo} predicted amino acid sequences \citep{Allmer2004}.
+Instead of matching short sequence tags to gene model proteins, GPF uses the
+six frame translation of a genomic DNA sequence as a matching target.
+From a given {\em de novo} sequenced peptide, all sequence tags of a 
+user-defined size are extracted and each of the sequence tags is located
+within the six frame translation.
+From the resulting locations, the deduction of candidate peptides is attempted,
+each of which could be a possible explanation of the fragmention scan the
+{\em de novo} sequenced peptide originated from.
+All deduced candidate peptides fulfill the following criteria:
 
-% \subsection{The AUGUSTUS/GPF approach}
+\begin{itemize}
+\item a short sequence tag (typically three to five amino acids) has been 
+correctly predicted via {\em de novo} sequencing 
+\item the position of the sequence tag within the peptide, as defined by
+either the N- or C-terminal fragment mass, is correct within the limits 
+defined by the fragment scan mass accuracy (typically 700 ppm for an ion trap)
+\item the total mass of the peptide matches the observed precursor mass
+within the range defined by the full scan mass accuracy (typically 5 ppm for 
+the Orbitrap)
+\end{itemize}
+
+In addition to unspliced candidate peptides, the deduction of spliced candidate
+peptides is attempted by considering a user-defined maximum intron length.
+The resulting peptides may then be used to verify or falsify existing gene 
+models, as shown in a subsequent publication where GPF was used to confirm 
+2174 gene model peptides and further identify 448 novel peptides, including 98 
+spliced peptides \citep{Allmer2006}.
+The manual inspection of the identified peptides lead to the identification
+of novel gene models, the improvement of existing gene models as well as 
+hints for alternative splicing.
+
+% --------------------------------------------------------------
+\section{Software solutions for MS/MS data evaluation}
+% --------------------------------------------------------------
+
 
 % --------------------------------------------------------------
 \section{Chlamydomonas reinhardtii}
 % --------------------------------------------------------------
 
 \chlre~is a well-studied model organism which has been used to elucidate 
-photosynthesis, light perception, and cell motility \citep{Harris2001}.
+photosynthesis, light perception, and cell motility, among others 
+\citep{Harris2001}.
 \cre~is a unicellular green alga and can be found in the soil or freshwater.
 Most interestingly, it can survive both photoautotrophically and 
 heterotrophically.
@@ -907,23 +888,17 @@ Because of this capability to switch between different types of metabolism,
 the alga is able to thrive on water, carbon dioxide and sunlight but it is
 also able to cope with darkness, given that an external carbon source is 
 available.
-Molecular methods, including the transformation of nucleic, chloroplast, and
-mitochondrial DNA, are established and the full genome sequence has been 
-published in \citeyear{Merchant2007} \citep{Merchant2007}.
+Various methods are established for genetic engineering and the fully sequenced 
+genome \citep{Merchant2007} has allowed for numerous omics-based approaches to 
+be utilized.
 \cre~exhibits a short doubling time of less than 10 hours which makes it 
 a good candidate for selection experiments \citep{Dent2001}.
 % Genome sequencing and annotation efforts are organized under the roof of the 
 % Joint Genome Institute (JGI).
-
 A particularly interesting aspect of \cre~is its capability to produce
-hydrogen under anaebrobic, photoautotrophic conditions \citep{Greenbaum1982}.
+hydrogen under anaebrobic conditions \citep{Greenbaum1982}.
 Considering energy production, this effect may be considered to play an 
 important role in the future.
-One of the studies presented in this thesis provides a comprehensive list of
-previously unknown chloroplast proteins in \cre.
-In addition, the anaerobic response of the green alga is characterized. 
-Among other results, the induction of hydrogenase, a protein involved in 
-hydrogen production, is shown \citep{Terashima2010}.
 
 % % --------------------------------------------------------------
 % \section{Thalassiosira oceanica}
