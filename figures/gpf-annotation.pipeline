@@ -1,0 +1,599 @@
+connections:
+  -
+    - 172354140
+    - 175832644
+  -
+    - 161502060
+    - 161118700
+  -
+    - 172283084
+    - 175538308
+  -
+    - 171194548
+    - 171700948
+  -
+    - 171532732
+    - 171106340
+  -
+    - 171867436
+    - 171718364
+  -
+    - 173948276
+    - 165668660
+  -
+    - 164198404
+    - 164359724
+  -
+    - 161862076
+    - 161544396
+  -
+    - 166826852
+    - 171423084
+  -
+    - 164897212
+    - 164888044
+  -
+    - 161502060
+    - 165668660
+  -
+    - 176983676
+    - 177697572
+  -
+    - 170070036
+    - 169973996
+  -
+    - 165200028
+    - 165668660
+  -
+    - 161652652
+    - 164359724
+  -
+    - 177774092
+    - 176062644
+  -
+    - 172354140
+    - 161382988
+  -
+    - 175816204
+    - 176062644
+inputFileListBoxes:
+  -
+    batchMode: false
+    id: 164897212
+    paths:
+      - /home/michael/data/databases/jgi-chlamydomonas-3_1.fasta
+    position:
+      - 450
+      - -110
+    size:
+      - 248
+      - 73
+  -
+    batchMode: true
+    id: 161502060
+    paths:
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_01-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_02-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_03-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_04-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_05-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_06-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_07-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_08-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_09-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_10-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_11-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_12-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_13-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_14-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_15-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_16-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_17-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_18-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_19-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_20-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_21-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_22-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_23-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_24-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_25-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_26-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_27-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_28-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_29-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_30-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_31-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_32-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_33-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_34-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_35-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_36-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_37-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_38-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_39-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_40-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_41-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_42-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_43-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_44-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_45-no-ms1.mzML.gz
+      - /home/michael/data/spectra/CPAN1/MT_Hyd_CPAN_040708_46-no-ms1.mzML.gz
+    position:
+      - 16
+      - 26
+    size:
+      - 359
+      - 113
+  -
+    batchMode: false
+    id: 161862076
+    paths:
+      - /home/michael/data/genomes/cre4.fasta
+    position:
+      - 197
+      - -325
+    size:
+      - 248
+      - 73
+scriptBoxes:
+  -
+    activeOutputFiles:
+      outputWriteMerged:
+        batchMode: false
+        id: 177774092
+        position:
+          - -656
+          - -271
+        size:
+          - 125
+          - 65
+    expanded: false
+    id: 177697572
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters: {}
+    position:
+      - -439
+      - -250
+    shortIterationTags: false
+    size:
+      - 150
+      - 39
+    uri: merge-csv-files.rb
+  -
+    activeOutputFiles:
+      outputWriteCroppedPsm:
+        batchMode: false
+        id: 171867436
+        position:
+          - -554
+          - 456
+        size:
+          - 234
+          - 65
+    expanded: false
+    id: 171700948
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters:
+      maxPpm: 5
+    position:
+      - -286
+      - 498
+    shortIterationTags: false
+    size:
+      - 200
+      - 39
+    uri: filter-psm-by-mass-accuracy.rb
+  -
+    activeOutputFiles:
+      outputWriteResults:
+        batchMode: false
+        id: 171532732
+        position:
+          - 351
+          - 470
+        size:
+          - 142
+          - 65
+    expanded: false
+    id: 171423084
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters:
+      threshold: 2
+      upcasePeptides: true
+    position:
+      - 371
+      - 380
+    shortIterationTags: false
+    size:
+      - 130
+      - 39
+    uri: filter-psm-sanitize.rb
+  -
+    activeOutputFiles:
+      outputWriteResultFile:
+        batchMode: false
+        id: 166826852
+        position:
+          - 333
+          - 268
+        size:
+          - 248
+          - 112
+    expanded: false
+    id: 165668660
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters:
+      batchSize: 2000
+      omssa.omssacl.TaxonomyIds: 0
+      omssa.omssacl.autoMassToleranceAdjustmentFraction: 1
+      omssa.omssacl.chargeOneDetermination: 1
+      omssa.omssacl.chargeOneDeterminationPeaksFractions: 0.95
+      omssa.omssacl.consecutiveIonProbability: 0.5
+      omssa.omssacl.correlationCorrection: 0
+      omssa.omssacl.dontCleaveNTermM: ""
+      omssa.omssacl.doubleChargePeaksAllowed: 2
+      omssa.omssacl.doubleChargeWindow: 14
+      omssa.omssacl.eValueCutoff: 1
+      omssa.omssacl.eliminateChargeReducedPrecursors: 0
+      omssa.omssacl.enzyme: 0
+      omssa.omssacl.fixedMods: ""
+      omssa.omssacl.hitListSize: 30
+      omssa.omssacl.includeSpectraAndParams: ""
+      omssa.omssacl.ionsToSearch: 1,4
+      omssa.omssacl.lowIntensityCutoff: 0
+      omssa.omssacl.maxIonsSearchPerSeries: 100
+      omssa.omssacl.maxMassLadders: 128
+      omssa.omssacl.maxPrecursorCharge: 3
+      omssa.omssacl.maxProductCharge: 2
+      omssa.omssacl.memoryMappedSeqLibs: ""
+      omssa.omssacl.minMatchingPeaksLibrary: 2
+      omssa.omssacl.minMatchingPeaksSpectrum: 6
+      omssa.omssacl.minPeaksInSpectrum: 4
+      omssa.omssacl.minPrecursorCharge: 1
+      omssa.omssacl.minPrecursorChargeForMulti: 3
+      omssa.omssacl.minPrecursorSpectrumMatchCount: 1
+      omssa.omssacl.missedCleavages: 1
+      omssa.omssacl.neutronAddInExactSearchThreshold: 1446.94
+      omssa.omssacl.noEnzymeMaxPeptideSize: 40
+      omssa.omssacl.noEnzymeMinPeptideSize: 4
+      omssa.omssacl.noProlineRule: ""
+      omssa.omssacl.precursorChargeDetermination: 2
+      omssa.omssacl.precursorIonMassTolerance: 2
+      omssa.omssacl.precursorIonSearchType: 0
+      omssa.omssacl.precursorToleranceChargeDependency: 0
+      omssa.omssacl.productIonMassTolerance: 0.8
+      omssa.omssacl.productIonSearchType: 0
+      omssa.omssacl.searchB1Ions: 1
+      omssa.omssacl.searchCTermIons: 0
+      omssa.omssacl.singleChargePeaksAllowed: 2
+      omssa.omssacl.singleChargeWindow: 20
+      omssa.omssacl.variableMods: ""
+      threadCount: 0
+    position:
+      - 140
+      - 144
+    shortIterationTags: true
+    size:
+      - 123
+      - 39
+    uri: run-omssa.rb
+  -
+    activeOutputFiles:
+      outputWriteOut:
+        batchMode: true
+        id: 170070036
+        position:
+          - -368
+          - 343
+        size:
+          - 248
+          - 116
+    expanded: false
+    id: 161382988
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: gpf-peptide-
+    parameters:
+      column: peptide
+      sort: false
+      uniq: false
+      upcase: false
+    position:
+      - -365
+      - 215
+    shortIterationTags: true
+    size:
+      - 176
+      - 39
+    uri: extract-csv-column.rb
+  -
+    activeOutputFiles:
+      outputWriteFasFile:
+        batchMode: true
+        id: 164198404
+        position:
+          - 128
+          - -194
+        size:
+          - 248
+          - 112
+    expanded: false
+    id: 161118700
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters:
+      enzyme: trypsin
+      precursorIonTolerance: 1.5
+      productIonTolerance: 1
+      variableModifications: ""
+    position:
+      - 105
+      - -82
+    shortIterationTags: true
+    size:
+      - 119
+      - 39
+    uri: run-peaks.rb
+  -
+    activeOutputFiles:
+      outputWriteOut:
+        batchMode: false
+        id: 175816204
+        position:
+          - -666
+          - 19
+        size:
+          - 196
+          - 65
+    expanded: false
+    id: 175538308
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: gpf-peptide-
+    parameters:
+      column: peptide
+      sort: false
+      uniq: false
+      upcase: false
+    position:
+      - -665
+      - 129
+    shortIterationTags: false
+    size:
+      - 176
+      - 39
+    uri: extract-csv-column.rb
+  -
+    activeOutputFiles:
+      outputWriteOutputDatabase:
+        batchMode: false
+        id: 165200028
+        position:
+          - 328
+          - 84
+        size:
+          - 179
+          - 65
+    expanded: false
+    id: 164888044
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters:
+      decoyAmount: 1
+      decoyEntryPrefix: __td__decoy_
+      targetDecoyKeepEnd: 1
+      targetDecoyKeepStart: 0
+      targetDecoyMethod: reverse
+      targetEntryPrefix: __td__target_
+    position:
+      - 394
+      - -7
+    shortIterationTags: false
+    size:
+      - 247
+      - 39
+    uri: decoyfasta.rb
+  -
+    activeOutputFiles:
+      outputWriteMerged:
+        batchMode: false
+        id: 176983676
+        position:
+          - -368
+          - -124
+        size:
+          - 248
+          - 112
+    expanded: false
+    id: 175832644
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters: {}
+    position:
+      - -419
+      - -24
+    shortIterationTags: false
+    size:
+      - 150
+      - 39
+    uri: merge-csv-files.rb
+  -
+    activeOutputFiles:
+      outputWriteCroppedPsm:
+        batchMode: false
+        id: 171194548
+        position:
+          - -43
+          - 511
+        size:
+          - 161
+          - 65
+    expanded: false
+    id: 171106340
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters:
+      beStrict: true
+      decoyAmount: 1
+      decoyPrefix: __td__decoy_
+      fprCalculation: 2d_dt
+      scoreThresholdScope: global
+      targetFpr: 1
+      targetPrefix: __td__target_
+    position:
+      - 164
+      - 490
+    shortIterationTags: false
+    size:
+      - 131
+      - 39
+    uri: filter-psm-by-fpr.rb
+  -
+    activeOutputFiles:
+      outputWriteCsvResults:
+        batchMode: true
+        id: 172354140
+        position:
+          - -368
+          - 83
+        size:
+          - 248
+          - 113
+    expanded: false
+    id: 164359724
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters:
+      massError: 700
+      masses: monoisotopic
+      maxIntronLength: 2100
+      minChainLength: 5
+      protease: trypsin
+      searchIntrons: yes
+      searchSimilar: yes
+    position:
+      - -147
+      - -103
+    shortIterationTags: true
+    size:
+      - 100
+      - 39
+    uri: run-gpf.rb
+  -
+    activeOutputFiles: {}
+    converterOutputFileBoxBatchMode: false
+    converterOutputFileBoxId: 161652652
+    converterOutputFileBoxPosition:
+      - -188
+      - -244
+    converterOutputFileBoxSize:
+      - 320
+      - 77
+    expanded: false
+    id: 161544396
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters: {}
+    position:
+      - -88
+      - -336
+    shortIterationTags: false
+    size:
+      - 170
+      - 39
+    uri: compile-gpf-index.rb
+  -
+    activeOutputFiles:
+      outputWriteFasta:
+        batchMode: false
+        id: 173948276
+        position:
+          - -23
+          - 273
+        size:
+          - 278
+          - 112
+    expanded: false
+    id: 169973996
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters:
+      prefix: ""
+    position:
+      - -33
+      - 410
+    shortIterationTags: false
+    size:
+      - 202
+      - 39
+    uri: create-fasta.rb
+  -
+    activeOutputFiles:
+      outputWriteGff:
+        batchMode: false
+        id: 176089812
+        position:
+          - -773
+          - -84
+        size:
+          - 130
+          - 65
+    expanded: false
+    id: 176062644
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters: {}
+    position:
+      - -626
+      - -183
+    shortIterationTags: false
+    size:
+      - 221
+      - 39
+    uri: generate-augustus-hints.rb
+  -
+    activeOutputFiles:
+      outputWriteAcceptedEntries:
+        batchMode: false
+        id: 172283084
+        position:
+          - -636
+          - 232
+        size:
+          - 137
+          - 65
+    expanded: false
+    id: 171718364
+    inputProxyBoxes: {}
+    outputDirectory: ""
+    outputPrefix: ""
+    parameters:
+      caseSensitive: yes
+      column: peptide
+      operand: contains
+      value: ""
+    position:
+      - -627
+      - 345
+    shortIterationTags: false
+    size:
+      - 131
+      - 39
+    uri: split-csv-file.rb
+snippetBoxes: []
