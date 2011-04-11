@@ -18,10 +18,17 @@ the full human genome sequence in 2001 \citep{Venter2001}.
 The possibility to obtain genome sequences has added considerable momentum
 to biological research and full genome sequences for more than 180 species
 are available (\cite{Yates2009}, see Table \ref{tab:genome-sizes}).
-Aside from the ambiguities introduced by non-coding regions in the genome 
-\citep{Gilbert1978} and alternative splicing of genes \citep{Black2003}, 
-the genome provides, in theory, all necessary information about which proteins 
-can potentially be expressed in a cell.
+Interestingly, the number of genes encoded in a genome does not seem to depend
+largely on the size of the genome.
+For example, the number of human genes was initially overestimated to be around 
+2 million \citep{Kauffman1969}.
+More recent studies estimate the human genome to comprise about 20,000 -- 25,000 
+genes, with protein diversity being achieved through alternative splicing 
+\citep{Rubin2004}.
+Aside from the ambiguities introduced by alternative splicing of genes 
+\citep{Black2003} and non-coding regions in the genome \citep{Gilbert1978},
+the genome provides -- in theory -- all necessary information about which 
+proteins can potentially be expressed in a cell.
 However, in order to study the dynamic nature of a cell or organism, as for 
 example in response to changing environmental conditions, the static information
 provided by the genome is not sufficient. 
@@ -52,7 +59,7 @@ Species & Genome size & Predicted genes & Reference \\
 \paragraph{Omics-related areas of research.}
 
 One such research area, {\em transcriptomics}, deals with the transcription
-of genes, as recorded in the DNA, to mRNA.
+of genes, as encoded in the DNA, to mRNA.
 The transcriptome provides information about gene expression at the mRNA level. 
 DNA microarray techniques can be employed to screen the regulation of many
 genes in parallel on the transcript level \citep{Schena1995}.
@@ -65,7 +72,7 @@ actually expressed by a cell \citep{Wilkins2009}.
 The transcriptome can be regarded as a precursor of the proteome.
 However, transcriptional regulation does not necessarily correlate to
 protein expression in a linear fashion \citep{Rogers2008}.
-It is therefore vital to combine various types of qualitative of quantitative
+It is therefore vital to combine various types of qualitative and quantitative
 information, including the transcriptome and proteome, with further aspects such 
 as evolution and the modeling of interactions on the levels of molecules, 
 proteins, and cells to achieve a comprehensive understanding of life.
@@ -73,7 +80,7 @@ In the past few years, this approach has manifested itself as {\em systems
 biology} \citep{Vidal2009}.
 In addition to genomics, transcriptomics, and proteomics, further fields 
 involved in the holistic approach of systems biology include metabolomics,
-in which the end-products of metabolic processes are analyzed 
+in which the end products of metabolic processes are analyzed 
 \citep{Daviss2005}.
 Furthermore, glycomics and lipidomics which provide a view on life from the
 perspective of carbohydrates and lipids, respectively, contribute to the
@@ -86,7 +93,7 @@ the identifcation of post-translational modifications (PTM),
 relative and absolute protein quantitation, protein localization, and
 protein-protein interaction studies.
 An important aspect about the proteome is that it is highly variable and
-subject to change over time and changing environmental conditions.
+subject to change over time and in response to changing environmental conditions.
 In contrast to the genome and the transcriptome, the proteome most accurately
 reflects the phenotype of a cell.
 While information provided by genomics acts as a foundation to the possible
@@ -98,8 +105,8 @@ mRNA is sometimes not translated into a protein at all \citep{Eddy2001}.
 Furthermore, the final function of a protein is heavily influenced by
 post-translational modifications such as phosphorylation \citep{Olsen2006} 
 and ubiquitination.
-Finally, not all proteins are expressed in all cell types or cell compartments,
-adding another level of ambiguity.
+Finally, not all proteins are expressed in all cell types in multicellular 
+species, thus adding another level of ambiguity.
 For these reasons, proteomics is a highly complex research area, requiring
 sophisticated techniques to produce confident results in the face of
 massive complexity.
@@ -193,12 +200,6 @@ Another application of mass spectrometry-based analysis is the localization of
 proteins to certain compartments of a cell, for example by semi-quantitative
 analysis.
 
-Although modern mass spectrometers are very sensitive, a couple of sample 
-purification and fractionation steps, as described above, must be carried out 
-in order to achieve comprehensive proteome coverage. 
-An example of a mass spectrometry-based proteomics workflow for peptide 
-and protein identification is depicted in Fig.~\ref{fig:proteomics-overview}.
-
 \begin{figure}
 \includegraphics[width=\textwidth]{figures/Proteomics.jpg}
 \caption{
@@ -211,6 +212,14 @@ are recorded as peptide elution is in progress for a pre-defined amount of time.
 }
 \label{fig:proteomics-overview}
 \end{figure}
+
+Although modern mass spectrometers are very sensitive, a couple of sample 
+purification and fractionation steps, as described above, must be carried out 
+in order to achieve comprehensive proteome coverage. 
+An example of a mass spectrometry-based proteomics workflow for peptide 
+and protein identification is depicted in Fig.~\ref{fig:proteomics-overview}.
+
+
 
 % --------------------------------------------------------------
 \subsection{Acquisition of mass spectrometric data}
@@ -514,6 +523,8 @@ In the recent years, several new database search programs have become
 available, including MASCOT \citep{Perkins1999}, X! Tandem \citep{Craig2004},
 OMSSA \citep{Geer2004}, and MyriMatch \citep{Tabb2007}.
 
+\paragraph{Statistical assessment of peptide/spectral matches.} 
+
 Initially, individual peptide/spectral matches had to be validated manually,
 and consensus score thresholds could be used as a rough estimate to distinguish
 incorrect from correct peptide identifications.
@@ -616,7 +627,7 @@ If a standard of known amount is spiked into the sample and quantified alongside
 the proteins of interest, these relative results can typically be promoted to 
 absolute quantitation results.
 
-\paragraph{Chemical labeling}
+\paragraph{Chemical labeling.}
 
 Chemical labeling methods introduce a label into the peptides from one of the 
 samples via a chemical reaction. 
@@ -650,7 +661,7 @@ In comparison to the ICAT method, peptide quantitation is only performed in
 fragmentation scans and therefore the amount of sampled quantitation ratios 
 per peptide is usually low.
 
-\paragraph{Metabolic labeling}
+\paragraph{Metabolic labeling.}
 
 As an alternative to chemical labeling, metabolic labeling can be used for
 peptide and protein quantitation in organisms which can be forced to incorporate
@@ -684,7 +695,7 @@ However, different variations are possible, for example, $^{13}$C-Arg/Lys
 labeling can be used, although this requires a strain which is both Arginine
 and Lysine-auxotrophic.
 
-\paragraph{Label-free quantitation}
+\paragraph{Label-free quantitation.}
 
 In the recent years, label-free quantitation methods have been developed and
 constantly refined.
@@ -873,6 +884,81 @@ hints for alternative splicing.
 \section{Software solutions for MS/MS data evaluation}
 % --------------------------------------------------------------
 
+Although manual interpretation of mass spectrometric data, including
+peptide and protein identification and quantitation, is possible and was
+the only possibility in the beginning of mass spectrometric research, dedicated 
+software is essential today in order to deal with the massive amounts of data
+generated in high-throughput experiments.
+Despite the numerous applicable techniques for the reduction of mass spectrum
+complexity, interpretation of mass spectra is still hampered by a certain
+level of ambiguity introduced by several factors, including multiply charged, 
+overlapping ions and missing fragment ions in MS/MS scans.
+In the face of high complexity, it is therefore vital to define clear
+rules and solid models for the interpretation of mass spectra.
+Given these rules and models, expert interpretation and computational 
+analysis both have their advantages and disadvantages.
+While an algorithm executed by a computer is typically strictly deterministic 
+and less susceptible to external influences, and produces the same results
+when repeated on the same input data, a human expert is capable of detecting 
+situations in which previously made assumptions must be challenged and 
+subsequently, models must be adjusted to reflect the changed preconditions.
+
+Regardless of these differences, it is obvious that for large-scale data
+evaluation, it is more efficient to invest human field-specific expertise and
+software engineering skills to create an automated algorithm which subsequently
+performs the data interpretation.
+This way, it can be ensured that the interpretation of mass spectrometric data 
+is consistent across one version of the software and in the case of false
+assumptions or ill-designed models, a uniform re-interpretation of previously
+acquired data is possible in a short time.
+Software solutions therefore play a key role in today's mass spectrometric 
+experiments.
+
+Concerning the evaluation of mass spectrometric data, SEQUEST was the first
+program to implement protein database-driven annotation of MS/MS spectra 
+\citep{Eng1994}.
+It has inspired a large number of alternative solutions for this problem,
+including commercial and freely available software.
+Likewise, various commercial and freely available tools for peptide and
+protein quantitation exist, comprising the entire range of chemical and 
+metabolical labeling as well as label-free techniques \citep{Vaudel2010}.
+
+\paragraph{MS/MS data processing infrastructure.}
+
+Apart from the actual software tools which perform mass spectrometric data 
+interpretation, additional infrastructure is required to enable user-friendly 
+control of these programs.
+Most importantly, such an infrastructure must be able to handle the 
+high-troughput capabilities of today's LC-MS/MS setups.
+The Trans-Proteomic Pipeline (TPP) was the first MS/MS-specific data evaluation 
+platform to be released (\cite{Keller2005}).
+It allows users to run various programs on MS/MS data files.
+It is platform-independent and supports a large selection of commercial and
+free software.
+However, TPP requires the installation of an Apache web server for the purpose
+of providing a web browser-based graphical user interface (GUI).
+While the graphical user interaction is helpful for users, the required Apache 
+web server presents a non-negligible security risk because it potentially renders 
+the user's computer accessible and exploitable from the Internet when it can be 
+expected that most users won't be aware of this issue and will therefore not 
+be able to regularly apply security patches. 
+This issue is especially precarious on Windows and Mac OS X which do not 
+natively provide centralized, automatic software updating.
+The web server-based approach implemented by TPP lends itself to a centralized
+setup where a central server performs the actual data processing and can
+be controlled by external clients via the web browser.
+
+The OpenMS Proteomics Pipeline (TOPP) is another recently released software 
+system for the evaluation of MS/MS data \citep{Kohlbacher2007}.
+TOPP is based on the OpenMS C++ library which provides misceallaneous mass 
+spectrometry-related functionality to software developers as a programming 
+library.
+Aside from providing a substantial body of software tools on the command-line 
+interface (CLI), TOPP provides a GUI to these tools which can be used to
+construct and execute MS/MS data evaluation pipelines.
+In comparison to the web server-based approach followed by TPP, TOPP implements
+a more distributed approach because the installation of a web server is not
+required and a platform-independent GUI is provided via the Qt framework.
 
 % --------------------------------------------------------------
 \section{Chlamydomonas reinhardtii}
