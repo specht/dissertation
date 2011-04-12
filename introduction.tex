@@ -81,7 +81,7 @@ entire set of gene transcripts of a genome, and the research area of
 {\em transcriptomics} monitors the transcriptional regulation of genes.
 DNA microarray techniques can be employed to screen the regulation of many
 genes in parallel on the transcript level \citep{Schena1995}, in high throughput.
-Common to all {\em omics} methods is the scope under research -- typically, the 
+Common to all {\em omics} methods is the scope of the research -- typically, the 
 analysis encompasses entire genomes.
 This is in stark contrast to previous times when gene regulation and 
 transcription, as well as protein function and structure have been analyzed on 
@@ -157,91 +157,137 @@ future, the hypotheses resulting from systems-level approaches can be used
 to determine the optimal succession of experiments required to answer a
 specific biological question in a comprehensive way \citep{Ideker2000}.
 
-\section{Proteomics}
+While the prospects of systems biology are highly promising, the central focus
+of this thesis lies on proteomics, thus contributing to an overall understanding
+of certain biological aspects by providing information on protein identities,
+protein localization, and protein quantitation.
+
+\paragraph{Proteomics.}
 
 The central aspects of proteomics are the identification of proteins, 
 the identifcation of post-translational modifications (PTM), 
 relative and absolute protein quantitation, protein localization, and
-protein-protein interaction studies.
+the elucidation of protein-protein interactions.
 An important aspect about the proteome is that it is highly variable and
-subject to change over time and in response to changing environmental conditions.
+subject to change over time and in response to changing environmental 
+conditions.
 In contrast to the genome and the transcriptome, the proteome most accurately
 reflects the phenotype of a cell.
-While information provided by genomics acts as a foundation to the possible
-expression of a protein by the presence of its respective gene in the DNA,
-transcript profiling yields information about gene transcription to mRNA.
-However, actual protein abundance is not directly related to mRNA abundance.
-mRNA molecules may be subject to rapid degradation, and it is also known that 
-mRNA is sometimes not translated into a protein at all \citep{Eddy2001}.
-Furthermore, the final function of a protein is heavily influenced by
-post-translational modifications such as phosphorylation \citep{Olsen2006} 
-and ubiquitination.
-Finally, not all proteins are expressed in all cell types in multicellular 
-species, thus adding another level of ambiguity.
-For these reasons, proteomics is a highly complex research area, requiring
-sophisticated techniques to produce confident results in the face of
-massive complexity.
 
-\paragraph{Organelle isolation and protein purification.}
+Classic proteomic research used to be inherently {\em hypothesis-driven}.
+The large-scale identification of novel proteins was not feasible
+in the beginnings of the field, and the presence of known proteins could only
+be established by means of immunoblotting which provides a visualization
+of proteins, resulting in distinct, more or less prominent bands (in the case 
+of one-dimensional gels) or spots (in two-dimensional gels).
+Immunoblotting also allows for semi-quantitative analysis by visual or 
+computer-assisted inspection of protein bands.
+Apart from protein identification, some of the major aspects of classical 
+proteomic research are localization, quantitation, and the analysis of protein 
+interaction.
+Isolation and purification strategies are available to reduce the scope of
+proteins under investigation to individual cellular organelles, enrich for
+proteins exposing certain properties such as post-translational modifications
+or interacting proteins, and reduce the overall complexity of the sample.
 
-A variety of methods for the reduction of sample complexity are available.
+Centrifugation protocols can be used for the isolation of cellular organelles 
+or protein complexes \citep{Pertoft1978}.
+Localization of specific proteins can be performed by combining isolation 
+techniques with immunoblotting.
+Gel filtration techniques can be used to enrich phosphorylated proteins.
+While phosphorylation plays an important role in determining protein function,
+phosphorylated proteins are low abundant and therefore, a purification is
+generally necessary to achieve good coverage in phosphoproteomic experiments.
+Protein complexes can be analyzed using blue native gel electrophoresis, a 
+method in which intact protein complexes are first separated in one dimension.
+In a second step, the protein complexes are broken down into single proteins and
+further separation of the resulting proteins is performed in the second 
+dimension.
+The resulting bands can be used to estimate the number and abundance of
+the proteins in each complex, along with their molecular mass.
+% While information provided by genomics acts as a foundation to the possible
+% expression of a protein by the presence of its respective gene in the DNA,
+% transcript profiling yields information about gene transcription to mRNA.
+% However, actual protein abundance is not directly related to mRNA abundance.
+% mRNA molecules may be subject to rapid degradation, and it is also known that 
+% mRNA is sometimes not translated into a protein at all \citep{Eddy2001}.
+
+% Furthermore, the final function of a protein is heavily influenced by
+% post-translational modifications such as phosphorylation \citep{Olsen2006} 
+% and ubiquitination.
+% Finally, not all proteins are expressed in all cell types in multicellular 
+% species, thus adding another level of ambiguity.
+% For these reasons, proteomics is a highly complex research area, requiring
+% sophisticated techniques to produce confident results in the face of
+% massive complexity.
+
+% \paragraph{Organelle isolation and protein purification.}
+
+% A variety of methods for the reduction of sample complexity are available.
 % 
 % \paragraph{Cell fractionation.}
 % 
-In order to enable the proteomic investigation of certain cell organella such 
-as chloroplasts or mitochondria, cell fractionation can be employed.
-The isolation of organelles is achieved by physical cell disruption, followed
-by multiple centrifugation steps in which distinct organelle types are 
-separated from the heterogeneous mixture by stepwise increasing gravitational 
-force \citep{Pertoft1978}.
+% In order to enable the proteomic investigation of certain cell organella such 
+% as chloroplasts or mitochondria, cell fractionation can be employed.
+% The isolation of organelles is achieved by physical cell disruption, followed
+% by multiple centrifugation steps in which distinct organelle types are 
+% separated from the heterogeneous mixture by stepwise increasing gravitational 
+% force \citep{Pertoft1978}.
 % 
 % \paragraph{Immunoprecipitation.}
 % 
 
-The extraction of a certain protein of interest from a complex mixture can
-be achieved by immunoprecipitation.
-Here, an antibody which binds specifically to the protein in question,
-and therefore an amino acid sequence specific to that protein, is required.
-It is also possible to purify whole protein complexes by means of
-co-immunoprecipitation, in which all proteins bound to the protein of interest
-can be co-extracted.
-Furthermore, gel filtration can be used to enrich phosphorylated proteins.
-While phosphorylation plays an important role in determining protein function,
-phosphorylated proteins are low abundant and therefore, purification is
-necessary to achieve good coverage in phosphoproteomic experiments.
+% The extraction of a certain protein of interest from a complex mixture can
+% be achieved by immunoprecipitation.
+% Here, an antibody which binds specifically to the protein in question,
+% and therefore an amino acid sequence specific to that protein, is required.
+% It is also possible to purify whole protein complexes by means of
+% co-immunoprecipitation, in which all proteins bound to the protein of interest
+% can be co-extracted.
+% Furthermore, gel filtration can be used to enrich phosphorylated proteins.
+% While phosphorylation plays an important role in determining protein function,
+% phosphorylated proteins are low abundant and therefore, purification is
+% necessary to achieve good coverage in phosphoproteomic experiments.
+% 
+% \paragraph{SDS-PAGE, DIGE, and chromatographic techniques.}
+% 
+% In addition to organelle isolation and protein purification steps, 
+% two methods which spread out a sample in both space and time domains exist: 
+% gel electrophoresis and liquid chromatography.
+% In gel electrophoresis strategies such as SDS-PAGE, samples are dispensed
+% into separate wells in a polyacrylamide gel.
+% An electric field is applied to the gel, thus inducing an electromotive force 
+% on the proteins which move through the gel at a speed which depends on their
+% size and charge.
+% However, SDS leads to denaturation of proteins and results in an overall
+% negative charge for all proteins. 
+% Thus, the migration speed of the proteins is only dependent on their size. 
+% Individual spots of equally-sized proteins may be visualized using Coomassie 
+% dye and subsequently excised.
+% In order to achieve even higher sample separation, two-dimensional gel 
+% electrophoresis may be used \citep{Klose1975, O'Farrell1975}.
+% Here, proteins are additionally separated by a second physicochemical property
+% such as their isoelectric point.
+% The resulting bands (or spots in the case of 2D gels) may then be excised and 
+% subjected to further analysis.
+% Visual inspection of the gel and comparison to known marker proteins may give 
+% clues about protein abundance and post-translational modifications.
+% In difference gel electrophoresis (DIGE), the ambiguities between successive 
+% gels are removed by running a single gel with two or three different protein
+% samples which have previously been labeled with different fluorescent dyes.
+% After the electrophoresis is finished, protein spots stemming from different 
+% samples can be visualized and subsequently matched and quantified in a 
+% computer-assisted way \citep{Berth2007}.
+% In addition to fractionation via SDS-PAGE, chromatographic techniques may be
+% employed to separate proteins according to various physicochemical properties
+% including mass, isoelectric point, and hydrophobicity \citep{Neverova2005}.
 
-\paragraph{SDS-PAGE, DIGE, and chromatographic techniques.}
-
-In addition to organelle isolation and protein purification steps, 
-two methods which spread out a sample in both space and time domains exist: 
-gel electrophoresis and liquid chromatography.
-In gel electrophoresis strategies such as SDS-PAGE, samples are dispensed
-into separate wells in a polyacrylamide gel.
-An electric field is applied to the gel, thus inducing an electromotive force 
-on the proteins which move through the gel at a speed which depends on their
-size and charge.
-However, SDS leads to denaturation of proteins and results in an overall
-negative charge for all proteins. 
-Thus, the migration speed of the proteins is only dependent on their size. 
-Individual spots of equally-sized proteins may be visualized using Coomassie 
-dye and subsequently excised.
-In order to achieve even higher sample separation, two-dimensional gel 
-electrophoresis may be used \citep{Klose1975, O'Farrell1975}.
-Here, proteins are additionally separated by a second physicochemical property
-such as their isoelectric point.
-The resulting bands (or spots in the case of 2D gels) may then be excised and 
-subjected to further analysis.
-Visual inspection of the gel and comparison to known marker proteins may give 
-clues about protein abundance and post-translational modifications.
-In difference gel electrophoresis (DIGE), the ambiguities between successive 
-gels are removed by running a single gel with two or three different protein
-samples which have previously been labeled with different fluorescent dyes.
-After the electrophoresis is finished, protein spots stemming from different 
-samples can be visualized and subsequently matched and quantified in a 
-computer-assisted way \citep{Berth2007}.
-In addition to fractionation via SDS-PAGE, chromatographic techniques may be
-employed to separate proteins according to various physicochemical properties
-including mass, isoelectric point, and hydrophobicity \citep{Neverova2005}.
+With the advent of mass spectrometric techniques, proteomic research has
+undergone a fundamental change due to the fact that the identity of 
+peptides, and subsequently proteins, can be accurately determined from 
+complex protein samples.
+This change has lead to the novel possibility of {\em discovery-driven}
+proteomic research.
 
 \section{Mass spectrometry-based proteomics}
 
@@ -453,7 +499,7 @@ an ion may fail for various reasons.
 Following a full scan, one or more highly abundant precursors are usually
 selected for further analysis.
 
-\begin{figure}[h]
+\begin{figure}
 \includegraphics[width=\textwidth]{figures/ms1-scan.jpg}
 \caption{
 {\bf Zoomed view of a full scan.}
@@ -473,7 +519,7 @@ When fragmentation peaks are missing, the exact sequence of the peptide may not
 become clear from a single mass ladder.
 However, a combination of multiple mass ladders can resolve such ambiguities.
 
-\begin{figure}[h]
+\begin{figure}
 \includegraphics[width=\textwidth]{figures/ms2-scan.jpg}
 \caption{
 {\bf Example of a fragmentation scan.} 
@@ -484,7 +530,7 @@ Resulting fragment ions are recorded in the fragmentation scan.
 \label{fig:fragmentation-scan}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \includegraphics[width=\textwidth]{figures/ms2-scan-b-y-1.jpg}
 \caption{
 {\bf The MS/MS scan depicted in Fig.~\ref{fig:fragmentation-scan} with {\em b} and 
@@ -1006,15 +1052,15 @@ platform to be released (\cite{Keller2005}).
 It allows users to run various programs on MS/MS data files.
 It is platform-independent and supports a large selection of commercial and
 free software.
-However, TPP requires the installation of an Apache web server for the purpose
-of providing a web browser-based graphical user interface (GUI).
-While the graphical user interaction is helpful for users, the required Apache 
-web server presents a non-negligible security risk because it potentially renders 
-the user's computer accessible and exploitable from the Internet when it can be 
-expected that most users won't be aware of this issue and will therefore not 
-be able to regularly apply security patches. 
-This issue is especially precarious on Windows and Mac OS X which do not 
-natively provide centralized, automatic software updating.
+% However, TPP requires the installation of an Apache web server for the purpose
+% of providing a web browser-based graphical user interface (GUI).
+% While the graphical user interaction is helpful for users, the required Apache 
+% web server presents a non-negligible security risk because it potentially renders 
+% the user's computer accessible and exploitable from the Internet when it can be 
+% expected that most users won't be aware of this issue and will therefore not 
+% be able to regularly apply security patches. 
+% This issue is especially precarious on Windows and Mac OS X which do not 
+% natively provide centralized, automatic software updating.
 The web server-based approach implemented by TPP lends itself to a centralized
 setup where a central server performs the actual data processing and can
 be controlled by external clients via the web browser.
@@ -1032,7 +1078,7 @@ a more distributed approach because the installation of a web server is not
 required and a platform-independent GUI is provided via the Qt framework.
 
 % --------------------------------------------------------------
-\section{{\em Chlamydomonas reinhardtii}}
+\section{The green alga {\em Chlamydomonas reinhardtii}}
 % --------------------------------------------------------------
 
 \chlre~is a well-studied model organism which has been used to elucidate 
@@ -1045,17 +1091,32 @@ Because of this capability to switch between different types of metabolism,
 the alga is able to thrive on water, carbon dioxide and sunlight but it is
 also able to cope with darkness, given that an external carbon source is 
 available.
-Various methods are established for genetic engineering and the fully sequenced 
-genome \citep{Merchant2007} has allowed for numerous omics-based approaches to 
-be utilized.
+Various methods for genetic engineering are established.
 \cre~exhibits a short doubling time of less than 10 hours which makes it 
 a good candidate for selection experiments \citep{Dent2001}.
-% Genome sequencing and annotation efforts are organized under the roof of the 
-% Joint Genome Institute (JGI).
+The fully sequenced genome \citep{Merchant2007} has allowed for numerous 
+{\em omics}-based approaches to be utilized.
+Genome sequencing and annotation efforts are coordinated by the Joint Genome 
+Institute (JGI)\footnote{\href{http://www.phytozome.net/chlamy}{http://www.phytozome.net/chlamy}}.
+The \cre~genome sequence and gene models are released in combination with
+24 green plants under the name of {\em Phytozome}.
+The current version of the \cre~genome consists of 113 Mbp in 88 scaffolds,
+17 of which are contiguous chromosome sequences.
+Gene annotation is provided by AUGUSTUS and updated regularly.
+
 A particularly interesting aspect of \cre~is its capability to produce
 hydrogen under anaebrobic conditions \citep{Greenbaum1982}.
-Considering energy production, this effect may be considered to play an 
-important role in the future.
+The increasing amounts of reducing equivalents in the chloroplast is
+compensated by hydrogenase which acts as a sink for electrons from
+the photosynthetic electron transport chain \citep{Hemschemeier2011}.
+Regarding future energy production, it is therefore of interest to gain 
+detailes insight into the anaerobic response of the chloroplast proteome in
+the green alga.
+A necessary requirement is the availability of an experimentally characterized
+chloroplast proteome. 
+Furthermore, the localization of anaerbiosis-induced fermentation pathways
+is helpful to provide a comprehensive understanding of the biochemical 
+processes involved.
 
 % % --------------------------------------------------------------
 % \section{Thalassiosira oceanica}
