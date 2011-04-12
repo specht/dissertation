@@ -29,24 +29,50 @@ Aside from the ambiguities introduced by alternative splicing of genes
 \citep{Black2003} and non-coding regions in the genome \citep{Gilbert1978},
 the genome provides -- in theory -- all necessary information about which 
 proteins can potentially be expressed in a cell.
-However, in order to study the dynamic nature of a cell or organism, as for 
+However, the amino acid sequence of a protein alone does not determine the 
+final function of the protein.
+Post-translational modifications or conformational changes, facilitated by
+chaperone proteins, may be required to activate a protein.
+Apparently, in order to study the dynamic nature of a cell or organism, as for 
 example in response to changing environmental conditions, the static information
 provided by the genome is not sufficient. 
-Consequently, the field of genomics has spurred a number of {\em omics}-related 
-areas of research \citep{Sauer2007}.
+
+\paragraph{Omics approaches.}
+
+Since the beginning of the current century the copious amounts of large-scale 
+genome sequencing data have spurred a number of {\em omics}-related areas of 
+research \citep{Sauer2007, Colquhoun2005}.
+Originating from genomics, which deals with the effects of genes on the 
+development and control of biological processes, the field of {\em functional
+genomics} deals with the elucidation of dynamic aspects of genes in regard
+to whole genomes \citep{Hieter1997}.
+Likewise, the field of {\em structural genomics} attempts to predict 
+three-dimensional structures of all proteins encoded by a genome, also on
+a genome-wide level \citep{Baker2001a}.
+The field of {\em epigenomics} addresses the role of environmental influences
+on the genome \citep{Jirtle2007}.
+The {\em transcriptome} is defined as the entire set of gene transcripts of a 
+genome.
+The research area of {\em transcriptomics} monitors the transcriptional 
+regulation of genes.
+Common to all omics methods is the scope under research -- typically, the 
+analysis encompasses entire genomes.
+This is in stark contrast to pre-large scale sequencing times when gene 
+regulation and transcription, as well as protein function and structure have 
+been analyzed on a per-gene or per-protein basis.
 
 \begin{table}
 \begin{tabular}{|l|r|r|l|}
 \hline
 Species & Genome size & Predicted genes & Reference \\
 \hline
-{\em Escherischia coli} & 5.2 Mbp & 5,379 & \cite{Welch2002} \\
-{\em Thalassiosira pseudonana} & 34.5 Mbp & 11,242 & \cite{Armbrust2004} \\
-{\em Arabidopsis thaliana} & 119 Mbp & 25,498 & \cite{Arabidopsis2000} \\
-{\em Chlamydomonas reinhardtii} & 121 Mbp & 15,143 & \cite{Merchant2007} \\
-{\em Drosophila melanogaster} & 165 Mbp & 13,600 & \cite{Adams2000} \\
-{\em Daphnia pulex} & 200 Mbp & 30,907 & \cite{Colbourne2011} \\
-{\em Homo sapiens} & 3.2 Gbp & 20,251 & \cite{Venter2001} \\
+{\em Escherischia coli} & 5 Mbp & $\sim$5,400 & \cite{Welch2002} \\
+{\em Thalassiosira pseudonana} & 34 Mbp & $\sim$11,200 & \cite{Armbrust2004} \\
+{\em Arabidopsis thaliana} & 119 Mbp & $\sim$25,500 & \cite{Arabidopsis2000} \\
+{\em Chlamydomonas reinhardtii} & 121 Mbp & $\sim$15,100 & \cite{Merchant2007} \\
+{\em Drosophila melanogaster} & 165 Mbp & $\sim$13,600 & \cite{Adams2000} \\
+{\em Daphnia pulex} & 200 Mbp & $\sim$30,900 & \cite{Colbourne2011} \\
+{\em Homo sapiens} & 3.2 Gbp & $\sim$20,300 & \cite{Venter2001} \\
 \hline
 \end{tabular}
 \caption{{\bf Genome sizes of selected species.} The range of known genome sizes 
@@ -56,35 +82,37 @@ Species & Genome size & Predicted genes & Reference \\
 \label{tab:genome-sizes}
 \end{table}
 
-\paragraph{Omics-related areas of research.}
 
-One such research area, {\em transcriptomics}, deals with the transcription
-of genes, as encoded in the DNA, to mRNA.
-The transcriptome provides information about gene expression at the mRNA level. 
-DNA microarray techniques can be employed to screen the regulation of many
-genes in parallel on the transcript level \citep{Schena1995}.
-Complementing transcriptomics, the field of {\em proteomics} deals with the total
-set of proteins expressed in a cell, tissue, or organism, at a defined time
-point and under certain conditions \citep{Yarmush2002, Yates2009}.
-The notion of the {\em proteome} was coined by Marc Wilkins in 1994 
-to reflect the entire set of proteins that are encoded in a genome and are 
-actually expressed by a cell \citep{Wilkins2009}.
-The transcriptome can be regarded as a precursor of the proteome.
-However, transcriptional regulation does not necessarily correlate to
-protein expression in a linear fashion \citep{Rogers2008}.
-It is therefore vital to combine various types of qualitative and quantitative
-information, including the transcriptome and proteome, with further aspects such 
-as evolution and the modeling of interactions on the levels of molecules, 
-proteins, and cells to achieve a comprehensive understanding of life.
-In the past few years, this approach has manifested itself as {\em systems 
-biology} \citep{Vidal2009}.
-In addition to genomics, transcriptomics, and proteomics, further fields 
-involved in the holistic approach of systems biology include metabolomics,
-in which the end products of metabolic processes are analyzed 
-\citep{Daviss2005}.
-Furthermore, glycomics and lipidomics which provide a view on life from the
-perspective of carbohydrates and lipids, respectively, contribute to the
-overall picture in the systems biology framework.
+
+% One such research area, {\em transcriptomics}, deals with the transcription
+% of genes, as encoded in the DNA, to mRNA.
+% The transcriptome provides information about gene expression at the mRNA level. 
+% DNA microarray techniques can be employed to screen the regulation of many
+% genes in parallel on the transcript level \citep{Schena1995}.
+% Complementing transcriptomics, the field of {\em proteomics} deals with the total
+% set of proteins expressed in a cell, tissue, or organism, at a defined time
+% point and under certain conditions \citep{Yarmush2002, Yates2009}.
+% The notion of the {\em proteome} was coined by Marc Wilkins in 1994 
+% to reflect the entire set of proteins that are encoded in a genome and are 
+% actually expressed by a cell \citep{Wilkins2009}.
+% The transcriptome can be regarded as a precursor of the proteome.
+% However, transcriptional regulation does not necessarily correlate to
+% protein expression in a linear fashion \citep{Rogers2008}.
+% It is therefore vital to combine various types of qualitative and quantitative
+% information, including the transcriptome and proteome, with further aspects such 
+% as evolution and the modeling of interactions on the levels of molecules, 
+% proteins, and cells to achieve a comprehensive understanding of life.
+% In the past few years, this approach has manifested itself as {\em systems 
+% biology} \citep{Vidal2009}.
+% In addition to genomics, transcriptomics, and proteomics, further fields 
+% involved in the holistic approach of systems biology include metabolomics,
+% in which the end products of metabolic processes are analyzed 
+% \citep{Daviss2005}.
+% Furthermore, glycomics and lipidomics which provide a view on life from the
+% perspective of carbohydrates and lipids, respectively, contribute to the
+% overall picture in the systems biology framework.
+
+\paragraph{Systems biology.}
 
 \section{Proteomics}
 
