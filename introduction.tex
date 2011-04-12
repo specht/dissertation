@@ -18,8 +18,8 @@ the full human genome sequence in 2001 \citep{Venter2001}.
 The possibility to obtain genome sequences has added considerable momentum
 to biological research and full genome sequences for more than 180 species
 are available (\cite{Yates2009}, see Table \ref{tab:genome-sizes}).
-Interestingly, the number of genes encoded in a genome does not seem to depend
-largely on the size of the genome.
+Interestingly, the number of genes encoded in a genome does not seem to strongly
+correlate to the size of the genome.
 For example, the number of human genes was initially overestimated to be around 
 2 million \citep{Kauffman1969}.
 More recent studies estimate the human genome to comprise about 20,000 -- 25,000 
@@ -32,34 +32,12 @@ proteins can potentially be expressed in a cell.
 However, the amino acid sequence of a protein alone does not determine the 
 final function of the protein.
 Post-translational modifications or conformational changes, facilitated by
-chaperone proteins, may be required to activate a protein.
+chaperone proteins, may be necessary for protein activation.
+Furthermore, metabolic pathways and protein-protein interaction cannot be
+investigated on the genomic level alone.
 Apparently, in order to study the dynamic nature of a cell or organism, as for 
 example in response to changing environmental conditions, the static information
 provided by the genome is not sufficient. 
-
-\paragraph{Omics approaches.}
-
-Since the beginning of the current century the copious amounts of large-scale 
-genome sequencing data have spurred a number of {\em omics}-related areas of 
-research \citep{Sauer2007, Colquhoun2005}.
-Originating from genomics, which deals with the effects of genes on the 
-development and control of biological processes, the field of {\em functional
-genomics} deals with the elucidation of dynamic aspects of genes in regard
-to whole genomes \citep{Hieter1997}.
-Likewise, the field of {\em structural genomics} attempts to predict 
-three-dimensional structures of all proteins encoded by a genome, also on
-a genome-wide level \citep{Baker2001a}.
-The field of {\em epigenomics} addresses the role of environmental influences
-on the genome \citep{Jirtle2007}.
-The {\em transcriptome} is defined as the entire set of gene transcripts of a 
-genome.
-The research area of {\em transcriptomics} monitors the transcriptional 
-regulation of genes.
-Common to all omics methods is the scope under research -- typically, the 
-analysis encompasses entire genomes.
-This is in stark contrast to pre-large scale sequencing times when gene 
-regulation and transcription, as well as protein function and structure have 
-been analyzed on a per-gene or per-protein basis.
 
 \begin{table}
 \begin{tabular}{|l|r|r|l|}
@@ -82,19 +60,49 @@ Species & Genome size & Predicted genes & Reference \\
 \label{tab:genome-sizes}
 \end{table}
 
+\paragraph{Omics-based approaches.}
 
+Since the beginning of the current century the copious amounts of large-scale 
+genome sequencing data have spurred a number of {\em omics}-related areas of 
+research \citep{Sauer2007, Colquhoun2005}.
+Originating from genomics, which deals with the effects of genes on the 
+development and control of biological processes, several related {\em omics} 
+fields of research have emerged.
+The field of {\em functional
+genomics} deals with the elucidation of dynamic aspects of genes in regard
+to whole genomes \citep{Hieter1997}.
+Likewise, the field of {\em structural genomics} attempts to predict 
+three-dimensional structures of all proteins encoded by a genome, also on
+a genome-wide level \citep{Baker2001a}.
+The role of environmental influences on the genome is addressed in the field
+of {\em epigenomics} \citep{Jirtle2007}.
+Taking a step away from the genome, the {\em transcriptome} is defined as the 
+entire set of gene transcripts of a genome, and the research area of 
+{\em transcriptomics} monitors the transcriptional regulation of genes.
+DNA microarray techniques can be employed to screen the regulation of many
+genes in parallel on the transcript level \citep{Schena1995}, in high throughput.
+Common to all {\em omics} methods is the scope under research -- typically, the 
+analysis encompasses entire genomes.
+This is in stark contrast to previous times when gene regulation and 
+transcription, as well as protein function and structure have been analyzed on 
+a per-gene or per-protein basis.
+Just as the genome is a precursor to the transcriptome, the transcriptome can
+be regarded as a precursor to the {\em proteome}.
+The field of {\em proteomics} deals with the total set of proteins expressed in 
+a cell, tissue, or organism, at a defined time point and under certain 
+conditions \citep{Yarmush2002, Yates2009}.
+The notion of the {\em proteome} was coined by Marc Wilkins in 1994 
+to reflect the entire set of proteins that are encoded in a genome and are 
+actually expressed by a cell \citep{Wilkins2009}.
+Interestingly, transcriptional regulation does not always correlate to
+protein expression in a linear fashion and \citep{Rogers2008}.
+In particular, expression of a specific protein cannot be inferred from the 
+presence of its transcript because it has been shown that sometimes, mRNA 
+is not translated into a protein at all \citep{Eddy2001}.
+Complementing genomics, transcriptomics, and proteomics, the field of
+{\em metabolomics} deals with small molecules which are synthesized or
+metabolized in a cell \citep{Kell2004}.
 
-% One such research area, {\em transcriptomics}, deals with the transcription
-% of genes, as encoded in the DNA, to mRNA.
-% The transcriptome provides information about gene expression at the mRNA level. 
-% DNA microarray techniques can be employed to screen the regulation of many
-% genes in parallel on the transcript level \citep{Schena1995}.
-% Complementing transcriptomics, the field of {\em proteomics} deals with the total
-% set of proteins expressed in a cell, tissue, or organism, at a defined time
-% point and under certain conditions \citep{Yarmush2002, Yates2009}.
-% The notion of the {\em proteome} was coined by Marc Wilkins in 1994 
-% to reflect the entire set of proteins that are encoded in a genome and are 
-% actually expressed by a cell \citep{Wilkins2009}.
 % The transcriptome can be regarded as a precursor of the proteome.
 % However, transcriptional regulation does not necessarily correlate to
 % protein expression in a linear fashion \citep{Rogers2008}.
@@ -113,6 +121,41 @@ Species & Genome size & Predicted genes & Reference \\
 % overall picture in the systems biology framework.
 
 \paragraph{Systems biology.}
+
+The previously mentioned {\em omics}-related fields of research each deal
+with a specific aspect of biology.
+While the methods employed in these areas provide detailed insights on the 
+molecular level, this information is not sufficient to gain a general 
+understanding of biology on the the systems level \citep{Kitano2002}.
+While comprehensive lists of genes and proteins, along with a mapping
+of their relations represents a valuable foundation of knowledge which can
+be built upon, a meta layer is required which is able to integrate the
+different sources of molecular information.
+An example provided by \citeauthor{Kitano2002} in his review uses an analogy 
+to an airplane.
+While a listing of all airplane parts is not sufficient to understand or even
+build a functional airplane because information beyond the scope of individual
+components is missing, for example regarding the assembly of the single parts,
+how signals are encoded on signal lines, and how they can be made robust against
+external influences, noise, and malfunction.
+
+The field of {\em systems biology} attempts to provide a systems-level 
+understanding of biology. 
+To achieve this goal, large-scale data reporting on various aspects of a 
+biological system is combined on several levels and models are designed and
+adjusted in an iterative process.
+Using available {\em omics} methods, systems biology aims to elucidate both 
+the structure and dynamics of biological systems.
+Furthermore, it tries to use these insights to provide control mechanisms which
+can be used to actively modify cells, for example to improve medical treatment.
+Finally, systems biology aims at providing the necessary foundation for
+the design of artificial biological systems.
+% Prior to the high-throughput {\em omics} methods which are available today,
+% experiments were mostly hypothesis-driven,
+Although the systems design approach seems to remain a challenge in the near
+future, the hypotheses resulting from systems-level approaches can be used
+to determine the optimal succession of experiments required to answer a
+specific biological question in a comprehensive way \citep{Ideker2000}.
 
 \section{Proteomics}
 
@@ -989,7 +1032,7 @@ a more distributed approach because the installation of a web server is not
 required and a platform-independent GUI is provided via the Qt framework.
 
 % --------------------------------------------------------------
-\section{Chlamydomonas reinhardtii}
+\section{{\em Chlamydomonas reinhardtii}}
 % --------------------------------------------------------------
 
 \chlre~is a well-studied model organism which has been used to elucidate 
