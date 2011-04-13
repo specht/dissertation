@@ -163,49 +163,52 @@ of this thesis lies on proteomics, thus contributing to an overall understanding
 of certain biological aspects by providing information on protein identities,
 protein localization, and protein quantitation.
 
-\paragraph{Proteomics.}
+% \paragraph{Proteomics.}
+% 
+% The central aspects of proteomics are the identification of proteins, 
+% the identifcation of post-translational modifications (PTM), 
+% relative and absolute protein quantitation, protein localization, and
+% the elucidation of protein-protein interactions.
+% An important aspect about the proteome is that it is highly variable and
+% subject to change over time and in response to changing environmental 
+% conditions.
+% In contrast to the genome and the transcriptome, the proteome most accurately
+% reflects the phenotype of a cell.
+% 
+% Classic proteomic research used to be inherently {\em hypothesis-driven}.
+% The large-scale identification of novel proteins was not feasible
+% in the beginnings of the field, and the presence of known proteins could only
+% be established by means of immunoblotting which provides a visualization
+% of proteins, resulting in distinct, more or less prominent bands (in the case 
+% of one-dimensional gels) or spots (in two-dimensional gels).
+% Immunoblotting also allows for semi-quantitative analysis by visual or 
+% computer-assisted inspection of protein bands.
+% Apart from protein identification, some of the major aspects of classical 
+% proteomic research are localization, quantitation, and the analysis of protein 
+% interaction.
+% Isolation and purification strategies are available to reduce the scope of
+% proteins under investigation to individual cellular organelles, enrich for
+% proteins exposing certain properties such as post-translational modifications
+% or interacting proteins, and reduce the overall complexity of the sample.
+% 
+% Centrifugation protocols can be used for the isolation of cellular organelles 
+% or protein complexes \citep{Pertoft1978}.
+% Localization of specific proteins can be performed by combining isolation 
+% techniques with immunoblotting.
+% Gel filtration techniques can be used to enrich phosphorylated proteins.
+% While phosphorylation plays an important role in determining protein function,
+% phosphorylated proteins are low abundant and therefore, a purification is
+% generally necessary to achieve good coverage in phosphoproteomic experiments.
+% Protein complexes can be analyzed using blue native gel electrophoresis, a 
+% method in which intact protein complexes are first separated in one dimension.
+% In a second step, the protein complexes are broken down into single proteins and
+% further separation of the resulting proteins is performed in the second 
+% dimension.
+% The resulting bands can be used to estimate the number and abundance of
+% the proteins in each complex, along with their molecular mass.
 
-The central aspects of proteomics are the identification of proteins, 
-the identifcation of post-translational modifications (PTM), 
-relative and absolute protein quantitation, protein localization, and
-the elucidation of protein-protein interactions.
-An important aspect about the proteome is that it is highly variable and
-subject to change over time and in response to changing environmental 
-conditions.
-In contrast to the genome and the transcriptome, the proteome most accurately
-reflects the phenotype of a cell.
+% ------ OLD STUFF BELOW -------
 
-Classic proteomic research used to be inherently {\em hypothesis-driven}.
-The large-scale identification of novel proteins was not feasible
-in the beginnings of the field, and the presence of known proteins could only
-be established by means of immunoblotting which provides a visualization
-of proteins, resulting in distinct, more or less prominent bands (in the case 
-of one-dimensional gels) or spots (in two-dimensional gels).
-Immunoblotting also allows for semi-quantitative analysis by visual or 
-computer-assisted inspection of protein bands.
-Apart from protein identification, some of the major aspects of classical 
-proteomic research are localization, quantitation, and the analysis of protein 
-interaction.
-Isolation and purification strategies are available to reduce the scope of
-proteins under investigation to individual cellular organelles, enrich for
-proteins exposing certain properties such as post-translational modifications
-or interacting proteins, and reduce the overall complexity of the sample.
-
-Centrifugation protocols can be used for the isolation of cellular organelles 
-or protein complexes \citep{Pertoft1978}.
-Localization of specific proteins can be performed by combining isolation 
-techniques with immunoblotting.
-Gel filtration techniques can be used to enrich phosphorylated proteins.
-While phosphorylation plays an important role in determining protein function,
-phosphorylated proteins are low abundant and therefore, a purification is
-generally necessary to achieve good coverage in phosphoproteomic experiments.
-Protein complexes can be analyzed using blue native gel electrophoresis, a 
-method in which intact protein complexes are first separated in one dimension.
-In a second step, the protein complexes are broken down into single proteins and
-further separation of the resulting proteins is performed in the second 
-dimension.
-The resulting bands can be used to estimate the number and abundance of
-the proteins in each complex, along with their molecular mass.
 % While information provided by genomics acts as a foundation to the possible
 % expression of a protein by the presence of its respective gene in the DNA,
 % transcript profiling yields information about gene transcription to mRNA.
@@ -283,12 +286,14 @@ the proteins in each complex, along with their molecular mass.
 % employed to separate proteins according to various physicochemical properties
 % including mass, isoelectric point, and hydrophobicity \citep{Neverova2005}.
 
-With the advent of mass spectrometric techniques, proteomic research has
-undergone a fundamental change due to the fact that the identity of 
-peptides, and subsequently proteins, can be accurately determined from 
-complex protein samples.
-This change has lead to the novel possibility of {\em discovery-driven}
-proteomic research.
+% ------ OLD STUFF ABOVE -------
+
+% With the advent of mass spectrometric techniques, proteomic research has
+% undergone a fundamental change due to the fact that the identity of 
+% peptides, and subsequently proteins, can be accurately determined from 
+% complex protein samples.
+% This change has lead to the novel possibility of {\em discovery-driven}
+% proteomic research.
 
 \section{Mass spectrometry-based proteomics}
 
@@ -318,6 +323,76 @@ Another application of mass spectrometry-based analysis is the localization of
 proteins to certain compartments of a cell, for example by semi-quantitative
 analysis.
 
+% protein isolation "from cell lysate or tissues by biochemical fractionation or affinity selection"
+% often final 1D or 2D gel electrophoresis step which "defines the sub-proteome to be analyzed"
+% MudPIT
+% IEF
+% whole cell lysate
+
+Although modern mass spectrometers are very sensitive, is usually not possible
+to achieve exhaustive proteome coverage from the measurement of highly complex 
+protein cocktails.
+Because proteins or peptides are identified solely by their observed {\em m/z} 
+values, the mass range and the mass accuracy defined by the mass spectrometer
+represent an upper limit of distinct molecules that can be unambiguously 
+detected.
+Therefore, it is often desired to reduce the complexity of a sample before
+the measurement.
+
+% --------------------------------------------------------------
+\subsection{Sample separation techniques}
+% --------------------------------------------------------------
+
+Starting from a complex protein mixture, several options are available to
+reduce the complexity of a sample and therefore facilitate mass spectrometric 
+analysis.
+Centrifugation protocols can be used for the isolation of cellular organelles
+\citep{Huber2003}, membrane proteins \citep{Gilmore2010}, or protein complexes 
+\citep{Puig2001}, filtration techniques can be used to enrich phosphorylated 
+proteins \citep{Thingholm2008}.
+While phosphorylation plays an important role in determining protein function,
+phosphorylated proteins are low abundant and therefore, a purification is
+generally necessary to achieve good coverage in phosphoproteomic experiments.
+By employing the appropriate isolation and purification steps, a sub-proteome
+of interest can be defined.
+
+Historically, two-dimensional gel electrophoresis (2D-PAGE) used to be the 
+method of choice for protein separation. 
+In this approach, proteins are first separated by their isoelectric point in
+the first dimension, followed by a SDS-PAGE step which further separates
+proteins by their molecular in the orthogonal direction.
+The resulting protein clusters can then be visualized and the visible spots
+excised and subjected to further analysis.
+As an alternative to gel-based approaches, gel-free separation techniques
+are available.
+High performance liquid chromatography (HPLC) systems can be directly coupled
+to mass spectrometers employing electrospray ionization (see below).
+The approach to enzymatically digest complex protein cocktails and subsequently
+separate the resulting peptides via liquid chromatography has been termed 
+{\em shotgun proteomics} in analogy to shotgun genome sequencing where
+the entire genome is fragmented and the resulting short reads are then 
+re-assembled by specialized software.
+Such a LC-MS/MS approach allows for the direct measurement of highly complex 
+peptide samples.
+The MudPIT strategy enhances this concept by implementing a two-dimensional
+chromatography which combines strong cation exchange chromatography (SCX) with
+reverse-phase chromatography (RPC).
+While the online sampling in both dimensions is a time-consuming operation,
+MudPIT provides high sensitivity \citep{Washburn2001, Wolters2001}.
+Gel-based and gel-free separation strategies can also be combined.
+In this approach which is also known as GeLC-MS/MS, intact proteins are 
+first separated by molecular weight via SDS-PAGE.
+The gel is then cut into typically 40--60 pieces and each band is then 
+digested and the resulting peptides are further separated via HPLC.
+% In difference gel electrophoresis (DIGE), the ambiguities between successive 
+% gels are removed by running a single gel with two or three different protein
+% samples which have previously been labeled with different fluorescent dyes.
+% After the electrophoresis is finished, protein spots stemming from different 
+% samples can be visualized and subsequently matched and quantified in a 
+% computer-assisted way \citep{Berth2007}.
+An example of a GeLC-MS/MS-based proteomics workflow for peptide and protein 
+identification is depicted in Fig.~\ref{fig:proteomics-overview}.
+
 \begin{figure}
 \includegraphics[width=\textwidth]{figures/Proteomics.jpg}
 \caption{
@@ -330,14 +405,6 @@ are recorded as peptide elution is in progress for a pre-defined amount of time.
 }
 \label{fig:proteomics-overview}
 \end{figure}
-
-Although modern mass spectrometers are very sensitive, a couple of sample 
-purification and fractionation steps, as described above, must be carried out 
-in order to achieve comprehensive proteome coverage. 
-An example of a mass spectrometry-based proteomics workflow for peptide 
-and protein identification is depicted in Fig.~\ref{fig:proteomics-overview}.
-
-
 
 % --------------------------------------------------------------
 \subsection{Acquisition of mass spectrometric data}
@@ -370,7 +437,7 @@ ions adds an additional level of complexity to data analysis.
 A common problem is that low abundant proteins may be missed in complex samples 
 due to the fact that there are many more highly abundant proteins present.
 To overcome these obstacles, several sample preprocessing steps, for example 
-SDS-PAGE and liquid chromatographyare, are usually undertaken.
+SDS-PAGE and liquid chromatography can be employed.
 Although mass spectrometric analysis of intact proteins has been successfully
 reported \citep{Lee2002, Taylor2003}, such an approach is not feasible in 
 general because the high mass of proteins cannot be accounted for with most
@@ -1078,6 +1145,13 @@ In comparison to the web server-based approach followed by TPP, TOPP implements
 a more distributed approach because the installation of a web server is not
 required and a platform-independent GUI is provided via the Qt framework.
 
+Systems biology approaches in which model organisms are characerized in
+regard to various aspects can be expected to produce huge amounts of data 
+which must be complemented with a versatile and robust data evaluation 
+infrastructure.
+A widely used model organism used for studying various plant-related
+aspects is {\em Chlamydomonas reinhardtii}.
+
 % --------------------------------------------------------------
 \section{The green alga {\em Chlamydomonas reinhardtii}}
 % --------------------------------------------------------------
@@ -1101,9 +1175,17 @@ Genome sequencing and annotation efforts are coordinated by the Joint Genome
 Institute (JGI)\footnote{\href{http://www.phytozome.net/chlamy}{http://www.phytozome.net/chlamy}}.
 The \cre~genome sequence and gene models are released in combination with
 24 green plants under the name of {\em Phytozome}.
-The current version of the \cre~genome consists of 113 Mbp in 88 scaffolds,
-17 of which are contiguous chromosome sequences.
+The current version of the \cre~genome (assembly 4) consists of 113 Mbp in 88 
+scaffolds, 17 of which are contiguous chromosome sequences.
+The GC content of the \cre~genome is unusually high at 64\%.
 Gene annotation is provided by AUGUSTUS and updated regularly.
+The current version of the gene models, AUGUSTUS version u10.2, comprises
+17,114 genes.
+Only a small fraction of the genome is protein-coding (16.7\%).
+A large fraction of genes contains introns (92\%), with a mean intron length
+of 373 base pairs.
+The number of exons per gene is quite high with 8.3 exons on average, with
+exons having a mean length of 190 base pairs.
 
 A particularly interesting aspect of \cre~is its capability to produce
 hydrogen under anaebrobic conditions \citep{Greenbaum1982}.
