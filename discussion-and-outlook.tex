@@ -1,45 +1,90 @@
+\cleardoublepage
 % ==============================================================
 \chapter{Discussion and outlook}
 % ==============================================================
 
+In the scope of this thesis, several software tools have been designed, 
+developed and subsequently applied for the investigation of biological 
+questions, including the characterization of the \cre~chloroplast proteome
+and its anaerobic response.
+In addition, a re-designed version of the Genomic Peptide Finder was used
+to establish a high-throughput proteogenomic genome annotation pipeline.
 
 \section{Decentralized MS/MS data evaluation infrastructure}
 
-
-
-\begin{todo}
-- decentralized system
-- many researches, many computers for data evaluation
-- low impact of failing single computers on overall performance 
-- functional data evaluation setup can be restored in a straightforward way
-- automatic software downloading
-- also beneficial in education
-- two-level design (CLI and GUI) allows for usage in situations which too 
-  complex to be feasible for handling in the GUI
-- rapid deployment of novel functionality
-- support for multiple scripting languages
-
-outlook:
-- more functionality
-- in particular, free de novo tool
-- remote execution (but local creation)
-- refinement of the workflow interaction metaphors (batches should be defined
-  per arrow, not per input file box)
-\end{todo}
-
-However, TPP requires the installation of an Apache web server for the purpose
-of providing a web browser-based graphical user interface (GUI).
-While the graphical user interaction is helpful for users, the required Apache 
-web server presents a non-negligible security risk because it potentially renders 
-the user's computer accessible and exploitable from the Internet when it can be 
-expected that most users won't be aware of this issue and will therefore not 
-be able to regularly apply security patches. 
-This issue is especially precarious on Windows and Mac OS X which do not 
-natively provide centralized, automatic software updating.
+From the researcher's perspective, Proteomatic provides a way to create and
+execute MS/MS data evaluation pipelines without the need to install each of
+the individual software tools manually.
+Every researcher with access to a computer is able to run data evaluation
+pipelines of virtually arbritrary complexity in an independent fashion.
+This independence is facilitated by the fact that the system runs on Windows,
+Mac OS X, and Linux.
+% ------------------------------------
 
 \paragraph{High-throughput data processing.}
 
+From the primary investigator's point of view, Proteomatic implements a 
+decentralized data evaluation system, in which the data evaluation requirements
+of every researcher can be typically accomodated for with a single computer,
+resulting in optimal scalability of the system because each computer acts 
+independently.
+Furthermore, a distributed system as provided by Proteomatic results in 
+increased robustness towards component failure and the lab-wide throughput
+is not greatly diminished by one or two failing computers.
+Due to the automatic software downloading and update features, a fully 
+functional environment can be quickly restored on a new hardware unit.
+% ------------------------------------
+Therefore, Proteomatic provides an advantage in terms of system reliability 
+over existing alternatives such as the Trans-Proteomics Pipeline (TPP) and 
+The OpenMS Proteomics Pipeline (TOPP).
+Although these systems provide more comprehensive functionality than Proteomatic
+currently does, the setup and preparation of these systems to a point where
+they become fully functional from the user's perspective is a time-consuming 
+process.
+Proteomatic performs these initial tasks automatically when they are required.
+TPP requires the installation of an Apache web server for the purpose
+of providing a web browser-based graphical user interface (GUI).
+While the GUI is helpful for users, the required Apache web server presents a 
+non-negligible security risk because it potentially renders the user's computer 
+accessible from the Internet.
+It can be expected that most users will be unaware of this issue and therefore
+not take care to update the web server software regularly.
+This issue is especially precarious on Windows and Mac OS X which do not 
+natively provide centralized, automatic software updating.
+Finally, because Proteomatic is easy to install, it is also beneficial in 
+education, giving students the opportunity to gain hands-on MS/MS data 
+evalution experience.
+
 \paragraph{Rapid deployment of novel functionality.}
+
+The fact that mass spectrometric data acquisition is constantly improving in
+terms of quantity and quality has fueled the development of software tools for
+various data evaluation-related purposes.
+Most of these programs can be easily integrated into Proteomatic.
+In addition, the deployment of novel, in-house developed functionality is
+greatly facilitated by Proteomatic due to its support for multiple scripting
+languages and the central script update mechanism.
+When novel functionality is being developed, initial decisions should be made 
+carefully.
+Although Proteomatic can support virtually any programming language, choosing
+a programming language which runs on Windows only inherently restricts the 
+target audience.
+Using Proteomatic, tool developers can concentrate on the actual data 
+processing and do not have to spend time on creating graphical user interfaces.
+
+% \begin{todo}
+% - decentralized system
+% - many researches, many computers for data evaluation
+% - low impact of failing single computers on overall performance 
+% - functional data evaluation setup can be restored in a straightforward way
+% - automatic software downloading
+% - also beneficial in education
+% - two-level design (CLI and GUI) allows for usage in situations which too 
+%   complex to be feasible for handling in the GUI
+% - rapid deployment of novel functionality
+% - support for multiple scripting languages
+% 
+
 
 \section{Automated quantitation of metabolically labeled samples}
 
@@ -116,3 +161,14 @@ independently confirmed via GPF \citep{Specht2011_GPF}.
 \paragraph{Proteogenomic genome annotation.}
 
 \paragraph{Identification of novel targets for reverse-genetics approaches.}
+
+\section{Outlook}
+
+% outlook:
+% - more functionality
+% - in particular, free de novo tool
+% - also provide data, not just tools
+% - remote execution (but local creation)
+% - refinement of the workflow interaction metaphors (batches should be defined
+%   per arrow, not per input file box)
+% \end{todo}
