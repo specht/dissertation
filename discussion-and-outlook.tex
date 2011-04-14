@@ -14,6 +14,10 @@ platform Proteomatic.
 
 \section{Decentralized MS/MS data evaluation infrastructure}
 
+In order to facilitate software development and utilization, Proteomatic
+was designed and implemented to provide a framework for the software
+dealing with specific mass spectrometric questions that is presented in 
+this thesis.
 From the researcher's perspective, Proteomatic provides a way to create and
 execute MS/MS data evaluation pipelines without the need to install each of
 the individual software tools manually.
@@ -114,7 +118,8 @@ One might criticize the apparent lack of visualization capabilities in
 Proteomatic for experimental data and data evaluation results.
 This is, however, a design decision which has been made to avoid {\em feature 
 creep}, an effect which may lead to failure of software projects due to
-more and more features being implemented.
+an ever-increasing amount of features being implemented which go far beyond the 
+originally intended scope.
 Proteomatic implements a strictly file-based data processing pipeline which
 means that all processing steps are strictly atomic and the output of one
 processing step is passed on as one or several files.
@@ -159,10 +164,20 @@ is not evident.
 One of the studies presented in this thesis provides a comprehensive list of 
 experimentally deduced chloroplast proteins for \cre~for the first time
 (manuscript 2).
-In addition, the anaerobic response of the chloroplast proteome of the green 
-alga is characterized. 
-Among other results, the anaerobic induction of hydrogenase, a protein involved 
-in hydrogen production, is experimentally confirmed.
+The list of 895 chloroplast-localized proteins has been compiled using
+a quantitative approach via spectral counting.
+The necessary data evaluation and filtering steps have been implemented
+as processing steps in Proteomatic.
+In manuscript 3, the list of chloroplast proteins has been manually extended 
+to 996 proteins, including chloroplast-encoded proteins and further proteins
+which have previously been characterized as localized to the chloroplast.
+In addition to experimental localization, the anaerobic response of the 
+experimentally deduced chloroplast proteome of the green alga is characterized 
+in manuscript 2. 
+From 895 proteins, 425 proteins could be quantified, confirming the anaerobic 
+induction of hydrogenase, a protein involved in hydrogen production.
+Furthermore, various proteins previously found to be induced on the transcript
+level under anaerobiosis were also found induced in the protein sample.
 
 The framework for high-throughput quantitation of metabolically labeled 
 samples, in this case by SILAC, is provided by qTrace.
@@ -181,7 +196,7 @@ using intact peptide masses only.
 In order to remove spurious precursor peak assignments, several filters are 
 employed.
 
-\paragraph{MS/MS requirement filter.}
+\paragraph{Confidence of peak assignments.}
 
 The inherent ambiguity resulting from assigning precursor peaks in full scans
 is compensated with the requirement of MS/MS identification in the same band
@@ -189,6 +204,20 @@ within a small retention time window of one minute.
 The assumption made by such a {\em MS/MS requirement filter} is that once the
 identity of a precursor peak has been established via MS/MS, this information
 can be expected to remain true within a short time span.
+Furthermore, if protein fractionation via SDS-PAGE has been employed, a filter
+which determines for each protein the SDS-PAGE band it has been most abundantly
+identified in via MS/MS and subsequently discards all quantitation events
+from other bands, allowing for a user-defined tolerance, under the assumption
+that peak assignments in atypical bands are potential artifacts.
+
+While these filters allow to increase the confidence of quantitation results
+by coupling them to the identification results in both retention time and
+molecular weight dimensions, assignments of peptides to intact precursor
+peaks remains a challenge.
+Therefore, quantitation results stemming from the analysis of full scans
+should be regarded to provide potential candidates in a discovery-based
+experiment and further validation by employing molecular biology techniques
+is advisable.
 
 \paragraph{Labeling strategies.}
 
@@ -200,6 +229,9 @@ can be expected to remain true within a short time span.
 }
 \label{fig:qtrace-15n}
 \end{figure}
+
+\paragraph{Induction of unannotated proteins.}
+
 
 
 \section{Advancement of the Genomic Peptide Finder }
