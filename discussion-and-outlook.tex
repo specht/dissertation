@@ -5,10 +5,12 @@
 
 In the scope of this thesis, several software tools have been designed, 
 developed and subsequently applied for the investigation of biological 
-questions, including the characterization of the \cre~chloroplast proteome
-and its anaerobic response.
+questions, including the quantitation program qTrace for the characterization 
+of the \cre~chloroplast proteome and its anaerobic response.
 In addition, a re-designed version of the Genomic Peptide Finder was used
-to establish a high-throughput proteogenomic genome annotation pipeline.
+to establish an automated proteogenomic genome annotation pipeline.
+These two systems have been implemented in the context of the data evaluation
+platform Proteomatic.
 
 \section{Decentralized MS/MS data evaluation infrastructure}
 
@@ -89,11 +91,40 @@ processing and do not have to spend time on creating graphical user interfaces.
 \section{Automated quantitation of metabolically labeled samples}
 
 One of the studies presented in this thesis provides a comprehensive list of 
-experimentally deduced chloroplast proteins for \cre~for the first time.
+experimentally deduced chloroplast proteins for \cre~for the first time
+(manuscript 2).
 In addition, the anaerobic response of the chloroplast proteome of the green 
 alga is characterized. 
-Among other results, the induction of hydrogenase, a protein involved in 
-hydrogen production, is confirmed \citep{Terashima2010}.
+Among other results, the anaerobic induction of hydrogenase, a protein involved 
+in hydrogen production, is experimentally confirmed.
+
+The framework for high-throughput quantitation of metabolically labeled 
+samples, in this case by SILAC, is provided by qTrace.
+qTrace is a targeted quantitation program which takes a list of peptides
+identified via MS/MS, along with their retention time, as input and then 
+reconstructs the corresponding isotope envelopes which are subsequently 
+matched to the full scans.
+In comparison to MS/MS-based quantitation, this strategy allows for the
+incorporation of a large set of data points during the final peptide ratio
+estimation because peptides usually elute for a time span long enough to
+show their precursor peaks in several successive full scans.
+It is obvious that the assignment of precursor peaks in full scans is highly
+ambiguous, given the fact that several distinct peptides can yield the
+same {\em m/z} values and therefore, peptide identification is not possible
+using intact peptide masses only.
+In order to remove spurious precursor peak assignments, several filters are 
+employed.
+
+\paragraph{MS/MS requirement filter.}
+
+The inherent ambiguity resulting from assigning precursor peaks in full scans
+is compensated with the requirement of MS/MS identification in the same band
+within a small retention time window of one minute.
+The assumption made by such a {\em MS/MS requirement filter} is that once the
+identity of a precursor peak has been established via MS/MS, this information
+can be expected to remain true within a short time span.
+
+\paragraph{Labeling strategies.}
 
 \section{Advancement of the Genomic Peptide Finder }
 
