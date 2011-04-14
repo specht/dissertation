@@ -184,7 +184,7 @@ samples, in this case by SILAC, is provided by qTrace.
 qTrace is a targeted quantitation program which takes a list of peptides
 identified via MS/MS, along with their retention time, as input and then 
 reconstructs the corresponding isotope envelopes which are subsequently 
-matched to the full scans.
+matched to the full scans (see Appendix A for a detailed description).
 In comparison to MS/MS-based quantitation, this strategy allows for the
 incorporation of a large set of data points during the final peptide ratio
 estimation because peptides usually elute for a time span long enough to
@@ -215,40 +215,90 @@ by coupling them to the identification results in both retention time and
 molecular weight dimensions, assignments of peptides to intact precursor
 peaks remains a challenge.
 Therefore, quantitation results stemming from the analysis of full scans
-should be regarded to provide potential candidates in a discovery-based
+should be regarded to provide induced candidate proteins in a discovery-based
 experiment and further validation by employing molecular biology techniques
 is advisable.
 
-\paragraph{Labeling strategies.}
+\paragraph{Metabolic labeling strategies.}
 
 \begin{figure}
 \includegraphics[width=\textwidth]{figures/qtrace-diagram.jpg}
 \caption{
-{\bf Quantitation results for \textsuperscript{15}N labeled \cre samples
+{\bf Quantitation results for \textsuperscript{15}N labeled \cre~samples
     under iron deficiency.} 
+    Isolated chloroplast proteins from \cre~cultures grown under 
+    iron-deficient (\textsuperscript{14}N) and iron-sufficient
+    (\textsuperscript{15}N) conditions were mixed and measured via
+    GeLC-MS/MS, using five bands from the gel.
+    Using Proteomatic, a set of 2,754 distinct peptides could be identified
+    via OMSSA which were subsequently passed to qTrace. 
+    After carrying out all filtering steps as described in manuscript 2
+    and shifting the quantitation results to the protein level,
+    a set of 59 proteins or protein groups could be quantified,
+    including many light-harvesting proteins.
+    Ratios correspond to \textsuperscript{14}N/\textsuperscript{15}N ratios,
+    high values correspond to induction under iron deficiency.
+    The data presented in this figure was provided by Ricarda H\"ohner.
 }
 \label{fig:qtrace-15n}
 \end{figure}
 
+qTrace supports a variety of metabolic labeling strategies by allowing the 
+user to define a non-natural isotope distribution for every chemical element 
+occuring in amino acids (hydrogen, carbon, nitrogen, oxygen, and sulfur).
+In addition, these non-natural isotope distributions can be applied 
+to a restricted set of amino acids.
+Using the user-specified label definition, qTrace is able to handle a variety
+of labeling strategies, including SILAC, \textsuperscript{15}N labeling (see 
+Fig. \ref{fig:qtrace-15n}), or \textsuperscript{18}O labeling 
+\citep{Miyagi2007}.
+\textsuperscript{13}C Arg SILAC labeling typically introduces a mass shift
+of 6 Da between two sister peptides if trypsin is used for enzymatic digestion
+because at most one arginine residue is typically expected per peptide and
+arginine contains 6 carbon atoms.
+Quantitation results stemming from \textsuperscript{15}N labeled samples
+can be regarded as more confident because the mass shift between sister peptides
+depends on the amino acid composition.
+This is because the label is introduced into every amino acid, and the number of
+nitrogen atoms is varying between different amino acids.
+
 \paragraph{Induction of unannotated proteins.}
 
+The large-scale quantitation approach presented in manuscript 2 resulted
+in a couple of proteins of unknown function shown to be induced under
+anaerobiosis.
+The quantitative results for these proteins hint towards a possible role
+in response to the experimental condition.
+Therefore, such proteins present interesting candidates for further research.
 
+\section{Proteogenomic genome annotation}
 
-\section{Advancement of the Genomic Peptide Finder }
+In manuscript 4, a new version of the Genomic Peptide Finder is presented
+which has been redesigned and implemented from scratch to add two important 
+features:
 
-In 2007, GPF was redesigned and implemented from scratch in the scope of this
-thesis to add a variety of features \citep{Specht2011_GPF}:
+\begin{enumerate}
+\item {\bf Intron splits may occur within a single coding nucleotide triplet.}
+This addition increases search sensitivity by considering a possible intron
+split in three locations per nucleotide triplet instead of one.
 
-\begin{itemize}
-\item intron splits may occur within a single coding nucleotide triplet
-\item splice donor/acceptor site consensus sequences may be specified to
-reduce the number of spurious spliced peptide alignments
-\item increased search speed by employing an indexing strategy while locating
-the occurences of sequence tags in the genomic DNA sequence
-\end{itemize}
+\item {\bf Splice donor/acceptor site consensus sequences may be specified.} 
+This modification increases search specificity because spliced peptides with
+unusual splice donor/acceptor sites are omitted from the results.
+\end{enumerate}
 
-In addition, a method for the automated validation of GPF candidate peptides,
-employing standard database search programs such as OMSSA was established.
+Most importantly, the search has been greatly accelerated due to the use
+of a one-time pre-processing step in which an index of the genomic DNA sequence
+to be used is created.
+For \cre, this indexing step produces an index file of 2.4 GiB in about 15 
+minutes.
+This initial cost is later compensated during the search which performs
+20 queries per second on average on commodity hardware, using commodity flash 
+memory to store the index file for faster random access.
+
+Apart from these technical improvements, a method for the automated validation 
+of GPF candidate peptides, employing standard database search programs such as 
+OMSSA was established.
 This allows for statistically robust identification of GPF-deduced peptides
 alongside gene model peptides.
 Furthermore, an annotation pipeline was established in which resulting GPF
@@ -258,29 +308,38 @@ GPF peptides.
 It is therefore a major contribution of this thesis that an automated
 proteogenomic annotation of the \cre~genome in which MS/MS data generated
 for various unrelated purposes can be re-used for the generation of
-extrinsic AUGUSTUS hints has become possible.
+extrinsic AUGUSTUS hints is available.
 
-\paragraph{GPF-supported proteogenomic genome annotation.}
-
-\begin{SCtopfig}
-\includegraphics[width=0.7\textwidth]{figures/gpf-omssa.jpg}
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{figures/gpf-omssa.jpg}
 \caption{
 {\bf Validation of GPF candidate peptides via a target/decoy approach
     using previously established gene models.} 
     Statistical significance of identified GPF candidate peptides is 
-    assessed using existing gene models which may be incomplete but
-    can be expected to contain a high amount of correct sequences.
+    assessed by employing a target/decoy approach with existing gene models 
+    which may be incomplete but can be expected to contain a high amount of 
+    correct sequences.
+    GPF peptides are also added to the candidate peptide pool, and the database
+    search program (OMSSA) assigns the best match from the pool to each
+    MS/MS spectrum, resulting in comparable E-values in between the two
+    peptide sources.
+    The final E-value threshold determination is performed under exclusive
+    consideration of the gene model target and decoy peptides.
+    The determined threshold is then applied to all peptide/spectral matches,
+    including those to GPF peptides.
 }
 \label{fig:gpf-omssa}
-\end{SCtopfig}
+\end{figure}
 
-The GPF annotation pipeline presented in this thesis follows a similar strategy
-(\cite{Specht2011_GPF}, see p.~\pageref{section:gpf} and \pageref{paper:gpf}).
+The presented pipeline for the generation of peptide hints for the purpose of
+proteogenomic annotation is similar to the exon splice graph approach proposed
+by \citeauthor{Tanner2007} in that it uses MS/MS scans as a source of candidate
+peptides.
 However, the GPF approach is less biased in comparison to the exon splice graph
 approach because it does not require exon/intron prediction as a first step.
 GPF candidate peptides are solely generated from MS/MS {\em de novo} sequencing
-and subsequent mapping of the resulting peptides to the genome, using 
-a user-defined maximum intron length and a set of possible splice donor/acceptor 
+and subsequent mapping of the resulting peptides to the genome, using a 
+user-defined maximum intron length and a set of possible splice donor/acceptor 
 site consensus sequences.
 This means that intron prediction is carried out on a per-peptide basis, and
 all peptides are treated independently.
@@ -290,16 +349,56 @@ Moreover, the approach is highly flexible because no specialized database
 search program is required because candidate peptides are inferred by GPF
 and then passed down the evaluation pipeline alongside a protein database
 (see Fig.~\ref{fig:gpf-omssa}).
-Although the protein database is used to estimate the FDR of peptide 
+
+% \paragraph{Improved GPF performace.}
+
+Although a gene model protein database is used to estimate the FDR of peptide 
 identifications, the final GPF-deduced peptides which are exported as
 peptide hints do not originate from this database, although in the case
-of \cre, a big portion of these protein database peptides could be 
-independently confirmed via GPF \citep{Specht2011_GPF}.
+of \cre, a large portion of these gene model peptides could be 
+independently confirmed via the combination of {\em de novo} sequencing and 
+GPF (see manuscript 4).
+The high amount of 53\% confirmed gene model peptides points to a improvement 
+of sensitivity of the new GPF version.
+One might argue that the use of {\em de novo} prediction, followed by
+error-tolerant, intron-aware matching to a genomic sequence is prone to
+produce large sets of similar peptides.
+However, this is not the case.
+The 10 peptides which are generated by PEAKS for every MS/MS scan are 
+reduced to 3.4 peptides on average after employment of GPF.
+Furthermore, as has been shown in manuscript 4, 97\% of all GPF-deduced 
+peptides are incorporated into the final gene models by AUGUSTUS.
+Because several other hint sources were available to AUGUSTUS and none of
+these sources is trusted unconditionally, these numbers suggest a strong 
+specificity of GPF peptides.
 
+\section{Identification of novel targets}
 
-\paragraph{Proteogenomic genome annotation.}
+A combination of qTrace and the Genomic Peptide Finder can produce especially
+interesting results.
+As shown in manuscript 4, the Genomic Peptide Finder can confirm a substantial
+amount of gene model peptides.
+In addition, previously unknown peptides may result from the analysis.
+This is especially true for organisms which for which genome sequencing and
+genome annotation are unavailable or are still in the early stages.
+Mass spectrometric data stemming from such organisms can be expected to
+yield a high amount of novel peptides.
+These peptides can be passed to qTrace along with identified gene model 
+peptides, possibly resulting in the identification of induced peptides which
+are not part of a gene model.
+If there is a peptide A stemming from already existing, possibly preliminary gene
+models, and a peptide B which has been identified via GPF only, and both
+are shown to be co-regulated via qTrace, it might be that the gene model
+containg A must be modified to also include B, if B is in close proximity to A
+on the genome (and the direction of the reading frames of A and B is equal).
+Quantitative information, mapped to the genome, might also be useful to
+support proteogenomic genome annotation because peptide clusters exhibiting 
+similar regulation patterns might be part of the same gene.
 
-\paragraph{Identification of novel targets for reverse-genetics approaches.}
+\begin{todo}
+qTrace confirms GPF results, especially with 15N labeling
+GPF confirms qTrace results ?
+\end{todo}
 
 \section{Outlook}
 
