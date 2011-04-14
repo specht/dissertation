@@ -6,7 +6,7 @@
 In the scope of this thesis, several software tools have been designed, 
 developed and subsequently applied for the investigation of biological 
 questions, including the quantitation program qTrace for the characterization 
-of the \cre~chloroplast proteome and its anaerobic response.
+of the chloroplast proteome of \cre~and its anaerobic response.
 In addition, a re-designed version of the Genomic Peptide Finder was used
 to establish an automated proteogenomic genome annotation pipeline.
 These two systems have been implemented in the context of the data evaluation
@@ -23,7 +23,7 @@ This independence is facilitated by the fact that the system runs on Windows,
 Mac OS X, and Linux.
 % ------------------------------------
 
-\paragraph{High-throughput data processing.}
+\paragraph{Scalability and robustness.}
 
 From the primary investigator's point of view, Proteomatic implements a 
 decentralized data evaluation system, in which the data evaluation requirements
@@ -43,7 +43,15 @@ Although these systems provide more comprehensive functionality than Proteomatic
 currently does, the setup and preparation of these systems to a point where
 they become fully functional from the user's perspective is a time-consuming 
 process.
-Proteomatic performs these initial tasks automatically when they are required.
+Proteomatic is downloads and unpacks software automatically when it is required.
+In addition, Proteomatic can be set up in such a way that all processing steps
+are automatically tracked by a central server.
+In the case that the file tracking server fails and cannot be reached, 
+Proteomatic stores all reports which could not be sent locally and attempts
+to re-send them the next time a script finishes.
+Although the file tracking step is not crucial for data evaluation itself,
+
+
 TPP requires the installation of an Apache web server for the purpose
 of providing a web browser-based graphical user interface (GUI).
 While the GUI is helpful for users, the required Apache web server presents a 
@@ -68,11 +76,66 @@ greatly facilitated by Proteomatic due to its support for multiple scripting
 languages and the central script update mechanism.
 When novel functionality is being developed, initial decisions should be made 
 carefully.
-Although Proteomatic can support virtually any programming language, choosing
-a programming language which runs on Windows only inherently restricts the 
-target audience.
+Although Proteomatic can support virtually any programming language, it should
+be noted that the choice of an appropriate language must be made carefully.
+For example, choosing a programming language which exclusively runs on Windows,
+such as C\# restricts the target audience and compromises further possibilities.
 Using Proteomatic, tool developers can concentrate on the actual data 
 processing and do not have to spend time on creating graphical user interfaces.
+An example regarding the calculation of peptide masses is shown in 
+Fig.~\ref{fig:rapid-development}.
+This approach enables a data processing method development style to which the
+`release early, release often' paradigm can be easily applied to 
+\citep{Raymond2001}.
+While this approach has the potential disadvantage of erroneous software
+being deployed to users, especially in the early stages, the faster progress
+achieved through early user feedback can be expected to improve the software
+quickly.
+Because Proteomatic provides a means to push software updates to users,
+this approach is especially feasible.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{figures/example-script-2.jpg}
+\caption{
+{\bf An example of a Proteomatic script.} 
+The script, which is implemented in Ruby in this case, is complemented with
+a YAML-formatted description which specifies all parameters as well as input
+and output files of the script.
+The description is used by the Proteomatic front end to automatically construct 
+a graphical user interface. This way, prototypes providing novel functionality
+or proof of concepts can be deployed early and often.
+}
+\label{fig:rapid-development}
+\end{figure}
+
+\paragraph{File-based data processing.}
+
+One might criticize the apparent lack of visualization capabilities in 
+Proteomatic for experimental data and data evaluation results.
+This is, however, a design decision which has been made to avoid {\em feature 
+creep}, an effect which may lead to failure of software projects due to
+more and more features being implemented.
+Proteomatic implements a strictly file-based data processing pipeline which
+means that all processing steps are strictly atomic and the output of one
+processing step is passed on as one or several files.
+This approach allows for manual inspection and intervention at any stage of
+a complex pipeline.
+Furthermore, all intermediate and final results can be copied to another 
+computer or sent via e-mail.
+Various standards are emerging for spectral data (mzML, \cite{Deutsch2008}), 
+identification results (mzIdentML\footnote{http://www.psidev.info/index.php?q=node/319}), and quantitation results 
+(mzQuantML\footnote{http://www.proteomexchange.org/project-organization/workpackages/wp2-standards-development}).
+In addition to these standardized file formats, further established file 
+formats such as plain text or comma-separated values are used for intermediate 
+results.
+For each of the file formats employed, specialized viewers already exist
+or are currently in development\footnote{http://code.google.com/p/mzidentml-viewer}.
+When the user double-clicks on an output file, Proteomatic delegates the
+file handling to the underlying operating system which even has a program 
+registered to handle the file type or may make a suggestion.
+Therefore, a requirement for handling various file types within Proteomatic
+is not evident.
+
 
 % \begin{todo}
 % - decentralized system
@@ -86,6 +149,9 @@ processing and do not have to spend time on creating graphical user interfaces.
 % - rapid deployment of novel functionality
 % - support for multiple scripting languages
 % 
+% outlook:
+% - remote execution and the cloud
+% - filetracker queries
 
 
 \section{Automated quantitation of metabolically labeled samples}
@@ -125,6 +191,16 @@ identity of a precursor peak has been established via MS/MS, this information
 can be expected to remain true within a short time span.
 
 \paragraph{Labeling strategies.}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{figures/qtrace-diagram.jpg}
+\caption{
+{\bf Quantitation results for \textsuperscript{15}N labeled \cre samples
+    under iron deficiency.} 
+}
+\label{fig:qtrace-15n}
+\end{figure}
+
 
 \section{Advancement of the Genomic Peptide Finder }
 
@@ -195,9 +271,27 @@ independently confirmed via GPF \citep{Specht2011_GPF}.
 
 \section{Outlook}
 
+\subsection{Proteomatic}
+
+\paragraph{Remote execution.}
+
+\paragraph{Incorporation of a freely available {\em de novo} sequencing software.}
+
+\paragraph{Centrally maintained repository of data files.}
+
+\paragraph{Refinement of workflow interaction metaphors.}
+
+\subsection{qTrace}
+
+\paragraph{Performance comparison to existing alternatives.}
+
+\paragraph{Untargeted quantitation.}
+
+\subsection{Genomic Peptide Finder}
+
+\paragraph{Increased search sensitivity.}
+
 % outlook:
-% - more functionality
-% - in particular, free de novo tool
 % - also provide data, not just tools
 % - remote execution (but local creation)
 % - refinement of the workflow interaction metaphors (batches should be defined
