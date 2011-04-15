@@ -1,4 +1,5 @@
 \cleardoublepage
+\addtocontents{toc}{\protect\newpage}
 % ==============================================================
 \chapter{Discussion and outlook}
 % ==============================================================
@@ -172,17 +173,29 @@ which have previously been characterized as localized to the chloroplast.
 In addition to experimental localization, the anaerobic response of the 
 experimentally deduced chloroplast proteome of the green alga is characterized 
 in manuscript 2. 
+
+\paragraph{Anaerobic response of the \cre~chloroplast proteome.}
+
 From 895 proteins, 425 proteins could be quantified in manuscript 2, 
 confirming the anaerobic induction of hydrogenase, a protein involved in 
 hydrogen production.
 Furthermore, induction on the protein level could be confirmed for various 
 proteins previously found to be induced on the transcript level,
-including proteins involved in fermentative metabolism (see Fig.~\ref{fig:qtrace-mia}).
+including proteins involved in the fermentative metabolism 
+(see Fig.~\ref{fig:qtrace-mia}).
 In addition to many ribosomal proteins with varying levels of induction,
 pointing to a re-structuring of the chloroplast metabolism via translational 
-regulation, a small set of 23 uncharacterized proteins was found to be induced
-and thus represent interesting candidates for further research.
+regulation, a small set of 23 uncharacterized proteins was found to be induced,
+four of which are part of the GreenCut \citep{Grossman2010}, and thus represent 
+interesting candidates for further research.
+One of these 23 proteins, TEF7, was further investigated using a reverse 
+genetics approach in which {\em tef7} knockdown mutant strains were generated
+and subsequently subjected to anaerobic conditions, showing that these mutants 
+were unable to survive (Mia Terashima, personal communication).
+This result indicates that TEF7 appears to play a crucial role in the 
+acclimation to anaerobic conditions.
 
+\paragraph{High-throughput quantitation in full scans.}
 
 The framework for high-throughput quantitation of metabolically labeled 
 samples, in this case by SILAC, is provided by qTrace.
@@ -281,27 +294,63 @@ depends on the amino acid composition.
 This is because the label is introduced into every amino acid, and the number of
 nitrogen atoms is varying between different amino acids.
 
-\paragraph{Induction of unannotated proteins.}
-
-The large-scale quantitation approach presented in manuscript 2 resulted
-in a handful of proteins of unknown function shown to be induced under
-anaerobiosis.
-The quantitative results for these proteins hint towards a possible role
-in response to the experimental condition.
-Therefore, such proteins present interesting candidates for further research.
+% \paragraph{Induction of unannotated proteins.}
+% 
+% The large-scale quantitation approach presented in manuscript 2 resulted
+% in a handful of proteins of unknown function shown to be induced under
+% anaerobiosis.
+% The quantitative results for these proteins hint towards a possible role
+% in response to the experimental condition.
+% Therefore, such proteins present interesting candidates for further research.
 
 \section{Further analysis of the \cre~chloroplast proteome}
 
 \begin{figure}
 \includegraphics[width=\textwidth]{figures/all-four-charts.jpg}
 \caption{
+    {\bf Visualization of \cre~chloroplast proteome similarities to
+    different taxonomic groups.}
+    Axes indicate median relative bit scores within each group (see
+    manuscript 3 for a detailed description of the score calculation).
 }
 \label{fig:mia-review-isolines}
 \end{figure}
 
+Manuscript 3 provides an in-depth review of the \cre~chloroplast proteome.
+In order to provide a foundation for discussion, a comparative analysis 
+of the \cre~chloroplast proteome has been carried out by running BLAST
+on the 996 protein set against the NCBI non-redundant database.
+In order to guarantee that the best-scoring hit would always be a hit to
+\cre, the NCBI non-redundant database was supplemented with the protein
+sequences of the \cre~chloroplast proteome.
+Relative bit scores for each of the 996 proteins were calculated for each of
+the four groups: (1) bacteria, (2) plants and mosses, (3) algae, and (4) green 
+algae.
+Fig.~\ref{fig:mia-review-isolines} provides a proteome-level overview
+of the similarities between the \cre~chloroplast proteome and the 4 taxonomic
+groups.
+Overall, it can be seen that in regard to the chloroplast proteome, there is
+a high similarity between green algae and plants/mosses (C) and the overall
+picture does not change dramatically when all algae are considered (D).
+Although there is also a substantial overlap in the comparison of bacteria
+to green algae (A) and algae (B), there are more outlier proteins which seem 
+to be more specific to algae.
+In addition, the overall trend in all four panels shows high similarity
+from the perspective of the proteome, with most proteins near the diagonal
+and only few outliers.
+Another figure from manuscript 3 provides a hierarchical view on the
+\cre~chloroplast proteome (Fig.~\ref{fig:mia-review-wheel}).
+It can be seen that the chloroplast covers a wide range of cellular
+functions, with protein functions and photosynthesis accounting for
+29\% of all proteins.
+Another 25\% of all known chloroplast proteins remains uncharacterized.
+
 \begin{figure}
 \includegraphics[width=\textwidth]{figures/wheel-yet-again-oh-noes.jpg}
 \caption{
+    {\bf Functional overview of the \cre~chloroplast proteome.}
+    For the classification of proteins, MapMan tables \cite{Thimm2004} 
+    have been used.
 }
 \label{fig:mia-review-wheel}
 \end{figure}
