@@ -67,7 +67,7 @@ This issue is especially precarious on Windows and Mac OS X which do not
 natively provide centralized, automatic software updating.
 Finally, because Proteomatic is easy to install, it is also beneficial in 
 education, giving students the opportunity to gain hands-on MS/MS data 
-evalution experience.
+evaluation experience.
 
 \paragraph{Rapid deployment of novel functionality.}
 
@@ -179,7 +179,7 @@ confirming the anaerobic induction of hydrogenase, a protein involved in
 hydrogen production.
 Furthermore, induction on the protein level could be confirmed for various 
 proteins previously found to be induced on the transcript level,
-including proteins involved in fermentative metabolism.
+including proteins involved in fermentative metabolism (see Fig.~\ref{fig:qtrace-mia}).
 In addition to many ribosomal proteins with varying levels of induction,
 pointing to a re-structuring of the chloroplast metabolism via translational 
 regulation, a small set of 23 uncharacterized proteins was found to be induced
@@ -201,6 +201,20 @@ same {\em m/z} values and therefore, peptide identification is not possible
 using intact peptide masses only.
 In order to remove spurious precursor peak assignments, several filters are 
 employed.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{figures/fig6.jpg}
+\caption{
+{\bf Quantitation results for SILAC labeled \cre~samples under anaerobiosis.} 
+Black dots denote quantitation results which have been confirmed by an
+MS/MS identification within a retention time window of one minute, white dots
+denote confirmation via a manual AMT approach.
+Graph A shows quantitation results for 345 proteins stemming from multiple 
+combinations of peptide, band, and charge. An additional set of 80 proteins 
+deduced from only one such combination are depicted in graph B.
+}
+\label{fig:qtrace-mia}
+\end{figure}
 
 \paragraph{Confidence of peak assignments.}
 
@@ -276,6 +290,22 @@ anaerobiosis.
 The quantitative results for these proteins hint towards a possible role
 in response to the experimental condition.
 Therefore, such proteins present interesting candidates for further research.
+
+\section{Further analysis of the \cre~chloroplast proteome}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{figures/all-four-charts.jpg}
+\caption{
+}
+\label{fig:mia-review-isolines}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{figures/wheel-yet-again-oh-noes.jpg}
+\caption{
+}
+\label{fig:mia-review-wheel}
+\end{figure}
 
 \section{Proteogenomic genome annotation}
 
@@ -428,15 +458,96 @@ the GPF peptide is correct.
 
 \section{Outlook}
 
+Although the presented software systems are fully functional and have been
+shown to provide useful results in the various studies, there are many
+points which should be addressed in the future to further improve the software.
+
 \subsection{Proteomatic}
 
 \paragraph{Remote execution.}
 
+In comparison to a web browser-based user interface as provided by TPP, the 
+GUI provided by Proteomatic can be regarded as highly accessible due to 
+the support for {\em drag and drop} operations and an overall look and feel
+which matches the underlying operating system.
+Also, the decentralized approach implemented by Proteomatic leads to a
+higher responsiveness of the system because network communication is not 
+involved in the pipeline creation process and there is no central server which
+could be overloaded from too many requests.
+However, it would be favorable to have the option to send a pipeline to a 
+dedicated server which would then execute the pipeline and leave the 
+user's computer responsive.
+In such a setup, the decentralized data evaluation approach would be 
+supplemented with an optional centralized data processing step which can
+aid in data evaluation but is not vital for the overall availability of
+data evaluation functionality.
+Because the scripts back end of Proteomatic is able to automatically resolve 
+external software dependencies, this approach seems especially feasible because
+the server could mimick the specific environment of the user as defined by
+the version number currently installed on the user's computer.
+
 \paragraph{Incorporation of a freely available {\em de novo} sequencing software.}
+
+While protein identification and quantitation is implemented in Proteomatic
+using free software, the proteogenomic pipeline approach presented in 
+manuscript 4 depends on PEAKS for the generation of {\em de novo} predictions.
+GPF does not require completely sequences peptides but also works with
+short sequence tags that have defined N- and C-terminal masses.
+Existing free alternatives such as Lutefisk \citep{Johnson2002}, PepNovo 
+\citep{Frank2005} and CompNovo \citep{Bertsch2009} should be evaluated in
+terms of performance.
+This can be easily accomplished by replacing the {\em de novo} prediction
+step with each software, re-running the entire annotation pipeline and 
+determining the amount of resulting GPF peptides that have been successfully
+incorporated into the resulting gene models.
+Once such a freely available {\em de novo} prediction software has been
+incorporated, the proteogenomic genome annotation approach could be 
+established in a distributed manner which yields comprehensive peptide hints.
 
 \paragraph{Centrally maintained repository of data files.}
 
+The strategy to collect information about external software and offer the
+use of these programs by means of a hierarchical menu of processing steps
+could be extended to data files such as genome and protein databases.
+By providing a centrally maintained repository containing links to freely
+available data files in addition to freely available software, the entire
+data evaluation process would be simplified because the user is not
+required to search for the appropriate files on the internet.
+Like software is downloaded automatically as soon as it is required for the 
+first time, data files could be downloaded when they are required and would
+then remain on the user's computer until a newer version is published in
+the Proteomatic data repository.
+
 \paragraph{Refinement of workflow interaction metaphors.}
+
+Proteomatic currently provides a way to establish complex file-based data 
+evaluation workflows which can be expressed by a directed acyclic graph (DAG),
+iteratively executing processing steps for which all input requirements are
+met and thus eventually resolving the entire pipeline.
+Software developers are used to the possibility to create loops in their
+workflows which is especially useful if the same task should be repeated
+several times on different input files.
+In order to provide this mechanism to users, Proteomatic offers an interaction 
+metaphor which turns a {\em file list} into a {\em file batch}, denoted by a 
+yellow arrow (see Fig.~\ref{fig:appendix-b-pipeline} for an example).
+However, as can be seen in the final processing steps of 
+Fig.~\ref{fig:appendix-b-pipeline}, this mechanism complicates matters when
+a set of input files should be used as a batch in one situation, and as a
+plain list in another situtation.
+Currently, this can only by achieved by turning the file batch into a file
+list by inserting two CSV file merging steps.
+If these steps would be ommited and the original CSV results file batch
+would be provided as input to the {\em Generate AUGUSTUS hints} processing
+step, 46 output files with partially redundant entries would emerge from
+the pipeline.
+A possible solution to this issue would be to define batch behaviour per
+arrow instead, thus allowing a set of files to be used as input to one single 
+processing step yielding a single output file, but at the same time the
+set of files could be used for the repeated execution of another processing
+step, yielding one output file for every specified input file.
+
+
+\paragraph{Filetracker querying.}
 
 \subsection{qTrace}
 
