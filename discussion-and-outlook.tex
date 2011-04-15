@@ -47,14 +47,12 @@ Although these systems provide more comprehensive functionality than Proteomatic
 currently does, the setup and preparation of these systems to a point where
 they become fully functional from the user's perspective is a time-consuming 
 process.
-Proteomatic is downloads and unpacks software automatically when it is required.
+Proteomatic downloads and unpacks software automatically when it is required.
 In addition, Proteomatic can be set up in such a way that all processing steps
 are automatically tracked by a central server.
 In the case that the file tracking server fails and cannot be reached, 
 Proteomatic stores all reports which could not be sent locally and attempts
 to re-send them the next time a script finishes.
-Although the file tracking step is not crucial for data evaluation itself,
-
 
 TPP requires the installation of an Apache web server for the purpose
 of providing a web browser-based graphical user interface (GUI).
@@ -546,24 +544,73 @@ processing step yielding a single output file, but at the same time the
 set of files could be used for the repeated execution of another processing
 step, yielding one output file for every specified input file.
 
-
 \paragraph{Filetracker querying.}
+
+While the collection of comprehensive reports for all executed processing steps
+is implemented and more than 15,000 reports have already been recorded, a
+user-friendly mechanism for querying this data repository does not yet exist.
+In order to enable the accurate reconstruction of finished data processing 
+workflows, a program is required which provides access to the reports collected
+by a Proteomatic file tracking server.
+This could be accomplished in a similar way that access to a MP3 music library 
+is provided where the entire set of songs can be reduced by selecting a subset 
+of artists or albums. 
+In the same manner, the set of available processing steps could be controlled
+by specifying details such as the user name or the approximate time the data
+evaluation was carried out.
+In addition, the MD5 checksum of generated output files could be used to 
+determine the processing step which yielded the file.
+Starting from a particular processing step, the entire data processing graph
+can be traversed in both upstream and downstream directions, and all related
+processing steps involved in the genesis of the final output file can
+be seamlessly reconstructed.
+
+% \begin{figure}
+% \includegraphics[width=\textwidth]{figures/revelio.jpg}
+% \caption{
+% {\bf Unfinished prototype of a file tracker querying tool.} 
+% }
+% \label{fig:revelio}
+% \end{figure}
 
 \subsection{qTrace}
 
 \paragraph{Performance comparison to existing alternatives.}
 
-\paragraph{Untargeted quantitation.}
+While qTrace has been employed successfully for the data analysis in 
+manuscript 2 and continues to provide interesting results in subsequent 
+experiments, a comprehensive performance assessment and comparison to existing 
+alternatives has not been carried out.
+Several free programs for SILAC \citep{Kohlbacher2007, Cox2008, Mortensen2010} 
+and \textsuperscript{18}O quantitation \citep{Halligan2005, Shinkawa2005} exist.
+Although many of these tools are restricted in some way, e. g. running on
+Windows only or working exclusively in conjunction with the commercial MASCOT
+software, the underlying models in each implementation can be expected to
+have a substantial impact on the quantity and quality of quantitation results.
+
+\paragraph{AMT-based validation and untargeted quantitation.}
+
+The validation of precursor peak assignments is currently performed using
+peptide identifications in MS/MS spectra which have been recorded at 
+approximately the same time as the full scan.
+Because there is an upper limit to the number of peptides identified via MS/MS
+scans and many more intact peptides are typically contained in a full scan,
+this approach also limits the number of quantified peptides.
+An AMT-based validation approach \citep{Mueller2007} resolves this issue by
+also considering peptide identification which have been made in other 
+measurements by aligning retention times between individual runs and 
+resolving the identity of precursor peaks in one run via identified MS/MS scans
+from another run.
+Because of the modular setup provided by Proteomatic, such an approach can
+be easily implemented without modifying the qTrace source code.
+In order to perform AMT-based validation, the {\em MS/MS requirement filter}
+would simply be replaced by a novel filter step which validates precursor
+peak assignments based on a AMT database.
 
 \subsection{Genomic Peptide Finder}
 
 \paragraph{Increased search sensitivity.}
 
-\paragraph{Processing of large genomes.}
 
-% outlook:
-% - also provide data, not just tools
-% - remote execution (but local creation)
-% - refinement of the workflow interaction metaphors (batches should be defined
-%   per arrow, not per input file box)
-% \end{todo}
+
+\paragraph{Processing of large genomes.}
