@@ -279,9 +279,12 @@ Therefore, such proteins present interesting candidates for further research.
 
 \section{Proteogenomic genome annotation}
 
-In manuscript 4, a new version of the Genomic Peptide Finder is presented
-which has been redesigned and implemented from scratch to add two important 
-features:
+Manuscript 4 introduces a new version of the Genomic Peptide Finder and
+presents a high-throughput strategy for the statistical validation of
+GPF peptides and their subsequent use in a proteogenomic genome annotation
+approach using AUGUSTUS.
+
+The new GPF version implements two major features:
 
 \begin{enumerate}
 \item {\bf Intron splits may occur within a single coding nucleotide triplet.}
@@ -315,6 +318,20 @@ It is therefore a major contribution of this thesis that an automated
 proteogenomic annotation of the \cre~genome in which MS/MS data generated
 for various unrelated purposes can be re-used for the generation of
 extrinsic AUGUSTUS hints is available.
+
+Using measurements of 949 bands which have been made in various experiments,
+a set of 9,336 statistically significant peptides could be deduced via 
+{\em de novo} prediction and subsequent GPF processing.
+From this peptide set, 1,318 peptides (14\%) contained an intron split,
+324 of which were spliced within a single coding nucleotide triplet,
+amounting to 25\% of all spliced peptides.
+The na\"ive assumption that the consideration of triplet-spliced peptides
+would enhance the overall number of spliced peptides by a factor of three,
+which would correspond to a relative triplet-spliced peptide amount of 66\%
+is therefore not met.
+This is in line with previous results which estimate the relative amount
+of triplet splicing to be surprisingly low at around 45\% in plants 
+\citep{Tomita1996}.
 
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{figures/gpf-omssa.jpg}
@@ -430,6 +447,8 @@ the GPF peptide is correct.
 \subsection{Genomic Peptide Finder}
 
 \paragraph{Increased search sensitivity.}
+
+\paragraph{Processing of large genomes.}
 
 % outlook:
 % - also provide data, not just tools
