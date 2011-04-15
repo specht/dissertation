@@ -607,10 +607,28 @@ In order to perform AMT-based validation, the {\em MS/MS requirement filter}
 would simply be replaced by a novel filter step which validates precursor
 peak assignments based on a AMT database.
 
+Another perspective for the further development of qTrace is to implement
+untargeted peptide quantitation. 
+In such an approach, no input peptides would be specified and the algorithm
+would try to recognize sister peptides by their mass shift.
+The untargeted quantitation approach would be especially useful in conjunction
+with AMT-based validation of quantitation events because potentially more 
+peptides could be quantified.
+
 \subsection{Genomic Peptide Finder}
 
 \paragraph{Increased search sensitivity.}
 
-
-
-\paragraph{Processing of large genomes.}
+Single nucleotide polymorphisms (SNPs) account for up to 80\% of interindivual
+genomic differences and are regarded to be useful for the assessment of disease
+susceptibility and also treatment.
+SNPs thus play an important role on the road towards personalized medicine 
+\citep{Carlson2008}.
+It would be a useful extension to the current implementation of GPF to provide 
+a mechanism which allows for the consideration of possible SNPs in the genome.
+Because SNPs occur rarely, it can be assumed that the consideration of a single
+SNP per peptide is sufficient.
+Because the consideration of a single SNP in a genomic sequence of $n$ base pairs
+can give rise to at most $3 \cdot n$ alternatives (which do not necessarily
+result in a different amino acid sequence), the time complexity of this algorithm
+is linear and thus the resulting increase in search time should be justifiable.
