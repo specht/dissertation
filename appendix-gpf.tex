@@ -38,16 +38,17 @@ PEAKS is used to determine 10 candidates peptides for each MS/MS spectrum
 via {\em de novo} sequencing.
 
 \item {\bf GPF alignment.} 
-The {\em de novo} peptides are aligned to the
-genomic DNA sequence of \cre, allowing for a maximum intron length of 602 base
-pairs and considering a splice site motif of GT/AG. 
-This process reduces the candidate peptide set per MS/MS spectrum from 10 to 
-3.4 on average.
+The {\em de novo} sequences peptides are aligned to the genomic DNA sequence 
+of \cre, allowing for a maximum intron length of 602 base pairs and considering 
+a single splice site motif of GT/AG. 
+This process reduces the size of the candidate peptide set per MS/MS spectrum 
+from 10 to 3.4 on average.
 The output contains detailed information of where each peptide alignment
 is located in the genomic DNA sequence.
 
 \item {\bf Extract peptides.}
-All resulting peptides are extracted from the GPF result tables for each band.
+All resulting peptides are extracted from the GPF result tables for each 
+SDS-PAGE band.
 
 \item {\bf Create FASTA databases.}
 For each band, a FASTA database is created which contains all GPF peptides 
@@ -60,14 +61,14 @@ of the contained sequences are correct, thus qualifying the database to be
 used as a provider of target peptides.
 
 \item {\bf Run OMSSA.} 
-The database search program OMSSA is run individually for each band using
+The database search program OMSSA is run once for each input file using
 the gene model target/decoy database and all GPF peptides obtained from
 the respective band.
 
 \item {\bf Sanitize peptide/spectral matches.} 
 A {\em hit distinctiveness filter} is applied to the lists of peptide/spectral
 matches (PSM) resulting from OMSSA, yielding a single result file that contains
-the results of all bands.
+the results from all bands.
 The filter employed checks whether there are multiple peptide assignments
 to the same MS/MS scan and discards non-first-ranking PSM.
 In addition, all PSM to a MS/MS scan are discarded if the top-scoring PSM
