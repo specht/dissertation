@@ -96,7 +96,7 @@ The notion of the {\em proteome} was coined by Marc Wilkins in 1994
 to reflect the entire set of proteins that are encoded in a genome and are 
 actually expressed by a cell \citep{Wilkins2009}.
 Interestingly, transcriptional regulation does not always correlate to
-protein expression in a linear fashion and \citep{Rogers2008}.
+protein expression in a linear fashion \citep{Rogers2008}.
 In particular, expression of a specific protein cannot be inferred from the 
 presence of its transcript because it has been shown that sometimes, mRNA 
 is not translated into a protein at all \citep{Eddy2001}.
@@ -123,12 +123,12 @@ metabolized in a cell \citep{Kell2004}.
 
 \paragraph{Systems biology.}
 
-The previously mentioned {\em omics}-related fields of research each deal
+The various {\em omics}-related fields of research each deal
 with a specific aspect of biology.
 While the methods employed in these areas provide detailed insights on the 
 molecular level, this information is not sufficient to gain a general 
-understanding of biology on the the systems level \citep{Kitano2002}.
-While comprehensive lists of genes and proteins, along with a mapping
+understanding of biology on the systems level \citep{Kitano2002}.
+While comprehensive lists of genes and proteins along with a mapping
 of their relations represents a valuable foundation of knowledge which can
 be built upon, a meta layer is required which is able to integrate the
 different sources of molecular information.
@@ -351,8 +351,8 @@ Centrifugation protocols can be used for the isolation of cellular organelles
 \citep{Puig2001}, filtration techniques can be used to enrich phosphorylated 
 proteins \citep{Thingholm2008}.
 While phosphorylation plays an important role in determining protein function,
-phosphorylated proteins are low abundant and therefore, a purification is
-generally necessary to achieve good coverage in phosphoproteomic experiments.
+phosphorylated proteins are often low abundant and therefore, purification is
+usually necessary to achieve good coverage in phosphoproteomic experiments.
 By employing the appropriate isolation and purification steps, a sub-proteome
 of interest can be defined.
 
@@ -366,7 +366,7 @@ excised and subjected to further analysis.
 As an alternative to gel-based approaches, gel-free separation techniques
 are available.
 High performance liquid chromatography (HPLC) systems can be directly coupled
-to mass spectrometers employing electrospray ionization (see below).
+to mass spectrometers employing electrospray ionization.
 The approach to enzymatically digest complex protein cocktails and subsequently
 separate the resulting peptides via liquid chromatography has been termed 
 {\em shotgun proteomics} in analogy to shotgun genome sequencing where
@@ -378,13 +378,13 @@ The MudPIT strategy (multi-dimensional protein identification technology)
 enhances this concept by implementing a two-dimensional
 chromatography which combines strong cation exchange chromatography (SCX) with
 reverse-phase chromatography (RPC).
-While the online sampling in both dimensions is a time-consuming process,
+Although the online sampling in both dimensions is a time-consuming process,
 MudPIT provides high sensitivity while rendering gel-based prefractionation 
 unnecessary \citep{Washburn2001, Wolters2001}.
 Gel-based and gel-free separation strategies can also be combined.
 In the GeLC-MS/MS strategy, intact proteins are 
 first separated by molecular weight via SDS-PAGE.
-The gel is then cut into typically 40--60 pieces and each band is then 
+The gel is then cut into typically 40--60 pieces and each band is
 digested and the resulting peptides are further separated via HPLC
 coupled online to the mass spectrometer.
 % In difference gel electrophoresis (DIGE), the ambiguities between successive 
@@ -414,10 +414,9 @@ are recorded as peptide elution is in progress for a pre-defined amount of time.
 % --------------------------------------------------------------
 
 Using mass spectrometry, the mass of molecules cannot be directly determined
-because mass analysis is always performed on ions of unknown charge, resulting
-in a spectrum of intensity values for individual mass-to-charge ({\em m/z}) 
-ratios.
-When high {\em m/z} resolution is available, ion charges can be determined 
+because mass analysis is always performed on charged ions, resulting in a 
+spectrum of intensity values for individual mass-to-charge ({\em m/z}) ratios.
+If high {\em m/z} resolution is available, ion charges can be determined 
 from a mass spectrum, and thus a deconvolution of {\em m/z} values to actual 
 masses is possible.
 Otherwise, the ambiguity introduced by the unknown charge state of detected
@@ -527,9 +526,9 @@ confined by a ring electrode and two endcap electrodes.
 The linear ion trap uses a two-dimensional field and provides for higher ion
 storage capacity, resulting in an increased detection sensitivity.
 The Fourier transform ion cyclotron resonance (FT-ICR) mass analyzer provides
-for extremely high mass resolution which.
+for extremely high mass resolution.
 However, a strong magnetic field must be created and sustained, resulting
-in high maintenance as the system needs to be constantly cooled with helium. 
+in high maintenance as the system needs to be constantly cooled. 
 The most recent development in this area, the Orbitrap, combines high mass 
 accuracy with low maintenance requirements \citep{Hu2005}. 
 A Thermo Scientific LTQ Orbitrap XL mass spectrometer has been used for the
@@ -561,7 +560,7 @@ acquired, each of which contains different information.
 
 \paragraph{Full scans (MS).}
 
-Full scans provide an overview over the peptides which are present in the
+Full scans provide an overview of the peptides which are present in the
 mass spectrometer at a given time (see Fig.~\ref{fig:full-scan}).
 The \mz~values of all intact peptides are reported.
 However, the absence of a precursor peak does not necessarily indicate the
@@ -575,7 +574,7 @@ selected for further analysis.
 \caption{
 {\bf Zoomed view of a full scan.}
 Isotope envelopes of doubly charged peptides, consisting of precursor
-peaks with a \mz~difference of $\sim0.5$ are visible,
+peaks with a \mz~difference of $\sim0.5$ are visible.
 }
 \label{fig:full-scan}
 \end{figure}
@@ -586,9 +585,10 @@ The scans resulting from collision-induced dissociation are called
 fragmentation scans, or tandem MS (MS/MS) scans (see Fig.~\ref{fig:fragmentation-scan}).
 From the observed fragment ions, {\em mass ladders} can be constructed which
 represent the amino acid sequence of the selected peptide (see Fig.~\ref{fig:fragmentation-scan-b-y}). 
-When fragmentation peaks are missing, the exact sequence of the peptide may not
-become clear from a single mass ladder.
-However, a combination of multiple mass ladders can resolve such ambiguities.
+If those cases where fragmentation peaks are missing, the exact sequence of the 
+peptide may not become clear from a single mass ladder.
+However, a combination of multiple mass ladders can aid to resolve such 
+ambiguities.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{figures/ms2-scan.jpg}
@@ -608,6 +608,8 @@ Resulting fragment ions are recorded in the fragmentation scan.
 {\em y} ion series mass ladders superimposed.} 
 The \mz~differences of fragmentation peaks reflect the masses of individual amino
 acids or short amino acid oligomers.
+The amino acid sequence of the peptide which has been recorded in this
+scan is VLVAEQGAAGLFK.
 }
 \label{fig:fragmentation-scan-b-y}
 \end{figure}
@@ -624,7 +626,7 @@ reflected in the data analysis: If proteins were separated via SDS-PAGE, the
 resulting order of proteins via their mass can be used to verify or falsify 
 identifications.
 Likewise, if liquid chromatography is employed, the retention time at which
-peptides have been identified can be used for plausibility checks.
+peptides have been identified can be used for plausibility testing.
 
 Sequence databases, including genome and protein sequences, play an important
 role in MS/MS data evaluation because they greatly confine the search space
@@ -636,13 +638,12 @@ to provide for proper identification.
 
 % \subsubsection{Identification}
 
-Several possibilities have been established to identify peptides present
-in the sample. 
-Usually, only a fraction of all peptides present in a sample can be 
-identified for various reasons.
-Firstly, peptides stemming from low abundant protein may be missed because 
+Several methods have been established to identify peptides present
+in a sample. 
+Usually, only a fraction of all peptides can be identified for various reasons.
+Firstly, peptides stemming from low abundant proteins may be missed because 
 they result in low precursor peaks which are generally less favored, and
-therefore harded to detect, when compared to high peaks that can be clearly
+therefore harder to detect, when compared to strong peaks that can be clearly
 distinguished from noise peaks.
 Another problem arises when highly complex samples are used and the
 high number of peptides outnumbers the number of scan events in the
@@ -656,20 +657,20 @@ fragmented in such a way that identification is possible.
 \paragraph{Peptide mass fingerprinting.}
 
 Peptide mass fingerprinting is a protein identification method which was
-simultaneously developed by several groups in 2003 
+simultaneously developed by several groups in 1993 
 \citep{Henzel1993,James1993,Mann1993,Pappin1993a,Yates1993}.
 In this method, the observation of several intact peptide precursor masses
 (the peptide mass fingerprint) is used to identify the protein which was 
 present in the sample.
-Peptides are determined {\em in silico} prior to the search from a protein
-database and their masses are subsequently matched to the observed precursor
-peaks.
+Suitable peptides are determined {\em in silico} prior to the search from a 
+protein database and their masses are subsequently matched to the observed 
+precursor peaks.
 Accoring to \citet{Mann1993}, four to six proteolytic peptides measured
 at a mass accuracy between 100 and 1,000 ppm are usually sufficient to
 characterize a protein.
-The acquisition and interpretation of fragmentation is scans is not required, 
+The acquisition and interpretation of fragmentation scans is not required, 
 however the method has the disadvantage that only samples containing a single 
-protein can be analyzed and complex protein mixtures cannot be used.
+protein can be analyzed and complex protein mixtures cannot be resolved.
 
 \paragraph{Database search.}
 
@@ -688,8 +689,8 @@ correct identification.
 \label{fig:psm}
 \end{figure}
 
-One year after the advent of the peptide mass fingerprint approach, a novel
-method for the identification of peptides was developed by \citet{Eng1994}.
+One year after the advent of the peptide mass fingerprinting approach, a novel
+method for the identification of peptides was presented by \citet{Eng1994}.
 In their study, \citeauthor{Eng1994} introduced SEQUEST, an algorithm which
 takes fragmentation scans and a protein sequence database as input files.
 From the protein sequences, {\em in silico} digested peptides are determined
@@ -705,8 +706,8 @@ This prerequisite for the correctness of peptide identifications highlights
 a drawback of the method: as for peptide mass fingerprinting, the peptide
 identification completely depends on the protein sequence database used.
 Sequences which are not covered by the database are not tested and therefore
-cannot weaken the identification distinctness of a particular peptide/spectral 
-match (PSM).
+cannot weaken the identification distinctiveness of a particular 
+peptide/spectral match (PSM).
 In the recent years, several new database search programs have become 
 available, including MASCOT \citep{Perkins1999}, X! Tandem \citep{Craig2004},
 OMSSA \citep{Geer2004}, and MyriMatch \citep{Tabb2007}.
@@ -714,7 +715,7 @@ OMSSA \citep{Geer2004}, and MyriMatch \citep{Tabb2007}.
 \paragraph{Statistical assessment of peptide/spectral matches.} 
 
 Initially, individual peptide/spectral matches had to be validated manually,
-and consensus score thresholds could be used as a rough estimate to distinguish
+and consensus score thresholds were used as a rough estimate to distinguish
 incorrect from correct peptide identifications.
 With the advances in mass spectrometry leading towards high-throughput analyses,
 such an approach was no more feasible and a method for the assessment of
@@ -749,14 +750,14 @@ Based on these numbers, \citeauthor{Elias2007} estimate the FDR as
 \text{FDR} = \frac{2 \cdot n_{\text{decoys}}}{n_{\text{targets}} + n_{\text{decoys}}}.
 \end{equation}
 
-\citeauthor{Kall2008a} propose an alternative FDR estimation 
+\citeauthor{Kall2008a} propose an alternative formula for FDR estimation 
 \citep{Kall2008a}:
 
 \begin{equation}
 \text{FDR} = \frac{n_{\text{decoys}}}{n_{\text{targets}}}.
 \end{equation}
 
-Regardless of the actual estimation, the target/decoy approach is based on 
+Regardless of the FDR estimation, the target/decoy approach is based on 
 the following assumptions \citep{Elias2007}: (1) proteolytic peptides inferred 
 from the target and decoy databases do not overlap, and (2) false positive 
 identifications from both databases are equally likely.
@@ -766,8 +767,8 @@ target/decoy approach is feasible.
 
 \paragraph{{\em De novo} sequencing.}
 
-For the interpretation of fragmentation scans, {\em de novo} sequencing is
-a highly unbiased method.
+For the interpretation of fragmentation scans, {\em de novo} sequencing 
+represents a highly unbiased method.
 Here, the mass ladders recorded in a fragmentation scan are reconstructed
 and a list of full peptide sequence candidates is returned as a result.
 Because the assignment of peptides to fragmentation spectra does not rely
@@ -790,7 +791,7 @@ are generally not completely correct across the entire amino acid sequence,
 and an automated method to validate peptides and use the resulting validated 
 peptides in a downstream analysis is not readily available. 
 Therefore, {\em de novo} sequencing is often used as a complementing method 
-which is used in special cases and requires manual verification.
+which is employed in special cases and requires manual verification.
 A hybrid approach combining {\em de novo} sequencing and database search
 is implemented by sequence tag search algorithms such as InsPecT 
 \citep{Tanner2005} or ByOnic \citep{Bern2007}.
@@ -833,11 +834,11 @@ coverage.
 The {\em isobaric tag for relative and absolute quantitation} method (iTRAQ)
 follows a similar approach by introducing isobaric tags into the peptides in
 different samples \citep{Ross2004} at the stage of enzymatic digestion.
-However, the N-terminus of peptides is labeled, resulting in increased proteome
+Here, the N-terminus of peptides is labeled, resulting in increased proteome
 coverage.
 Each iTRAQ tag consists of a reporter group and a balance group, which together 
 result in a mass shift of 145 Da. 
-However, several distinct tags are available and possible reporter group masses 
+Several distinct tags are available and possible reporter group masses 
 include 114 Da, 115 Da, 116 Da, and 117 Da, thus enabling the simultaneous 
 analysis of more than two samples (an iTRAQ variant with 8 different tags is also
 available).
@@ -888,9 +889,9 @@ and Lysine-auxotrophic.
 
 In the recent years, label-free quantitation methods have been developed and
 constantly refined.
-In these approaches, no labels are required and measurements of two or 
-more samples are cross-correlated to determine relative peptide and protein
-amounts in the respective conditions.
+In these approaches, no labels are required and two or more measurements of 
+individual, unlabeled samples are cross-correlated to determine relative 
+peptide and protein amounts in the respective conditions.
 Spectral counting is a coarse and simple way of assessing protein ratios by
 comparing the number of scans a peptide, and therefore protein, was identified
 in across the samples \citep{Old2005}.
@@ -916,7 +917,7 @@ peaks which have not been subsequently triggered for collision-induced
 dissociation but have been identified in a different run at the same retention 
 time.
 In order to accomodate for variations in the LC elution, all involved runs
-must be aligned in such a way that equal peptide elute at equal retention times.
+must be aligned in such a way that equal peptides elute at equal retention times.
 While retention time alignment is a complex and inherently ambiguous process
 \citep{Fischer2006}, label-free quantitation can be regarded as a very powerful
 quantitation strategy because it provides comprehensive results and recorded 
@@ -929,15 +930,14 @@ the database becomes saturated.
 \label{proteogenomics}
 
 Genome sequence databases are a prerequisite for the prediction of protein 
-databases, and full genome sequences for more than 180 species are available
-\citep{Yates2009}.
+databases.
 The annotation of genomic sequences remains a challenge, especially in
 eukaryotic genomes, where protein coding sequences are often interrupted by
 introns.
 % bad quality
 Published gene models for organisms are subject to frequent changes and updates
 following manual inspection or novel strategies for gene model prediction.
-In the {\em A. thaliana} gene models, more than 1000 genes needed corrections
+In the {\em A. thaliana} gene models, more than 1,000 genes needed corrections
 and over 250 novel genes were added with the release of version 9 of the
 Arabidopsis Information Resource (TAIR, \cite{Huala2001}).
 In the case of {\em C. elegans}, manual inspection of the predicted gene models
@@ -995,7 +995,8 @@ genes.
 Second, observed peptides can be used to ascertain that gene transcripts
 are not degraded but actually expressed as proteins.
 In addition, identified peptides automatically determine the coding frame
-for a certain genomic region and elucidate the location of introns in a gene.
+for a certain genomic region and may elucidate the location of introns in a 
+gene.
 An additional benefit of MS/MS-assisted genome annotation is that scans recorded
 in many experiments for various experimental purposes can be used to provide
 extrinsic peptide hints to the gene model prediction program and measurements 
@@ -1013,9 +1014,9 @@ it.
 However, the assessment of the statistical significance of these hits is 
 difficult, given that the amount of false peptides in the six frame translation
 is unknown and at least 83\% because for a certain genomic region, at most
-of six reading frames can be expected to be protein-coding.
-In addition, this method does not yield spliced peptides which are highly
-interesting for the annotation of complex eukaryotic genomes.
+one out of six reading frames can be expected to be protein-coding.
+In addition, this method does not yield spliced peptides which are especially
+useful for the annotation of complex eukaryotic genomes.
 
 % \subsection{The exon splice graph approach}
 
@@ -1036,10 +1037,9 @@ annotation of {\em A. thaliana} by correcting 695 genes and identifying
 \label{section:gpf}
 
 The Genomic Peptide Finder (GPF), originally devised by \citeauthor{Allmer2004} 
-in \citeyear{Allmer2004}, follows a different strategy for the use of 
-{\em de novo} predicted amino acid sequences \citep{Allmer2004}.
-Instead of matching short sequence tags to gene model proteins, GPF uses the
-six frame translation of a genomic DNA sequence as a matching target.
+in \citeyear{Allmer2004}, provides a strategy for the correction of 
+{\em de novo} predicted amino acid sequences \citep{Allmer2004},
+using the six frame translation of a genomic DNA sequence.
 From a given {\em de novo} sequenced peptide, all sequence tags of a 
 user-defined size are extracted and each of the sequence tags is located
 within the six frame translation.
@@ -1052,7 +1052,7 @@ All deduced candidate peptides fulfill the following criteria:
 \item a short sequence tag (typically three to five amino acids) has been 
 correctly predicted via {\em de novo} sequencing 
 \item the position of the sequence tag within the peptide, as defined by
-either the N- or C-terminal fragment mass, is correct within the limits 
+both the N- and C-terminal fragment masses, is correct within the limits 
 defined by the fragment scan mass accuracy (typically 700 ppm for an ion trap)
 \item the total mass of the peptide matches the observed precursor mass
 within the range defined by the full scan mass accuracy (typically 5 ppm for 
@@ -1063,7 +1063,7 @@ In addition to unspliced candidate peptides, the deduction of spliced candidate
 peptides is attempted by considering a user-defined maximum intron length.
 The resulting peptides may then be used to verify or falsify existing gene 
 models, as shown in a subsequent publication where GPF was used to confirm 
-2174 gene model peptides and further identify 448 novel peptides, including 98 
+2,174 gene model peptides and further identify 448 novel peptides, including 98 
 spliced peptides \citep{Allmer2006}.
 The manual inspection of the identified peptides lead to the identification
 of novel gene models, the improvement of existing gene models as well as 
@@ -1135,11 +1135,11 @@ free software.
 % natively provide centralized, automatic software updating.
 The web server-based approach implemented by TPP lends itself to a centralized
 setup where a central server performs the actual data processing and can
-be controlled by external clients via the web browser.
+be controlled by external clients via a web browser.
 
 The OpenMS Proteomics Pipeline (TOPP) is another recently released software 
 system for the evaluation of MS/MS data \citep{Kohlbacher2007}.
-TOPP is based on the OpenMS C++ library which provides misceallaneous mass 
+TOPP is based on the OpenMS C++ library which provides miscellaneous mass 
 spectrometry-related functionality to software developers as a programming 
 library.
 Aside from providing a substantial body of software tools on the command-line 
@@ -1206,9 +1206,8 @@ The 195 kbp chloroplast genome contains many genes involved in photosynthesis.
 However, a large fraction of photosynthesis-related genes have been transferred
 to the nuclear genome \citep{Blanchard2000} and are imported into the 
 chloroplast via transit peptides.
-Therefore, the chloroplast proteome which is estimated to comprise about 3,000
-proteins, cannot be readily determined from the genes encoded in the its 
-genome.
+Therefore, the proteome of the \cre~chloroplast cannot be readily determined 
+from the genes encoded in its genome.
 
 \paragraph{Anaerobic response.}
 
@@ -1217,9 +1216,9 @@ hydrogen as a by-product of photosynthesis under anaebrobic conditions
 \citep{Greenbaum1982} and sulfur deprivation \citep{Fouchard2005}.
 Due to the promising role of hydrogen in clean energy production, 
 \cre~represents a potential candidate for renewable energy.
-The increasing amounts of reducing equivalents in the chloroplast is
-compensated by a highly efficient hydrogenase which acts as a sink for 
-electrons from the photosynthetic electron transport chain 
+Under anaerobiosis, the increasing amounts of reducing equivalents in the 
+chloroplast is compensated by a highly efficient hydrogenase which acts as a 
+sink for electrons from the photosynthetic electron transport chain 
 \citep{Happe2002, Hemschemeier2011}.
 It is known that under anaerobiosis, \cre~induces several fermentative
 pathways \citep{Grossman2011}.
@@ -1228,8 +1227,8 @@ has not been previously determined experimentally.
 Moreover, the quantitative assessment of the anaerobic response of the
 chloroplast proteome can be expected to provide deeper insights into
 the biochemical mechanisms of photosynthesis under anaerobiosis.
-This information will be useful in the attempt to engineering a 
-\cre~strain which is optimized towards hydrogen production.
+This information will be useful in the attempt to engineer a \cre~strain which 
+is optimized towards hydrogen production.
 
 % % --------------------------------------------------------------
 % \section{Thalassiosira oceanica}
