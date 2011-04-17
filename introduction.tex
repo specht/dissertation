@@ -134,11 +134,12 @@ be built upon, a meta layer is required which is able to integrate the
 different sources of molecular information.
 An example provided by \citeauthor{Kitano2002} in his review uses an analogy 
 to an airplane.
-While a listing of all airplane parts is not sufficient to understand or even
+While a listing of all airplane parts represents a useful piece of information,
+it is not sufficient to understand or even
 build a functional airplane because information beyond the scope of individual
 components is missing, for example regarding the assembly of the single parts,
 how signals are encoded on signal lines, and how they can be made robust against
-external influences, noise, and malfunction.
+external influences, noise and malfunction.
 
 The field of {\em systems biology} attempts to provide a systems-level 
 understanding of biology. 
@@ -304,8 +305,7 @@ The major goals of mass spectrometry-based proteomics are protein
 identification and quantitation.
 However, since most proteins are too heavy to be measured directly, the
 analysis is usually performed on the peptide level, with proteins being digested
-prior to the measurement using proteolytic enzymes such as Trypsin, Lys-C, or 
-Pepsin. 
+prior to the measurement using proteolytic enzymes. 
 The inherent ambiguity introduced by protein isoforms or alternative splicing
 poses an additional challenge when peptide identifications are shifted to
 the protein level.
@@ -317,7 +317,7 @@ chemically modifying certain residues.
 Furthermore, structural adjustments such as the formation of disulfide 
 bonds between Cysteine residues may be required for the protein to become 
 functional.
-Employing mass spectrometry, it is possible not only to identify peptides and
+By employing mass spectrometry, it is possible not only to identify peptides and
 proteins, but also to study their various modifications.
 Another application of mass spectrometry-based analysis is the localization of
 proteins to certain compartments of a cell, for example by semi-quantitative
@@ -360,7 +360,7 @@ Historically, two-dimensional gel electrophoresis (2D-PAGE) used to be the
 method of choice for protein separation. 
 In this approach, proteins are first separated by their isoelectric point in
 the first dimension, followed by a SDS-PAGE step which further separates
-proteins by their molecular in the orthogonal direction.
+proteins by their molecular weight in the orthogonal direction.
 The resulting protein clusters can then be visualized and the visible spots
 excised and subjected to further analysis.
 As an alternative to gel-based approaches, gel-free separation techniques
@@ -524,7 +524,7 @@ sequentially, traversing the entire {\em m/z} range.
 In the three-dimensional quadrupole ion trap, ions are trapped in a space
 confined by a ring electrode and two endcap electrodes.
 The linear ion trap uses a two-dimensional field and provides for higher ion
-storage capacity, resulting in an increased detection sensitivity.
+storage capacity, resulting in increased detection sensitivity.
 The Fourier transform ion cyclotron resonance (FT-ICR) mass analyzer provides
 for extremely high mass resolution.
 However, a strong magnetic field must be created and sustained, resulting
@@ -706,8 +706,8 @@ This prerequisite for the correctness of peptide identifications highlights
 a drawback of the method: as for peptide mass fingerprinting, the peptide
 identification completely depends on the protein sequence database used.
 Sequences which are not covered by the database are not tested and therefore
-cannot weaken the identification distinctiveness of a particular 
-peptide/spectral match (PSM).
+cannot be detected or used to weaken the identification distinctiveness of a 
+particular peptide/spectral match (PSM).
 In the recent years, several new database search programs have become 
 available, including MASCOT \citep{Perkins1999}, X! Tandem \citep{Craig2004},
 OMSSA \citep{Geer2004}, and MyriMatch \citep{Tabb2007}.
@@ -780,8 +780,8 @@ problem of interfering noise peaks, interpretation is difficult and
 high-resolution spectra are usually required to achieve correct results.
 In addition, the speed of such algorithms is generally very low because the
 search space is only confined by the proteolytic enzyme which was used
-for protein digestion and apart from that, all possible amino acid sequences
-must be taken into account.
+for protein digestion and apart from the resulting restrictions, all possible 
+amino acid sequences must be taken into account.
 Available {\em de novo} sequencing programs include Lutefisk 
 \citep{Johnson2002}, PEAKS \citep{Ma2003}, PepNovo \citep{Frank2005}
 and CompNovo \citep{Bertsch2009}.
@@ -822,18 +822,18 @@ absolute quantitation results.
 Chemical labeling methods introduce a label into the peptides from one of the 
 samples via a chemical reaction. 
 The {\em isotope-coded affinity tag} method (ICAT) 
-uses two affinity tags {\em d0} and {\em d8} which bind to cysteine residues
+uses two affinity tags {\em d0} and {\em d8} which bind to Cysteine residues
 and introduce a mass shift of 0 and 8 Da, respectively \citep{Gygi1999}.
 The mass shift of 8 Da can be observed in the full scans and the area under
 the respective precursor ion isotope envelopes can be used to estimate
 the ratio of peptide abundance in both samples.
 However, because the method is restricted to mass spectrometry-compatible 
-peptides which contain a cysteine residue, ICAT yields comparably low proteome
+peptides which contain a Cysteine residue, ICAT yields comparably low proteome
 coverage.
 
 The {\em isobaric tag for relative and absolute quantitation} method (iTRAQ)
 follows a similar approach by introducing isobaric tags into the peptides in
-different samples \citep{Ross2004} at the stage of enzymatic digestion.
+different samples at the stage of enzymatic digestion \citep{Ross2004}.
 Here, the N-terminus of peptides is labeled, resulting in increased proteome
 coverage.
 Each iTRAQ tag consists of a reporter group and a balance group, which together 
@@ -878,7 +878,7 @@ From peptide identifcations in nearby fragmentation scans, the identity of
 sister peptide precursor peaks can be assumed and subsequently, the peptide
 can be quantified.
 In the case of $^{13}$C-Arg labeling, only 50\% of all tryptic peptides can
-be expected to be suitable for quantitation, because trypsin cleaves C-terminal
+be expected to be suitable for quantitation, because Trypsin cleaves C-terminal
 of Arginine and Lysine residues, resulting in roughly half of all tryptic 
 peptides containing no Arginine at all.
 However, different variations are possible, for example, $^{13}$C-Arg/Lys 
@@ -1030,7 +1030,7 @@ A specialized database search tool is then used to match fragmentation spectra
 to peptides contained in the exon splice graph.
 Using this method, \citeauthor{Castellana2008} were able to revise the 
 annotation of {\em A. thaliana} by correcting 695 genes and identifying
-778 novel genes.
+778 novel genes \citep{Castellana2008}.
 
 \paragraph{The Genomic Peptide Finder.}
 
@@ -1090,7 +1090,8 @@ While an algorithm executed by a computer is typically strictly deterministic
 and less susceptible to external influences, and produces the same results
 when repeated on the same input data, a human expert is capable of detecting 
 situations in which previously made assumptions must be challenged and 
-subsequently, models must be adjusted to reflect the changed preconditions.
+subsequently, models may have to be adjusted to reflect the changed 
+preconditions.
 
 Regardless of these differences, it is obvious that for large-scale data
 evaluation, it is more efficient to invest human field-specific expertise and
@@ -1120,7 +1121,7 @@ control of these programs.
 Most importantly, such an infrastructure must be able to handle the 
 high-troughput capabilities of today's LC-MS/MS setups.
 The Trans-Proteomic Pipeline (TPP) was the first MS/MS-specific data evaluation 
-platform to be released (\cite{Keller2005}).
+platform to be released \citep{Keller2005}.
 It allows users to run various programs on MS/MS data files.
 It is platform-independent and supports a large selection of commercial and
 free software.
@@ -1139,7 +1140,7 @@ be controlled by external clients via a web browser.
 
 The OpenMS Proteomics Pipeline (TOPP) is another recently released software 
 system for the evaluation of MS/MS data \citep{Kohlbacher2007}.
-TOPP is based on the OpenMS C++ library which provides miscellaneous mass 
+TOPP is based on the OpenMS C++ framework which provides miscellaneous mass 
 spectrometry-related functionality to software developers as a programming 
 library.
 Aside from providing a substantial body of software tools on the command-line 
@@ -1217,7 +1218,7 @@ hydrogen as a by-product of photosynthesis under anaebrobic conditions
 Due to the promising role of hydrogen in clean energy production, 
 \cre~represents a potential candidate for renewable energy.
 Under anaerobiosis, the increasing amounts of reducing equivalents in the 
-chloroplast is compensated by a highly efficient hydrogenase which acts as a 
+chloroplast are compensated by a highly efficient hydrogenase which acts as a 
 sink for electrons from the photosynthetic electron transport chain 
 \citep{Happe2002, Hemschemeier2011}.
 It is known that under anaerobiosis, \cre~induces several fermentative

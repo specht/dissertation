@@ -18,8 +18,7 @@ evaluation platform Proteomatic.
 
 In order to facilitate software development and utilization, Proteomatic
 was designed and implemented to provide a framework for the software
-dealing with specific mass spectrometric questions that is presented in 
-this thesis.
+dealing with specific mass spectrometric questions covered in this thesis.
 From the researcher's perspective, Proteomatic provides a way to create and
 execute MS/MS data evaluation pipelines without the need to install each of
 the individual software tools manually.
@@ -54,7 +53,7 @@ In addition, Proteomatic can be set up in such a way that all processing steps
 are automatically tracked by a central server.
 In the case that the file tracking server fails and cannot be reached, 
 Proteomatic stores all reports which could not be sent locally and attempts
-to re-send them the next time a script finishes.
+to re-send them at a later time.
 
 TPP requires the installation of an Apache web server for the purpose
 of providing a web browser-based graphical user interface (GUI).
@@ -87,9 +86,10 @@ For example, choosing a programming language which exclusively runs on Windows,
 such as C\# restricts the target audience and compromises further possibilities.
 Using Proteomatic, tool developers can concentrate on the actual data 
 processing and do not have to spend time on creating graphical user interfaces.
-An example regarding the calculation of peptide masses is shown in 
-Fig.~\ref{fig:rapid-development}.
-This approach enables a data processing method development style to which the
+Furthermore, the deployment of novel tools to users is straightforward.
+An example demonstrating a script for the calculation of peptide masses is 
+shown in Fig.~\ref{fig:rapid-development}.
+Proteomatic enables a data processing method development style to which the
 `release early, release often' paradigm can be easily applied to 
 \citep{Raymond2001}.
 While this approach has the potential disadvantage of erroneous software
@@ -166,7 +166,7 @@ One of the studies presented in this thesis provides a comprehensive list of
 experimentally deduced chloroplast proteins for \cre~for the first time
 (manuscript 2).
 The list of 895 chloroplast-localized proteins has been compiled using
-a quantitative approach via spectral counting.
+a semi-quantitative approach via spectral counting.
 The necessary data evaluation and filtering steps have been implemented
 as processing steps in Proteomatic.
 In manuscript 3, the list of chloroplast proteins has been extended 
@@ -247,7 +247,7 @@ assignments in atypical bands are potential artifacts.
 
 While these filters allow to increase the confidence of quantitation results
 by coupling them to the identification results in both retention time and
-molecular weight dimensions, assignments of peptides to intact precursor
+molecular weight dimensions, the assignment of peptides to intact precursor
 peaks remains a challenge.
 Therefore, quantitation results stemming from the analysis of full scans
 should be interpreted with caution and further validation by molecular
@@ -402,9 +402,9 @@ peptides are passed to AUGUSTUS which performs {\em ab initio} gene
 model prediction supplemented by various extrinsic hint sources including
 GPF peptides.
 It is therefore a major contribution of this thesis that an automated
-proteogenomic annotation of the \cre~genome in which MS/MS data generated
-for various experimental purposes can be re-used for the generation of
-extrinsic AUGUSTUS hints is available.
+pipeline for the proteogenomic annotation of the \cre~genome in which MS/MS 
+data generated for various experimental purposes can be re-used for the 
+generation of extrinsic AUGUSTUS hints is available.
 
 Using measurements of 949 bands which have been made in various experiments,
 a set of 9,336 statistically significant peptides could be deduced via 
@@ -537,7 +537,7 @@ mass shift introduced by the peptide-dependent number of nitrogen atoms acts
 as signature fingerprint for the peptide.
 Although this mass shift does not confirm the amino acid sequence of the 
 peptide, it represents a strong hint that the number of nitrogen atoms, and
-therefore the amino acid composition of the GPF peptide is correct.
+therefore the amino acid composition of the GPF peptide, is correct.
 
 \section{Outlook}
 
@@ -574,7 +574,7 @@ the Proteomatic version currently installed on the user's computer.
 While protein identification and quantitation is implemented in Proteomatic
 using free software, the proteogenomic pipeline approach presented in 
 manuscript 4 depends on PEAKS for the generation of {\em de novo} predictions.
-GPF does not require completely sequences peptides but also works with
+GPF does not require completely sequenced peptides but also works with
 short sequence tags that have defined N- and C-terminal masses.
 Existing free alternatives such as Lutefisk \citep{Johnson2002}, PepNovo 
 \citep{Frank2005} and CompNovo \citep{Bertsch2009} should be evaluated in
@@ -642,14 +642,14 @@ by a Proteomatic file tracking server.
 This could be accomplished in a similar way that access to a MP3 music library 
 is provided where the entire set of songs present in the library can be 
 reduced to a subset by selecting artists or albums. 
-In the same manner, the set of available processing steps could be confined
+In the same manner, the set of all tracked processing steps could be confined
 by specifying details such as the user name or the approximate date the data
 evaluation was carried out.
 In addition, the MD5 checksum of generated output files could be used to 
 determine the processing step which yielded the file.
 Starting from a particular processing step, the entire data processing graph
 can be traversed in both upstream and downstream directions, and all related
-processing steps involved in the genesis of the final output file can
+processing steps involved in the creation of the final output file can
 be seamlessly reconstructed.
 
 % \begin{figure}
@@ -722,6 +722,6 @@ can give rise to at most $3 \cdot n$ alternatives (which do not necessarily
 result in a different amino acid sequence for every alternative), the time 
 complexity of this algorithm is linear and thus the resulting increase in 
 search time should be justifiable.
-However, the consideration of SNPs extendeds the search space and therefore
+However, the consideration of SNPs extends the search space and therefore
 the confidence of resulting GPF peptide alignments must be carefully 
-re-evaluated.
+evaluated.
