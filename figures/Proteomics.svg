@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="688.92401"
+   height="366.68539"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="Proteomics.svg"
+   inkscape:export-filename="/home/michael/Promotion/dissertation/figures/Proteomics.png"
+   inkscape:export-xdpi="267.54999"
+   inkscape:export-ydpi="267.54999">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         id="path3712"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend"
+       style="overflow:visible">
+      <path
+         id="path3718"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective3632"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3667"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4332"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4346"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4360"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4398"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4433"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4503"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend-7"
+       style="overflow:visible">
+      <path
+         id="path3712-7"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <inkscape:perspective
+       id="perspective4549"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend-2"
+       style="overflow:visible">
+      <path
+         id="path3712-8"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <inkscape:perspective
+       id="perspective4589"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3725"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4529904"
+     inkscape:cx="341.6553"
+     inkscape:cy="178.78349"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="822"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2816"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="bg"
+     style="display:none">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect4831"
+       width="688.92401"
+       height="366.68539"
+       x="17.172594"
+       y="26.047197"
+       transform="translate(-17.172594,-26.047197)" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-17.172594,-26.047197)"
+     style="display:inline">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect3114"
+       width="688.91998"
+       height="366.69"
+       x="17.172594"
+       y="26.042589" />
+    <g
+       id="g3673"
+       transform="matrix(0.43078343,0,0,0.43078343,203.3413,176.22337)"
+       inkscape:export-filename="/home/michael/Promotion/Presentations/IEB 2010-10-26/ms1.png"
+       inkscape:export-xdpi="133.77"
+       inkscape:export-ydpi="133.77">
+      <rect
+         transform="matrix(0.99253168,-0.12198713,0.12198713,0.99253168,0,0)"
+         style="fill:#edd400;fill-opacity:1;stroke:none"
+         id="rect3610"
+         width="110"
+         height="20"
+         x="44.563065"
+         y="122.64106" />
+      <rect
+         transform="matrix(0.99717869,0.07506437,-0.07506437,0.99717869,0,0)"
+         y="127.59386"
+         x="89.335251"
+         height="20"
+         width="130"
+         id="rect3612"
+         style="fill:#f57900;fill-opacity:1;stroke:none" />
+      <rect
+         transform="matrix(0.99990566,0.01373584,-0.01373584,0.99990566,0,0)"
+         style="fill:#c17d11;fill-opacity:1;stroke:none"
+         id="rect3614"
+         width="140"
+         height="20"
+         x="59.710232"
+         y="72.016815" />
+      <rect
+         transform="matrix(0.9987767,-0.04944799,0.04944799,0.9987767,0,0)"
+         y="169.46596"
+         x="48.385929"
+         height="20"
+         width="95"
+         id="rect3616"
+         style="fill:#73d216;fill-opacity:1;stroke:none" />
+      <rect
+         transform="matrix(0.96311525,0.26908924,-0.26908924,0.96311525,0,0)"
+         style="fill:#3465a4;fill-opacity:1;stroke:none"
+         id="rect3618"
+         width="125"
+         height="20"
+         x="135.08533"
+         y="146.39111" />
+      <rect
+         transform="matrix(0.73350916,-0.67967957,0.67967957,0.73350916,0,0)"
+         y="221.07033"
+         x="-95.319229"
+         height="20"
+         width="75"
+         id="rect3620"
+         style="fill:#75507b;fill-opacity:1;stroke:none" />
+      <rect
+         transform="matrix(0.14673614,-0.98917567,0.98917567,0.14673614,0,0)"
+         style="fill:#cc0000;fill-opacity:1;stroke:none"
+         id="rect3622"
+         width="155"
+         height="20"
+         x="-211.63982"
+         y="192.22929" />
+    </g>
+    <image
+       sodipodi:absref="/home/michael/Promotion/dissertation/figures/SDS-PAGE.jpg"
+       xlink:href="SDS-PAGE.jpg"
+       width="87.85714"
+       height="101.56285"
+       id="image3669"
+       x="320.09073"
+       y="41.627945" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 422.33508,92.729841 c 29.92322,-13.394402 63.38941,0 63.38941,0"
+       id="path3682"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       x="452.47867"
+       y="77.586975"
+       id="text3684"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3686"
+         x="452.47867"
+         y="77.586975"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">cut bands</tspan></text>
+    <image
+       sodipodi:absref="/home/michael/Promotion/dissertation/figures/Orbitrap.png"
+       xlink:href="Orbitrap.png"
+       width="85.464928"
+       height="99.34819"
+       id="image4334"
+       x="391.76685"
+       y="187.37823" />
+    <image
+       sodipodi:absref="/home/michael/Promotion/dissertation/figures/HPLCC.jpg"
+       xlink:href="HPLCC.jpg"
+       width="99.988792"
+       height="104.78278"
+       id="image4348"
+       x="561.42859"
+       y="183.79364" />
+    <image
+       sodipodi:absref="/home/michael/Promotion/dissertation/figures/4251a.jpg"
+       xlink:href="4251a.jpg"
+       width="41.525002"
+       height="55"
+       id="image4362"
+       x="492.19403"
+       y="62.556538" />
+    <image
+       sodipodi:absref="/home/michael/Promotion/dissertation/figures/4251a.jpg"
+       xlink:href="4251a.jpg"
+       y="63.566689"
+       x="48.796524"
+       id="image4413"
+       height="55"
+       width="41.525002" />
+    <path
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       id="path4417"
+       d="m 536.62079,92.729841 c 29.92322,-13.394402 63.38941,0 63.38941,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
+    <text
+       id="text4419"
+       y="61.586971"
+       x="566.76434"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="61.586971"
+         x="566.76434"
+         id="tspan4421"
+         sodipodi:role="line">tryptic</tspan><tspan
+         id="tspan4423"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="76.586975"
+         x="566.76434"
+         sodipodi:role="line">cleavage</tspan></text>
+    <text
+       id="text3684-5"
+       y="155.56612"
+       x="202.42918"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="155.56612"
+         x="202.42918"
+         id="tspan3686-3"
+         sodipodi:role="line">SDS-PAGE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       x="59.609005"
+       y="135.36307"
+       id="text4450"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4452"
+         x="59.609005"
+         y="135.36307"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">protein</tspan><tspan
+         sodipodi:role="line"
+         x="59.609005"
+         y="150.36307"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         id="tspan4485">sample</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4456"
+       d="m 107.7023,92.729841 c 23.35723,-10.111406 50.7625,0 50.7625,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 258.02685,92.729841 c 23.35723,-10.111406 50.7625,0 50.7625,0"
+       id="path4462"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       x="363.85776"
+       y="155.56612"
+       id="text4466"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4468"
+         x="363.85776"
+         y="155.56612"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">bands</tspan></text>
+    <text
+       id="text4470"
+       y="135.36307"
+       x="502.20511"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="135.36307"
+         x="502.20511"
+         sodipodi:role="line"
+         id="tspan4476">protein</tspan><tspan
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="150.36307"
+         x="502.20511"
+         sodipodi:role="line"
+         id="tspan4483">sample</tspan></text>
+    <image
+       sodipodi:absref="/home/michael/Promotion/dissertation/figures/4251a.jpg"
+       xlink:href="4251a.jpg"
+       y="62.556538"
+       x="615.76544"
+       id="image4487"
+       height="55"
+       width="41.525002" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 639.54999,131.294 c 6.68048,32.09642 -13.56543,61.92089 -13.56543,61.92089"
+       id="path4417-4"
+       sodipodi:nodetypes="cc" />
+    <text
+       id="text4537"
+       y="304.05853"
+       x="612.35535"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="304.05853"
+         x="612.35535"
+         id="tspan4539"
+         sodipodi:role="line">HPLC</tspan><tspan
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="319.05853"
+         x="612.35535"
+         sodipodi:role="line"
+         id="tspan4615">(1 hour)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 555.32347,242.46457 c -29.92322,13.3944 -63.38941,0 -63.38941,0"
+       id="path4417-6"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       x="436.62943"
+       y="304.05853"
+       id="text4569"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4571"
+         x="436.62943"
+         y="304.05853"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">Mass spectrometer</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4573"
+       d="m 379.55693,242.46457 c -29.92322,13.3944 -63.38941,0 -63.38941,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
+    <text
+       id="text4575"
+       y="304.05853"
+       x="261.89334"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="304.05853"
+         x="261.89334"
+         id="tspan4577"
+         sodipodi:role="line">MS1 full scans</tspan><tspan
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="319.05853"
+         x="261.89334"
+         sodipodi:role="line"
+         id="tspan4617">(~5,000)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 207.831,242.46457 c -29.92322,13.3944 -63.38941,0 -63.38941,0"
+       id="path4579"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       x="96.228325"
+       y="304.05853"
+       id="text4603"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4605"
+         x="96.228325"
+         y="304.05853"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">MS2 fragmen-</tspan><tspan
+         sodipodi:role="line"
+         x="96.228325"
+         y="319.05853"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         id="tspan4607">tation scans</tspan><tspan
+         sodipodi:role="line"
+         x="96.228325"
+         y="334.05853"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         id="tspan4619">(~5,000)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       x="307.0282"
+       y="366.68799"
+       id="text4621"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4623"
+         x="308.37585"
+         y="366.68799"
+         style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter Italic;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">determine peptide </tspan><tspan
+         sodipodi:role="line"
+         x="307.0282"
+         y="381.68799"
+         style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter Italic;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         id="tspan4625">masses and abundance</tspan></text>
+    <text
+       id="text4627"
+       y="366.68799"
+       x="146.41394"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter Italic;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="366.68799"
+         x="146.41394"
+         id="tspan4629"
+         sodipodi:role="line">determine amino acid</tspan><tspan
+         id="tspan4631"
+         style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter Italic;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+         y="381.68799"
+         x="146.41394"
+         sodipodi:role="line">sequences of peptides</tspan></text>
+    <path
+       style="opacity:0.50000000000000000;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend-2)"
+       d="m 148.37708,349.33172 c -1.20449,-26.59913 -11.20449,-56.59913 -31.20449,-76.59913"
+       id="path4637"
+       sodipodi:nodetypes="cz" />
+    <path
+       id="path4829"
+       d="m 315.71428,349.33172 c 11.05862,-28.08797 16.69017,-52.00078 -7.82741,-75.45686"
+       style="opacity:0.50000000000000000;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend-2)"
+       sodipodi:nodetypes="cs" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%"
+       x="676.28412"
+       y="92.936661"
+       id="text4489"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4491"
+         sodipodi:role="line"
+         x="676.28412"
+         y="92.936661"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">peptide</tspan><tspan
+         id="tspan4493"
+         sodipodi:role="line"
+         x="676.28412"
+         y="107.93666"
+         style="font-size:12px;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">sample</tspan></text>
+    <g
+       id="g3759"
+       transform="matrix(0.96891188,-0.24740607,0.24740607,0.96891188,55.191849,-126.24781)"
+       inkscape:export-filename="/home/michael/Promotion/Presentations/IEB 2010-10-26/ms2.png"
+       inkscape:export-xdpi="133.77"
+       inkscape:export-ydpi="133.77">
+      <rect
+         y="-341.50549"
+         x="27.277304"
+         height="8.6156673"
+         width="65.014351"
+         id="rect3622-4"
+         style="fill:#cc0000;fill-opacity:1;stroke:none;display:inline"
+         transform="matrix(-0.99999856,-0.00169918,0.00161093,-0.9999987,0,0)" />
+      <rect
+         transform="matrix(-0.99999856,-0.00169918,0.00161093,-0.9999987,0,0)"
+         style="fill:#cc0000;fill-opacity:1;stroke:none;display:inline"
+         id="rect3739"
+         width="65.014351"
+         height="8.6156673"
+         x="27.257971"
+         y="-353.50549" />
+      <rect
+         y="-365.50546"
+         x="27.23864"
+         height="8.6156673"
+         width="65.014351"
+         id="rect3741"
+         style="fill:#cc0000;fill-opacity:1;stroke:none;display:inline"
+         transform="matrix(-0.99999856,-0.00169918,0.00161093,-0.9999987,0,0)" />
+      <rect
+         transform="matrix(-0.99999856,-0.00169918,0.00161093,-0.9999987,0,0)"
+         style="fill:#cc0000;fill-opacity:1;stroke:none;display:inline"
+         id="rect3743"
+         width="65.014351"
+         height="8.6156673"
+         x="27.219309"
+         y="-377.50546" />
+      <rect
+         y="-389.50543"
+         x="27.199978"
+         height="8.6156673"
+         width="65.014351"
+         id="rect3745"
+         style="fill:#cc0000;fill-opacity:1;stroke:none;display:inline"
+         transform="matrix(-0.99999856,-0.00169918,0.00161093,-0.9999987,0,0)" />
+      <rect
+         transform="translate(17.172594,26.047197)"
+         y="304.68539"
+         x="-100"
+         height="11.999996"
+         width="5.000021"
+         id="rect3749"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3751"
+         width="5.000021"
+         height="11.999996"
+         x="-72.827408"
+         y="342.7326" />
+      <rect
+         y="355.7326"
+         x="-62.827427"
+         height="11.999996"
+         width="5.000021"
+         id="rect3753"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3755"
+         width="5.000021"
+         height="11.999996"
+         x="-52.827427"
+         y="367.7326" />
+      <rect
+         y="378.7326"
+         x="-42.827427"
+         height="11.999996"
+         width="5.000021"
+         id="rect3757"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    </g>
+    <image
+       y="49.621178"
+       x="172.14969"
+       id="image3104"
+       xlink:href="file:///home/michael/Promotion/dissertation/figures/P1010070.JPG"
+       height="80.575394"
+       width="74.264381" />
+  </g>
+</svg>
